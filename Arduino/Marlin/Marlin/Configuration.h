@@ -544,7 +544,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 500, 500, 1000, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 500, 1000, 1000, 10000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -555,7 +555,7 @@
  *   M204 T    Travel Acceleration
  */
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts
+#define DEFAULT_RETRACT_ACCELERATION  5000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
@@ -566,9 +566,9 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define DEFAULT_XJERK                 10.0
-#define DEFAULT_YJERK                 10.0
-#define DEFAULT_ZJERK                  0.3
+#define DEFAULT_XJERK                100.0
+#define DEFAULT_YJERK                100.0
+#define DEFAULT_ZJERK                  3.0
 #define DEFAULT_EJERK                  5.0
 
 //===========================================================================
@@ -782,6 +782,7 @@
 // The size of the print bed
 #define X_BED_SIZE 1250
 #define Y_BED_SIZE 600
+#define Z_BED_SIZE 850
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -789,7 +790,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 200
+#define Z_MAX_POS Z_BED_SIZE
 
 /**
  * Software Endstops
