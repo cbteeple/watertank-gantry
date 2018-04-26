@@ -145,3 +145,7 @@ CMakeListsPrivate.txt
 
 #CLion
 cmake-build-*
+
+#GCode
+*.gcode
+*.gc
