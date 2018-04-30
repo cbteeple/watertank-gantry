@@ -1,4 +1,4 @@
-function [x,y,z] = TrajectoryPerturbation(x_final,y_final,z_final,N,power,epsilonFinalPosition,epsilonPower)
+function [x,y,z] = RandTrajectoryPerturbation(x_final,y_final,z_final,N,power,epsilonFinalPosition,epsilonPower)
     %The x_,y_,z_final are the final position of the gantry; N is the
     %number of discretization steps; power is the power law scaling
     %behavior of the parametrization; epsilonFinalPosition is the maximal
