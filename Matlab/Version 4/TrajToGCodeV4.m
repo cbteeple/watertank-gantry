@@ -1,4 +1,4 @@
-function TrajToGCodeV3(X,Y,Z,FR,N,fileName)
+function TrajToGCodeV4(X,Y,Z,FR,N,fileName)
 %X,Y,Z are the parametrized trajectories; FR is the feed rate; N is the
 %number of discretization steps
 
