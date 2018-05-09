@@ -19,7 +19,7 @@ function TrajToGCode(X,Y,Z,FR,N,fileName)
         if i == 1
             formatSpec = 'G1 X%1.1f Y%1.0f Z%1.1f\n%';
             fprintf(fileID,formatSpec, g(i,:));
-            fprintf(fileID,'G4 P1000'); %Dwell for 1 sec at "home"
+            fprintf(fileID,'G4 P1000\n'); %Dwell for 1 sec at "home"
         else
             formatSpec = 'G1 X%1.1f Y%1.0f Z%1.1f\n%';
             fprintf(fileID,formatSpec, g(i,:));
@@ -27,6 +27,7 @@ function TrajToGCode(X,Y,Z,FR,N,fileName)
     end
 
     fclose(fileID);
-    disp('File Saved')
+    [~,name,~] = fileparts(fileName);
+    disp(name)
     
 end

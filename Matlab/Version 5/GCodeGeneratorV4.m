@@ -6,12 +6,14 @@ close all;
 
 %The function type is a power law scaling with the parameter
 
+file_name = 'clarkTest4';
+
 %Define the location of the home
 locHome  = [1000;200;400];
 locFinal = [200,100,200];
 
 nSteps = 100;
-fx_power = 2;
+fx_power = 1/2;
 
 %Feedrate [mm/min]
 feedRate = 9000;
@@ -21,9 +23,7 @@ N_Trials = 3; %This will generate an N x N x N lattice
 
 %Error in final position
 PosError = 100;
-
-file_name = 'clarkTest3';
-
+perturbType = 'organized';
 
 
 %==========================================================================
@@ -55,17 +55,19 @@ mkdir(folder_name) %make a new folder
 TrajToGCode(x,y,z,feedRate,nSteps,[folder_name,'/',SaveFile])
 
 
-%Generate perturbations and plot the perturbations
+switch perturbType
+    
+    case 'random'
+    
+    otherwise 
 
-%Use this code if you are interested in an organized 3-dimensional array of
-%perturbed trajectories. If you are interested in a set of random
-%perturbations contained within the defined erro cube, comment out this
-%code and proceed to the random trajectory generator
-figure(2);
-TrajPerturbation(N_Trials, xF, yF, zF,xH,yH,zH, nSteps, fx_power,PosError,...
-    feedRate,[folder_name,'/',file_name])
+    %Make perturbations using an organized 3-dimensional array around the
+    %final point.
+    
+    TrajPerturbation(N_Trials, xF, yF, zF,xH,yH,zH, nSteps, fx_power,PosError,...
+        feedRate,[folder_name,'/',file_name])
+end
 
-%Make the graph work correctly
-axis equal
-axis vis3d
-rotate3d on
+%Combine all of the individual trajectories into a single file
+CombineGCode(folder_name);
+

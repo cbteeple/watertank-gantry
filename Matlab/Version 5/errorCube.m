@@ -1,6 +1,15 @@
-function errorCubeV4(x_final,y_final,z_final,epsilonFinalPosition)
-%The purpose of this function is to generate a cube that illustrates the
-%permitted error window centered about the final point
+function errorCube(x_final,epsilonFinalPosition)
+%errorCube generates a cube visualization of the error window
+%centered about the final point
+%
+%[] = errorCube(x_final,epsilonFinalPosition)
+%
+%INPUTS:
+%   x_final = the final position (length=3)
+%   epsilonFinalPosition = the half-width of the box around the final point
+%
+%OUTPUTS:
+%   n/a
 
 %x_,y_,z_final describe the final spatial postion, epsilonFinalPosition is
 %the upper bound on the error
@@ -8,12 +17,12 @@ function errorCubeV4(x_final,y_final,z_final,epsilonFinalPosition)
 %Define the 12 lines that describe the cube centered about the final
 %position with side length equal to 2 times the error (since it runs from
 %(x_i-error) to (x_i+error) 
-    xMinus = x_final - epsilonFinalPosition;
-    xPlus = x_final + epsilonFinalPosition;
-    yMinus = y_final - epsilonFinalPosition;
-    yPlus = y_final + epsilonFinalPosition;
-    zMinus = z_final - epsilonFinalPosition;
-    zPlus = z_final + epsilonFinalPosition;
+    xMinus  = x_final(1) - epsilonFinalPosition;
+    xPlus   = x_final(1) + epsilonFinalPosition;
+    yMinus  = x_final(2) - epsilonFinalPosition;
+    yPlus   = x_final(2) + epsilonFinalPosition;
+    zMinus  = x_final(3) - epsilonFinalPosition;
+    zPlus   = x_final(3) + epsilonFinalPosition;
     
     xLine(1,:) = [xMinus,xPlus];
     yLine(1,:) = [yMinus,yMinus];
@@ -66,8 +75,7 @@ function errorCubeV4(x_final,y_final,z_final,epsilonFinalPosition)
     %Plot the cube
     for i = 1:12
        
-        plot3(xLine(i,:),yLine(i,:),zLine(i,:),'b','LineWidth',1)
-        hold on
+        plot3(xLine(i,:),yLine(i,:),zLine(i,:),'b','LineWidth',1);
     
 end
     

@@ -4,6 +4,11 @@ function TrajPerturbation(N_Trials, xF, yF, zF, xH, yH, zH, nSteps, fx_type,PosE
 %discretization steps, the power law scaling, the position error, the
 %feedrate, and the file name for the exact trajectory; also, note the home
 %position is (xH, yH, zH)
+
+    %Start the plot
+    figure(2);
+
+    %Make all the trajectories
     for i=0:1:N_Trials-1 %Discrete steps in the x direction
         for j=0:1:N_Trials-1 %Discrete steps in the y direction
             for k = 0:1:N_Trials-1 %Discrete steps in the z direction
@@ -16,14 +21,8 @@ function TrajPerturbation(N_Trials, xF, yF, zF, xH, yH, zH, nSteps, fx_type,PosE
                     j*(2*PosError/(N_Trials-1)),zF-PosError + ...
                     k*(2*PosError/(N_Trials-1)),xH,yH,zH,nSteps,fx_type);
                 plot3(xi,yj,zk) %Plot the perturbed trajectories
-                xlabel('x')
-                ylabel('y')
-                zlabel('z')
                 hold on
                 plot3(xi(end),yj(end),zk(end),'ro')
-                hold on
-                errorCube(xF,yF,zF,PosError) %Plot the error cube
-                hold on
                 
                 %Name the file according to the final position xyz of the
                 %perturbed trajectory given the maximum error
@@ -31,7 +30,19 @@ function TrajPerturbation(N_Trials, xF, yF, zF, xH, yH, zH, nSteps, fx_type,PosE
                     num2str(j),num2str(k),'.gcode'); 
 
                 %Translate the perturbed trajectory to gcode
-                TrajToGCode(xi,yj,zk,feedRate,nSteps,i_name)
+                TrajToGCode(xi,yj,zk,feedRate,nSteps,i_name);
+            end
         end
     end
+
+    %Plot the cube only once at the end
+    errorCube([xF,yF,zF],PosError) %Plot the error cube
+    
+    %Make the plot window look nice
+    axis equal
+    axis vis3d
+    rotate3d on
+    xlabel('x')
+    ylabel('y')
+    zlabel('z')
 end
