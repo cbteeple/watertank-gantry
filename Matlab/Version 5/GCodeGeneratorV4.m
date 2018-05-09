@@ -8,10 +8,10 @@ close all;
 
 %Define the location of the home
 locHome  = [1000;200;400];
-locFinal = [200,200,400];
+locFinal = [200,100,200];
 
 nSteps = 100;
-fx_power = 1;
+fx_power = 2;
 
 %Feedrate [mm/min]
 feedRate = 9000;
@@ -22,7 +22,7 @@ N_Trials = 3; %This will generate an N x N x N lattice
 %Error in final position
 PosError = 100;
 
-file_name = 'clarkTest2';
+file_name = 'clarkTest3';
 
 
 
