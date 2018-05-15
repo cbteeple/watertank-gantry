@@ -12,7 +12,7 @@ function TrajToGCode(X,Y,Z,FR,N,fileName)
 
     %Generate the gcode by translating the trajectory into a sequence of
     %linear movements
-    for i=1:1:N-1
+    for i=1:1:N
         g(i,1) = X(i);
         g(i,2) = Y(i);
         g(i,3) = Z(i);

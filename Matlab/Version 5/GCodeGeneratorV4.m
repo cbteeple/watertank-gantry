@@ -12,8 +12,8 @@ file_name = 'clarkTest4';
 locHome  = [1000;200;400];
 locFinal = [200,100,200];
 
-nSteps = 100;
-fx_power = 1/2;
+nSteps = 2;
+fx_power = 1;
 
 %Feedrate [mm/min]
 feedRate = 9000;
