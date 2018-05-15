@@ -10167,6 +10167,18 @@ inline void gcode_M502() {
 
 #endif // DUAL_NOZZLE_DUPLICATION_MODE
 
+
+  //Enable Jog Mode
+  inline void gcode_M720() {
+    //[code here]
+  }
+
+  //Disable Jog Mode
+  inline void gcode_M721() {
+    //[code here]
+  }
+
+
 #if ENABLED(LIN_ADVANCE)
   /**
    * M900: Set and/or Get advance K factor and WH/D ratio
@@ -12286,6 +12298,16 @@ void process_parsed_command() {
           gcode_M605();
           break;
       #endif // DUAL_X_CARRIAGE
+
+
+        case 720: // M720: Enable Jog Mode
+          gcode_M720();
+          break;
+
+        case 721: // M720: Disable Jog Mode
+          gcode_M721();
+          break;
+
 
       #if ENABLED(MK2_MULTIPLEXER)
         case 702: // M702: Unload all extruders
