@@ -10173,6 +10173,8 @@ inline void gcode_M502() {
     //[code here]
   }
 
+      
+  
   //Disable Jog Mode
   inline void gcode_M721() {
     //[code here]
@@ -12304,7 +12306,7 @@ void process_parsed_command() {
           gcode_M720();
           break;
 
-        case 721: // M720: Disable Jog Mode
+        case 721: // M721: Disable Jog Mode
           gcode_M721();
           break;
 
@@ -12466,6 +12468,77 @@ void process_parsed_command() {
 
   ok_to_send();
 }
+
+
+//Jogging Code
+#ifdef JOGGING_ENABLED
+
+  #define BED_SIZE_ALL      {X_BED_SIZE, Y_BED_SIZE, Z_BED_SIZE}
+  int jogTime_start = 0;
+  int jog_dir[3] = {0,0,0};
+  
+  void handle_jog(){
+  
+    long jogTime=millis();
+    
+    //Read Jog Inputs
+    LOOP_XYZ(i){
+      //Read in the jog pins
+      setPin(JOG_PINS[2*i],INPUT);
+      setPin(JOG_PINS[2*i+1],INPUT);
+  
+      int joy_val_L=digitalRead(JOG_PINS[2*i]);
+      int joy_val_R=digitalRead(JOG_PINS[2*i+1]);
+      
+      //Decide what to do
+      jog_dir[i] = 0;
+      if (joy_val_L & joy_val_R){
+        jog_dir[i] = 0;
+      }
+      else if (joy_val_L){
+        jog_dir[i] = -1;
+      }
+      else if (joy_val_R){
+        jog_dir[i] = 1;
+      }
+      else{
+        jog_dir[i] = 0;
+      }
+    }
+    
+  
+    //Check if any of the axes are supposed to be moving
+    int jogSum=0;
+    for (int i=0; i<3; i++){
+      jogSum += abs(jog_dir[i]);
+    }
+    
+    if (!jogSum){
+      jogTime_start = jogTime;
+    }
+    
+  
+    //Set New Positions
+    LOOP_XYZ(i) {
+      destination[i] = current_position[i]+ (jog_dir[i]*BED_SIZE_ALL[i]/4);
+    }
+  
+    
+    //Set the feedrate depending on how long we've been jogging
+    if ((jogTime-jogTime_start)>2000){
+      feedrate_mm_s = FAST_JOG_FEEDRATE[1]);
+    }
+    else{
+      feedrate_mm_s = DEFAULT_JOG_FEEDRATE[1]);
+    }
+    
+    stepper.wake_up();
+    
+  }
+
+#endif
+
+
 
 void process_next_command() {
   char * const current_command = command_queue[cmd_queue_index_r];
@@ -14626,4 +14699,8 @@ void loop() {
   }
   endstops.report_state();
   idle();
+  
+  #ifdef JOGGING_ENABLED
+    handle_jog();
+  #endif
 }

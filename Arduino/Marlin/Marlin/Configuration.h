@@ -538,6 +538,12 @@
  */
 #define DEFAULT_MAX_FEEDRATE          { 5000, 5000, 5000, 25 }
 
+// Jog Settings
+#define JOGGING_ENABLED
+#define DEFAULT_JOG_FEEDRATE          {3000, 3000, 3000, 3000}
+#define FAST_JOG_FEEDRATE             {6000, 6000, 6000, 6000}
+#define JOG_PINS                      {1,2,3,4,5,6}
+
 /**
  * Default Max Acceleration (change/s) change = mm/s
  * (Maximum start speed for accelerated moves)
@@ -545,6 +551,8 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 #define DEFAULT_MAX_ACCELERATION      { 400, 1000, 1000, 10000 }
+
+
 
 /**
  * Default Acceleration (change/s) change = mm/s
