@@ -6,11 +6,11 @@ clear all;
 
 %The function type is a power law scaling with the parameter
 
-file_name = 'clarkTest7';
+file_name = 'clarkTest8';
 
 %Define the location of the home
-locHome  = [1000;200;200];
-locGrabStart = [200;200;200];
+locHome  = [600;200;450];
+locGrabStart = [200;100;200];
 locGrabRelease = [400;200;200];
 
 
@@ -27,7 +27,7 @@ functionType = 'none'; %power, subdiv, none
 feedRate = 9000;
 
 %Desired number of perturbation trials per direction
-N_Trials = 3; %This will generate an N x N x N lattice
+N_Trials = 2; %This will generate an N x N x N lattice
 
 %Error in final position
 PosError = 25;
