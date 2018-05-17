@@ -10,10 +10,18 @@ file_name = 'clarkTest4';
 
 %Define the location of the home
 locHome  = [1000;200;400];
-locFinal = [200,100,200];
+locGrabStart = [200;100;200];
+locGrabRelease = [250;100;200];
 
-nSteps = 2;
-fx_power = 1;
+x_points=[locHome, locGrabStart, locGrabRelease]
+
+
+
+subdiv   = 1;
+nSteps   = 10;
+fx_power = 2;
+
+functionType = 'none';
 
 %Feedrate [mm/min]
 feedRate = 9000;
@@ -23,27 +31,26 @@ N_Trials = 3; %This will generate an N x N x N lattice
 
 %Error in final position
 PosError = 100;
-perturbType = 'organized';
 
 
 %==========================================================================
 % Make and save all the files
-
-xH = locHome(1);
-yH = locHome(2);
-zH = locHome(3);
-
-xF = locFinal(1);
-yF = locFinal(2);
-zF = locFinal(3);
-
-    
+   
 %Generate the appropriate parametrized trajectories
-[x,y,z] = TrajectoryGenerator(xF,yF,zF, xH, yH, zH, nSteps,fx_power);
+
+
+switch functionType 
+    case 'Power'
+        x_traj = TrajectoryGenPow(locGrabStart, locHome, nSteps,fx_power);        
+    case 'Subdiv'
+        x_traj = TrajectoryGenLin([locHome, locGrabStart],subdiv );       
+    otherwise
+        x_traj = x_points;      
+end
 
 %Plot the trajectories
-%figure(1);
-%TrajectoryPlotter(x,y,z,nSteps)
+figure(1);
+TrajectoryPlotter(x_traj);
 
 %Translate the trajectory to gcode
 
@@ -51,23 +58,16 @@ SaveFile = strcat(file_name,'.gcode');
 folder_name = file_name;
 mkdir(folder_name) %make a new folder
 
+TrajToGCode(x_traj,feedRate,[folder_name,'/',SaveFile])
 
-TrajToGCode(x,y,z,feedRate,nSteps,[folder_name,'/',SaveFile])
-
-
-switch perturbType
-    
-    case 'random'
-    
-    otherwise 
 
     %Make perturbations using an organized 3-dimensional array around the
     %final point.
     
-    TrajPerturbation(N_Trials, xF, yF, zF,xH,yH,zH, nSteps, fx_power,PosError,...
+    TrajPerturbation(N_Trials, locGrabStart, locHome, nSteps, fx_power,PosError,...
         feedRate,[folder_name,'/',file_name])
-end
 
+    
 %Combine all of the individual trajectories into a single file
 CombineGCode(folder_name);
 
