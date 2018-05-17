@@ -1,4 +1,4 @@
-function [ params ] = worldParams()
+function [ params ] = getWorldParams()
 %WORLDPARAMS Set up the parameters of the world
 %
 %OUTPUTS:
@@ -7,7 +7,7 @@ function [ params ] = worldParams()
 params.tankDimX=1100;
 params.tankDimY=400;
 params.tankDimZ=850;
-
+params.gripChannel=0;
 
 
 
