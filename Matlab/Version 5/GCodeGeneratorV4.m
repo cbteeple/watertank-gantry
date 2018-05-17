@@ -1,27 +1,27 @@
 clc
 clear all;
-close all;
+%close all;
 %Start by generating the trajectory with inputs: final position in 3-space,
 %the number of discretization steps, and the function type
 
 %The function type is a power law scaling with the parameter
 
-file_name = 'clarkTest4';
+file_name = 'clarkTest7';
 
 %Define the location of the home
-locHome  = [1000;200;400];
-locGrabStart = [200;100;200];
-locGrabRelease = [250;100;200];
-
-x_points=[locHome, locGrabStart, locGrabRelease]
+locHome  = [1000;200;200];
+locGrabStart = [200;200;200];
+locGrabRelease = [400;200;200];
 
 
+x_points=[locHome, locGrabStart, locGrabRelease];
+x_grip = {0,1,0};
 
-subdiv   = 1;
-nSteps   = 10;
-fx_power = 2;
+subdiv   = 3;
+numSegs   = 50;
+fx_power = 1/2;
 
-functionType = 'none';
+functionType = 'none'; %power, subdiv, none
 
 %Feedrate [mm/min]
 feedRate = 9000;
@@ -30,7 +30,7 @@ feedRate = 9000;
 N_Trials = 3; %This will generate an N x N x N lattice
 
 %Error in final position
-PosError = 100;
+PosError = 25;
 
 
 %==========================================================================
@@ -38,34 +38,36 @@ PosError = 100;
    
 %Generate the appropriate parametrized trajectories
 
+trajSettings.type=functionType;
+trajSettings.numSegs=numSegs;
+trajSettings.power=fx_power;
+trajSettings.subdiv=subdiv;
 
-switch functionType 
-    case 'Power'
-        x_traj = TrajectoryGenPow(locGrabStart, locHome, nSteps,fx_power);        
-    case 'Subdiv'
-        x_traj = TrajectoryGenLin([locHome, locGrabStart],subdiv );       
-    otherwise
-        x_traj = x_points;      
-end
-
-%Plot the trajectories
-figure(1);
-TrajectoryPlotter(x_traj);
-
-%Translate the trajectory to gcode
 
 SaveFile = strcat(file_name,'.gcode');
 folder_name = file_name;
+if exist(folder_name,'dir')
+    rmdir(folder_name,'s');
+end
 mkdir(folder_name) %make a new folder
+file_base=[folder_name,'/',file_name];
 
-TrajToGCode(x_traj,feedRate,[folder_name,'/',SaveFile])
+
+%Plot the trajectories
+%figure(1);
+%TrajectoryPlotter(x_traj);
+
+%Translate the trajectory to gcode
+
+%TrajToGCode(x_traj,feedRate,[folder_name,'/',SaveFile])
 
 
-    %Make perturbations using an organized 3-dimensional array around the
-    %final point.
-    
-    TrajPerturbation(N_Trials, locGrabStart, locHome, nSteps, fx_power,PosError,...
-        feedRate,[folder_name,'/',file_name])
+%Make perturbations using an organized 3-dimensional array around the
+%final point.
+file_base=[folder_name,'/',file_name];
+
+TrajPerturbation(x_points, x_grip, trajSettings, N_Trials, PosError,...
+    feedRate,file_base)
 
     
 %Combine all of the individual trajectories into a single file

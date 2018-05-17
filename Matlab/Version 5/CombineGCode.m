@@ -10,8 +10,8 @@ function [finished] = CombineGCode(folder_name)
 finished=0;
 d = dir(fullfile(folder_name,'*.gcode*'));
 
-delete(fullfile(folder_name,[folder_name,'_Full.gcode']));
-outFid = fopen(fullfile(folder_name,[folder_name,'_Full.gcode']),'a' );
+%delete(fullfile(folder_name,[folder_name,'_Full.gcode']));
+outFid = fopen(fullfile(folder_name,[folder_name,'_Full.gcode']),'w' );
 for i=1:length(d)
     %Read in the files one by one
     fid=fopen(fullfile(d(i).folder,'/',d(i).name));
