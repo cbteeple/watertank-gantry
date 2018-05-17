@@ -5,17 +5,20 @@ clear all;
 %the number of discretization steps, and the function type
 
 %The function type is a power law scaling with the parameter
+worldParams = getWorldParams();
 
 file_name = 'clarkTest8';
 
 %Define the location of the home
-locHome  = [600;200;450];
-locGrabStart = [200;100;200];
+locHome  = [600;200;200];
+locGrabStart = [200;200;200];
 locGrabRelease = [400;200;200];
 
 
 x_points=[locHome, locGrabStart, locGrabRelease];
-x_grip = {0,1,0};
+x_grip = {[0,worldParams.timeHome],...
+          [1,worldParams.timeGrasp],...
+          [0,worldParams.timeRelease]};
 
 subdiv   = 3;
 numSegs   = 50;
@@ -24,7 +27,7 @@ fx_power = 1/2;
 functionType = 'none'; %power, subdiv, none
 
 %Feedrate [mm/min]
-feedRate = 9000;
+feedRate = 10000;
 
 %Desired number of perturbation trials per direction
 N_Trials = 2; %This will generate an N x N x N lattice

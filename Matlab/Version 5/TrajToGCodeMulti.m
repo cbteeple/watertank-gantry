@@ -33,18 +33,16 @@ function TrajToGCode(x_traj,x_grip,FR,fileName)
             end             
         end
         
-        if x_grip{idx}
+        if x_grip{idx}(1)
             fprintf(fileID,'M106 P%d\n',gripChan); %Actuate Fingers
-            fprintf(fileID,'G4 P2000\n'); %Dwell for 2 sec while closing
         else
             fprintf(fileID,'M107 P%d\n',gripChan); %Actuate Fingers
-            fprintf(fileID,'G4 P1000\n'); %Dwell for 2 sec while closing
         end
         
+        fprintf(fileID,'G4 P%d\n',x_grip{idx}(2)); %Dwell for specified time
+        
     end
-    
-    fprintf(fileID,'M107 P%d\n',gripChan); %release Fingers
-    fprintf(fileID,'G4 P4000\n'); %Dwell for 4 sec while releasing
+   
 
     fclose(fileID);
     [~,name,~] = fileparts(fileName);
