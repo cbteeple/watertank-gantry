@@ -7,12 +7,12 @@ clear all;
 %The function type is a power law scaling with the parameter
 worldParams = getWorldParams();
 
-file_name = 'clarkTest8';
+file_name = 'clarkTest9';
 
 %Define the location of the home
-locHome  = [600;200;200];
-locGrabStart = [200;200;200];
-locGrabRelease = [400;200;200];
+locHome  = [800;200;200];
+locGrabStart = [200;200;350];
+locGrabRelease = [400;200;400];
 
 
 x_points=[locHome, locGrabStart, locGrabRelease];
