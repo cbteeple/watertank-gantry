@@ -7,7 +7,7 @@ clear all;
 %The function type is a power law scaling with the parameter
 worldParams = getWorldParams();
 
-file_name = 'clarkTest10';
+file_name = 'clarkTest10_00mm';
 
 %Define the location of the home
 locHome  = [300;140;240];
@@ -33,7 +33,7 @@ feedRate = 8000;
 N_Trials = 5; %This will generate an N x N x N lattice
 
 %Error in final position
-PosError = 20;
+PosError = 0;
 
 
 %==========================================================================

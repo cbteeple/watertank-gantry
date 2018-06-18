@@ -14,9 +14,9 @@ Encoder myEnc(2, 3);
 //   avoid using pins with LEDs attached
 
 
-int COUNTS_PER_REV = 600;
-float DEGREES_PER_COUNT = 360.0/(float(COUNTS_PER_REV)*4);
-float REVS_PER_COUNT=1.0/(float(COUNTS_PER_REV)*4);
+int COUNTS_PER_REV = 600*4;
+float DEGREES_PER_COUNT = 360.0/(float(COUNTS_PER_REV));
+float REVS_PER_COUNT=1.0/(float(COUNTS_PER_REV));
 float FLIP_ANGLE_DIRECTION = -1;
 
 void setup() {
