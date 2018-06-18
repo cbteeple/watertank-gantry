@@ -9,6 +9,7 @@ function [finished] = CombineGCode(folder_name)
 
 finished=0;
 d = dir(fullfile(folder_name,'*.gcode*'));
+worldParams=getWorldParams();
 
 %delete(fullfile(folder_name,[folder_name,'_Full.gcode']));
 outFid = fopen(fullfile(folder_name,[folder_name,'_Full.gcode']),'w' );
@@ -21,6 +22,8 @@ for i=1:length(d)
     %Append to the ouptu file
     fwrite(outFid,data);
 end
+
+fprintf(outFid,'G1 Z%d\n',worldParams.tankDimZ-50); %Dwell for specified time
 
 fclose(outFid);
 

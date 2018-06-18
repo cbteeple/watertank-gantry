@@ -7,12 +7,12 @@ clear all;
 %The function type is a power law scaling with the parameter
 worldParams = getWorldParams();
 
-file_name = 'clarkTest9';
+file_name = 'clarkTest10';
 
 %Define the location of the home
-locHome  = [800;200;200];
-locGrabStart = [200;200;350];
-locGrabRelease = [400;200;400];
+locHome  = [300;140;240];
+locGrabStart = [55;140;240];
+locGrabRelease = [300;140;150];
 
 
 x_points=[locHome, locGrabStart, locGrabRelease];
@@ -27,13 +27,13 @@ fx_power = 1/2;
 functionType = 'none'; %power, subdiv, none
 
 %Feedrate [mm/min]
-feedRate = 10000;
+feedRate = 8000;
 
 %Desired number of perturbation trials per direction
-N_Trials = 2; %This will generate an N x N x N lattice
+N_Trials = 5; %This will generate an N x N x N lattice
 
 %Error in final position
-PosError = 25;
+PosError = 20;
 
 
 %==========================================================================

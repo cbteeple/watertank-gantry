@@ -41,8 +41,7 @@ function TrajToGCode(x_traj,x_grip,FR,fileName)
         
         fprintf(fileID,'G4 P%d\n',x_grip{idx}(2)); %Dwell for specified time
         
-    end
-   
+    end   
 
     fclose(fileID);
     [~,name,~] = fileparts(fileName);

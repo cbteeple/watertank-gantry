@@ -8,6 +8,8 @@ function TrajPerturbation(x_points, x_grip, settings, N_Trials, PosError,...
 
     %Unpack
     
+    
+    
     xF = x_points(1,2);
     yF = x_points(2,2);
     zF = x_points(3,2);
