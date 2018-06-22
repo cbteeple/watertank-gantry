@@ -232,7 +232,7 @@ uint8_t Temperature::soft_pwm_amount[HOTENDS],
 
     #if WATCH_THE_BED || WATCH_HOTENDS
       const float watch_temp_target = temp -
-        #if ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED) && ENABLED(THERMAL_PROTECTION_HOTENDS) && ENABLED(PIDTEMP)
+        #if ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED) && ENABLED() && ENABLED(PIDTEMP)
           (hotend < 0 ? (WATCH_BED_TEMP_INCREASE + TEMP_BED_HYSTERESIS + 1) : (WATCH_TEMP_INCREASE + TEMP_HYSTERESIS + 1))
         #elif ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED)
           (WATCH_BED_TEMP_INCREASE + TEMP_BED_HYSTERESIS + 1)
@@ -241,7 +241,7 @@ uint8_t Temperature::soft_pwm_amount[HOTENDS],
         #endif
       ;
       const int8_t watch_temp_period =
-        #if ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED) && ENABLED(THERMAL_PROTECTION_HOTENDS) && ENABLED(PIDTEMP)
+        #if ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED) && ENABLED() && ENABLED(PIDTEMP)
           hotend < 0 ? WATCH_BED_TEMP_PERIOD : WATCH_TEMP_PERIOD
         #elif ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED)
           WATCH_BED_TEMP_PERIOD
@@ -250,7 +250,7 @@ uint8_t Temperature::soft_pwm_amount[HOTENDS],
         #endif
       ;
       const int8_t watch_temp_increase =
-        #if ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED) && ENABLED(THERMAL_PROTECTION_HOTENDS) && ENABLED(PIDTEMP)
+        #if ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED) && ENABLED() && ENABLED(PIDTEMP)
           hotend < 0 ? WATCH_BED_TEMP_INCREASE : WATCH_TEMP_INCREASE
         #elif ENABLED(THERMAL_PROTECTION_BED) && ENABLED(PIDTEMPBED)
           WATCH_BED_TEMP_INCREASE
@@ -1299,9 +1299,9 @@ void Temperature::init() {
   }
 #endif
 
-#if ENABLED(THERMAL_PROTECTION_HOTENDS) || HAS_THERMALLY_PROTECTED_BED
+#if ENABLED() || HAS_THERMALLY_PROTECTED_BED
 
-  #if ENABLED(THERMAL_PROTECTION_HOTENDS)
+  #if ENABLED()
     Temperature::TRState Temperature::thermal_runaway_state_machine[HOTENDS] = { TRInactive };
     millis_t Temperature::thermal_runaway_timer[HOTENDS] = { 0 };
   #endif
@@ -1372,7 +1372,7 @@ void Temperature::init() {
     }
   }
 
-#endif // THERMAL_PROTECTION_HOTENDS || THERMAL_PROTECTION_BED
+#endif //  || THERMAL_PROTECTION_BED
 
 void Temperature::disable_all_heaters() {
 
