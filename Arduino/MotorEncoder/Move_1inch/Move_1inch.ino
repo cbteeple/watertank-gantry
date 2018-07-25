@@ -10,15 +10,17 @@
 #define pin_dcmoto_encode1 3
 #define pin_dcmoto_encode2 2
 //Determined by experimentation, depends on your encoder, and your belt/gearing ratios:
-#define dcmoto_encoder_1_rev 1856
+#define dcmoto_encoder_1_rev 1920
 
 DCMotorServo servo = DCMotorServo(pin_dcmoto_dir1, pin_dcmoto_dir2, pin_dcmoto_pwm_out, pin_dcmoto_encode1, pin_dcmoto_encode2);
+
+bool flip=false;
 
 void setup() {
 
   //Tune the servo feedback
   //Determined by trial and error
-  servo.myPID->SetTunings(0.1,0.15,0.05);
+  servo.myPID->SetTunings(0.5,0.05,0.05);
   servo.setPWMSkip(50);
   servo.setAccuracy(20);
   //Un-necessary, initializes to 0:
@@ -42,8 +44,13 @@ void loop() {
     }
     if(motor_timeout < millis()) {
       //Setting a move operation will ensure that servo.finished() no longer returns true
-      servo.move(dcmoto_encoder_1_rev);
+      if (flip)
+        servo.move(3*dcmoto_encoder_1_rev);
+      else
+        servo.move(-3*dcmoto_encoder_1_rev);
+        
       motor_go = 1;
+      flip=!flip;
     }
   }
 }
