@@ -4,31 +4,31 @@
 #include <PID_v1.h>
 #include <DCMotorServo.h>
 
-#define pin_dcmoto_dir1 4
-#define pin_dcmoto_dir2 5
-#define pin_dcmoto_pwm_out 6
-#define pin_dcmoto_encode1 3
-#define pin_dcmoto_encode2 2
-//Determined by experimentation, depends on your encoder, and your belt/gearing ratios:
-#define dcmoto_encoder_1_rev 1920
+#include "retract.h"
+
+motorFuns motor;
+
+
+
 float setpoint = 3;
-float PID_Tunings[3]={0.1,0.05,0.05};
 int servoMode=0;
 int setCounts=0;
 int prevPos=0;
 bool motorOn=false;
 
-DCMotorServo servo = DCMotorServo(pin_dcmoto_dir1, pin_dcmoto_dir2, pin_dcmoto_pwm_out, pin_dcmoto_encode1, pin_dcmoto_encode2);
+//DCMotorServo servo = DCMotorServo(pin_dcmoto_dir1, pin_dcmoto_dir2, pin_dcmoto_pwm_out, pin_dcmoto_encode1, pin_dcmoto_encode2);
+DCMotorServo servo =motor.initialize();
 
 bool flip=false;
 
 void setup() {
 
   //Tune the servo feedback
+  
   //Determined by trial and error
-  servo.myPID->SetTunings(PID_Tunings[0],PID_Tunings[1],PID_Tunings[2]);
-  servo.setPWMSkip(50);
-  servo.setAccuracy(50);
+//  servo.myPID->SetTunings(PID_Tunings[0],PID_Tunings[1],PID_Tunings[2]);
+//  servo.setPWMSkip(50);
+//  servo.setAccuracy(50);
   //Un-necessary, initializes to 0:
   //servo.setCurrentPosition(0);
   Serial.begin(115200);
@@ -140,7 +140,7 @@ void processCommand(String command){
       PID_Tunings[0] = getStringValue(command,';',1).toFloat();
       PID_Tunings[1] = getStringValue(command,';',2).toFloat();
       PID_Tunings[2] = getStringValue(command,';',3).toFloat();
-      servo.myPID->SetTunings(PID_Tunings[0],PID_Tunings[1],PID_Tunings[2]);
+      motor.savePID();
       Serial.print("NEW ");
     }    
     Serial.print("PID: P:");
