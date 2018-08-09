@@ -30,10 +30,10 @@ functionType = 'none'; %power, subdiv, none
 feedRate = 8000;
 
 %Desired number of perturbation trials per direction
-N_Trials = 5; %This will generate an N x N x N lattice
+N_Trials = 3; %This will generate an N x N x N lattice
 
 %Error in final position
-PosError = 0;
+PosError = 25;
 
 
 %==========================================================================
@@ -75,4 +75,4 @@ TrajPerturbation(x_points, x_grip, trajSettings, N_Trials, PosError,...
     
 %Combine all of the individual trajectories into a single file
 CombineGCode(folder_name);
-
+box on
