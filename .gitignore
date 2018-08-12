@@ -152,3 +152,10 @@ cmake-build-*
 
 #MATLAB
 *.asv
+
+
+#Python
+*.pyc
+
+
+
