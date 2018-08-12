@@ -7,12 +7,18 @@ clear all;
 %The function type is a power law scaling with the parameter
 worldParams = getWorldParams();
 
-file_name = 'clarkTest10_00mm';
+myDir  = pwd;
+idcs   = strfind(myDir,filesep);
+topDir = myDir(1:idcs(end-1)-1); 
+
+saveDir=fullfile(topDir,'Trajectories');
+
+file_name = 'Test_OptoFingers2';
 
 %Define the location of the home
-locHome  = [300;140;240];
-locGrabStart = [55;140;240];
-locGrabRelease = [300;140;150];
+locHome  = [500;140;200];
+locGrabStart = [500;140;0];
+locGrabRelease = locHome;%[300;140;150];
 
 
 x_points=[locHome, locGrabStart, locGrabRelease];
@@ -27,10 +33,10 @@ fx_power = 1/2;
 functionType = 'none'; %power, subdiv, none
 
 %Feedrate [mm/min]
-feedRate = 8000;
+feedRate = 5000;
 
 %Desired number of perturbation trials per direction
-N_Trials = 5; %This will generate an N x N x N lattice
+N_Trials = 3; %This will generate an N x N x N lattice
 
 %Error in final position
 PosError = 0;
@@ -48,7 +54,7 @@ trajSettings.subdiv=subdiv;
 
 
 SaveFile = strcat(file_name,'.gcode');
-folder_name = file_name;
+folder_name = fullfile(saveDir,file_name);
 if exist(folder_name,'dir')
     rmdir(folder_name,'s');
 end

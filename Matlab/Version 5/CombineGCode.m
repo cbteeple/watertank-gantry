@@ -11,8 +11,14 @@ finished=0;
 d = dir(fullfile(folder_name,'*.gcode*'));
 worldParams=getWorldParams();
 
+
+myDir  = folder_name;
+idcs   = strfind(myDir,filesep);
+filename = myDir(idcs(end):end); 
+
+
 %delete(fullfile(folder_name,[folder_name,'_Full.gcode']));
-outFid = fopen(fullfile(folder_name,[folder_name,'_Full.gcode']),'w' );
+outFid = fopen(fullfile(folder_name,[filename,'_Full.gcode']),'w' );
 for i=1:length(d)
     %Read in the files one by one
     fid=fopen(fullfile(d(i).folder,'/',d(i).name));
