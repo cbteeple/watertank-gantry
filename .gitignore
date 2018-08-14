@@ -146,9 +146,9 @@ CMakeListsPrivate.txt
 #CLion
 cmake-build-*
 
-#GCode
-*.gcode
-*.gc
+#GCode - Actually I want to save this
+#*.gcode
+#*.gc
 
 #MATLAB
 *.asv
