@@ -18,6 +18,7 @@ function TrajToGCode(x_traj,x_grip,FR,fileName)
     
     fprintf(fileID,'M107 P%d\n',gripChan); %release Fingers
     fprintf(fileID,'G4 P1000\n'); %Dwell for 4 sec while releasing
+    fprintf(fileID,'M114\n');
     
     for idx=1:length(x_traj)
         x_traj_i=x_traj{idx};
@@ -30,7 +31,8 @@ function TrajToGCode(x_traj,x_grip,FR,fileName)
                 formatSpec = 'G1 X%1.1f Y%1.0f Z%1.1f\n%';
                 fprintf(fileID,formatSpec, x_traj_i(:,i)');      
                 
-            end             
+            end    
+                fprintf(fileID,'M114\n');
         end
         
         if x_grip{idx}(1)

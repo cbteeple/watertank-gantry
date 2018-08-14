@@ -1,0 +1,24 @@
+rosbagTimestamp,header,seq,stamp,secs,nsecs,frame_id,level,name,msg,file,function,line,topics
+1534272125097816551,,1,,1534272125,87614967,'',2,"""/record""","""Recording to /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/output_2018-08-14-14-42-05.bag.""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""Recorder",395,[/rosout]
+1534272125097834785,,2,,1534272125,92196800,'',2,"""/record""","""Subscribing to /rosout_agg""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""shared_ptr<ros",212,[/rosout]
+1534272126099696434,,3,,1534272126,99547910,'',2,"""/record""","""Subscribing to /object_return""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""shared_ptr<ros",212,[/rosout]
+1534272127292715943,,1,,1534272127,292165040,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272128292623614,,2,,1534272128,292227029,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272129293970498,,3,,1534272129,293646097,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272130296286302,,4,,1534272130,295490980,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272131297284826,,5,,1534272131,296880960,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272132298937568,,6,,1534272132,298382997,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272133300591091,,7,,1534272133,300132036,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272134302138070,,8,,1534272134,301551103,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272135303726694,,9,,1534272135,302983045,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272136305507867,,10,,1534272136,304415941,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272137306634866,,11,,1534272137,306219100,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272138308400506,,12,,1534272138,308003902,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272139309664725,,13,,1534272139,309359073,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272140311472859,,14,,1534272140,310880899,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272141313095371,,15,,1534272141,312606096,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272142314707449,,16,,1534272142,314053058,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272143316591800,,17,,1534272143,315900087,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272144317881427,,18,,1534272144,317336082,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272145319660985,,19,,1534272145,319140911,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"
+1534272146320883583,,20,,1534272146,320533990,'',2,"""/readStuff""","""milliseconds","""serial_data_client.py""","""talker""",33,"[/object_return, /rosout]"

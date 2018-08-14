@@ -26,9 +26,9 @@ x_grip = {[0,worldParams.timeHome],...
           [1,worldParams.timeGrasp],...
           [0,worldParams.timeRelease]};
 
-subdiv   = 3;
-numSegs   = 50;
-fx_power = 1/2;
+subdiv   = 5;
+numSegs   = 30;
+fx_power = 1;
 
 functionType = 'none'; %power, subdiv, none
 
@@ -36,7 +36,7 @@ functionType = 'none'; %power, subdiv, none
 feedRate = 5000;
 
 %Desired number of perturbation trials per direction
-N_Trials = 3; %This will generate an N x N x N lattice
+N_Trials = 2; %This will generate an N x N x N lattice
 
 %Error in final position
 PosError = 0;

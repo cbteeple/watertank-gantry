@@ -1,0 +1,8 @@
+prefix=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install
+
+Name: motor_control
+Description: Description of motor_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install/lib 
+Requires: 

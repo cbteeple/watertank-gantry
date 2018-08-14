@@ -1,0 +1,14 @@
+gantry: 
+    devname: '/dev/ttyACM0' # [device string]
+    baudrate: 115200        # [baud]
+
+object_return: 
+    devname: '/dev/ttyUSB0' # [device string]
+    baudrate: 115200        # [baud]
+    default_delay: 1000     # [ms]
+
+camera1: 
+    devname: '/dev/video0'  #[device string]
+    location: 'Front'       #[string]
+    picture_width: 1920     #[px]
+    picture_height: 1080    #[px]

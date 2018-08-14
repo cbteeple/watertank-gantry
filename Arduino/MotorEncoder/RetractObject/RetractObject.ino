@@ -3,6 +3,8 @@
 #include <Encoder.h>
 #include <PID_v1.h>
 #include <DCMotorServo.h>
+#include <EEPROMAnything.h>
+
 
 #define pin_dcmoto_dir1 4
 #define pin_dcmoto_dir2 5
@@ -11,22 +13,38 @@
 #define pin_dcmoto_encode2 2
 //Determined by experimentation, depends on your encoder, and your belt/gearing ratios:
 #define dcmoto_encoder_1_rev 1920
-float setpoint = 3;
-float PID_Tunings[3]={0.1,0.05,0.05};
+
+#define settingsStart 0
+
+struct config_t
+{
+    float PID_Tunings[3]={0.1,0.05,0.05};
+    float setpoint =3;
+    unsigned int looptime =100;
+} settings;
+
+
 int servoMode=0;
 int setCounts=0;
 int prevPos=0;
 bool motorOn=false;
+bool outputsOn= false;
 
 DCMotorServo servo = DCMotorServo(pin_dcmoto_dir1, pin_dcmoto_dir2, pin_dcmoto_pwm_out, pin_dcmoto_encode1, pin_dcmoto_encode2);
 
 bool flip=false;
 
+//Timing Vars
+unsigned long timeCurr=0;
+unsigned long timeLast=0;
+long encoder_offset=0;
+
+
 void setup() {
 
   //Tune the servo feedback
   //Determined by trial and error
-  servo.myPID->SetTunings(PID_Tunings[0],PID_Tunings[1],PID_Tunings[2]);
+  servo.myPID->SetTunings(settings.PID_Tunings[0],settings.PID_Tunings[1],settings.PID_Tunings[2]);
   servo.setPWMSkip(50);
   servo.setAccuracy(50);
   //Un-necessary, initializes to 0:
@@ -37,36 +55,51 @@ void setup() {
 
 void loop() {
   //wait 1s before starting
+  timeCurr=millis();
   static unsigned long motor_timeout = millis() + 1000;
   static bool motor_go = 0;
 
 
   readSerial();
-  
- 
+
+  if (outputsOn && timeCurr-timeLast>= settings.looptime){
+    Serial.print(timeCurr);
+    Serial.print('\t');
+    Serial.print(timeCurr-timeLast);
+    Serial.print('\t');
+    Serial.print(servo.getRequestedPosition()-encoder_offset);
+    Serial.print('\t');
+    Serial.print(servo.getActualPosition()-encoder_offset);
+    Serial.print('\n');
+    timeLast=timeCurr;  
+  }
+
+
   
   if(motorOn){
     setSetpoint();
-     
-    //Run the servo
-    servo.run();
-  
-    if (servo.finished()) {
+       
+  /*   if (servo.finished()) {
       if(motor_go) {
         //stop disengages the motor feedback system, in which case if you moved the motor, it would fight you if you didn't "stop" it first (provided you were still running servo.run() operations)
         servo.stop();
-        motor_timeout = millis() + 1500;
-        motor_go = 0;
+       // motor_timeout = millis() + 1500;
+      //  motor_go = 0;
+
       }
-      if(motor_timeout < millis()) {
+     if(motor_timeout < millis()) {
         //Setting a move operation will ensure that servo.finished() no longer returns true
-        
-        servo.move(setCounts);
+
+        servo.moveTo(setCounts+encoder_offset);
           
         motor_go = 1;
         flip=!flip;
       }
-    }
+      
+    }*/
+    servo.moveTo(setCounts+encoder_offset);
+    //Run the servo
+    servo.run();
   }
 
 
@@ -97,15 +130,19 @@ void setSetpoint(){
     case 1:{
       setCounts=0;
     }
+    case 2:{
+      setCounts=int(settings.setpoint*dcmoto_encoder_1_rev);
+    }
     break;
-    default:{
+    case 99:{
       if (flip){
-        setCounts=int(setpoint*dcmoto_encoder_1_rev);
+        setCounts=int(settings.setpoint*dcmoto_encoder_1_rev);
       }
       else{
-        setCounts=int(-setpoint*dcmoto_encoder_1_rev);
+        setCounts=int(-settings.setpoint*dcmoto_encoder_1_rev);
       } 
     }
+    default:{}
     break;
   }
   
@@ -123,11 +160,20 @@ void setMode(){
     }
     break;
     default:{
-      motorOn=true; 
+      motorOn=true;
     }
     break;
   }
 }
+
+
+void loadSettings(){
+  EEPROM_readAnything(settingsStart,settings);
+  }
+
+void saveSettings(){
+  EEPROM_writeAnything(settingsStart,settings);
+  }
 
 
 
@@ -135,31 +181,31 @@ void setMode(){
 
 
 void processCommand(String command){
+  Serial.print("_");
   if (command.startsWith("PID")){
     if(getStringValue(command,';',1).length()){
-      PID_Tunings[0] = getStringValue(command,';',1).toFloat();
-      PID_Tunings[1] = getStringValue(command,';',2).toFloat();
-      PID_Tunings[2] = getStringValue(command,';',3).toFloat();
-      servo.myPID->SetTunings(PID_Tunings[0],PID_Tunings[1],PID_Tunings[2]);
+      settings.PID_Tunings[0] = getStringValue(command,';',1).toFloat();
+      settings.PID_Tunings[1] = getStringValue(command,';',2).toFloat();
+      settings.PID_Tunings[2] = getStringValue(command,';',3).toFloat();
+      servo.myPID->SetTunings(settings.PID_Tunings[0],settings.PID_Tunings[1],settings.PID_Tunings[2]);
       Serial.print("NEW ");
     }    
     Serial.print("PID: P:");
-    Serial.print(PID_Tunings[0],3);
+    Serial.print(settings.PID_Tunings[0],3);
     Serial.print("\tI: ");
-    Serial.print(PID_Tunings[1],3);
+    Serial.print(settings.PID_Tunings[1],3);
     Serial.print("\tD: ");
-    Serial.print(PID_Tunings[2],3);
-    Serial.print("\n");
+    Serial.print(settings.PID_Tunings[2],3);
 
   }
   else if(command.startsWith("SET")){
     if(getStringValue(command,';',1).length()){
-      setpoint= getStringValue(command,';',1).toFloat();
+      settings.setpoint= getStringValue(command,';',1).toFloat();
       Serial.print("NEW ");
     }
       Serial.print("SETPOINT: ");
-      Serial.print(setpoint,3);
-      Serial.print(" revs\n");
+      Serial.print(settings.setpoint,3);
+      Serial.print(" revs");
   }
   else if(command.startsWith("MODE")){
     if(getStringValue(command,';',1).length()){
@@ -169,11 +215,41 @@ void processCommand(String command){
     }
     Serial.print("MODE: ");
     Serial.print(servoMode);
-    Serial.print("\n");
+  }  
+  else if (command.startsWith("TIME")){
+    if(getStringValue(command,';',1).length()){
+      settings.looptime = getStringValue(command,';',1).toInt();
+      Serial.print("NEW ");
+    }    
+    Serial.print("Loop Time: ");
+    Serial.print(settings.looptime);
+  }
+  else if(command.startsWith("ZERO")){
+    encoder_offset=servo.getActualPosition();
+    servo.stop();
+    Serial.print("Reset Encoders");
+  }
+  else if(command.startsWith("LOAD")){
+    loadSettings();
+    Serial.print("Load Settings");
+  }
+  else if(command.startsWith("SAVE")){
+    saveSettings();
+    Serial.print("Save Settings");
+  }
+  else if(command.startsWith("OFF")){
+    outputsOn = false;
+    Serial.print("Output: OFF");
+  }
+  else if(command.startsWith("ON")){ 
+    outputsOn = true;
+    Serial.print("Output: ON");
   }
   else {
-    Serial.println("Unrecognized Command");
+    Serial.print("Unrecognized Command");
     }
+
+  Serial.print("\n");
 
 
 }
