@@ -34,7 +34,7 @@ All commands return a serial string with what they did.
 -  and ends with a newline '\n'
 
 ## Outputs
-The code sends data separated by '\t' in the following order:
+The code sends lines of data separated by '\t' in the following order:
 
 - **[time since last MCU reset *(ms)*]**
 - **[sample rate *(ms)*]**
