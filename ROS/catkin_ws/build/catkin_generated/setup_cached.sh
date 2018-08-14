@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel:$CMAKE_PREFIX_PATH"
 export PWD="/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src:$ROS_PACKAGE_PATH"
