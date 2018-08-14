@@ -32,3 +32,11 @@ This code enables a motor with encoder to follow a setpoint with PID values give
 All commands return a serial string with what they did.
 - This string begins with and underscore "_"
 -  and ends with a newline '\n'
+
+## Outputs
+The code sends data separated by '\t' in the following order:
+
+- **[time since last MCU reset *(ms)*]**
+- **[sample rate *(ms)*]**
+- **[setpoint *(encoder counts)*]**
+- **[current position *(encoder counts)*]**
