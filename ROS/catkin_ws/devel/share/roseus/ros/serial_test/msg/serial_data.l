@@ -42,10 +42,10 @@
    (+
     ;; uint32 _milliseconds
     4
-    ;; uint32 _rate
+    ;; int32 _rate
     4
-    ;; uint16[] _data
-    (* 2    (length _data)) 4
+    ;; int32[] _data
+    (* 4    (length _data)) 4
     ))
   (:serialize
    (&optional strm)
@@ -53,12 +53,12 @@
               (make-string-output-stream (send self :serialization-length)))))
      ;; uint32 _milliseconds
        (write-long _milliseconds s)
-     ;; uint32 _rate
+     ;; int32 _rate
        (write-long _rate s)
-     ;; uint16[] _data
+     ;; int32[] _data
      (write-long (length _data) s)
      (dotimes (i (length _data))
-       (write-word (elt _data i) s)
+       (write-long (elt _data i) s)
        )
      ;;
      (if (null strm) (get-output-stream-string s))))
@@ -66,30 +66,31 @@
    (buf &optional (ptr- 0))
    ;; uint32 _milliseconds
      (setq _milliseconds (sys::peek buf ptr- :integer)) (incf ptr- 4)
-   ;; uint32 _rate
+   ;; int32 _rate
      (setq _rate (sys::peek buf ptr- :integer)) (incf ptr- 4)
-   ;; uint16[] _data
+   ;; int32[] _data
    (let (n)
      (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4)
      (setq _data (instantiate integer-vector n))
      (dotimes (i n)
-     (setf (elt _data i) (sys::peek buf ptr- :short)) (incf ptr- 2)
+     (setf (elt _data i) (sys::peek buf ptr- :integer)) (incf ptr- 4)
      ))
    ;;
    self)
   )
 
-(setf (get serial_test::serial_data :md5sum-) "1dbb12ecfd1d112426442f51a9aecd31")
+(setf (get serial_test::serial_data :md5sum-) "708b64347fb146b1e49fddd9e079952d")
 (setf (get serial_test::serial_data :datatype-) "serial_test/serial_data")
 (setf (get serial_test::serial_data :definition-)
       "uint32 milliseconds
-uint32 rate
-uint16[] data
+int32 rate
+int32[] data
+
 
 ")
 
 
 
-(provide :serial_test/serial_data "1dbb12ecfd1d112426442f51a9aecd31")
+(provide :serial_test/serial_data "708b64347fb146b1e49fddd9e079952d")
 
 

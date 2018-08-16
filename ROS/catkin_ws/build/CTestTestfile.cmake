@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
-subdirs(motor_control)
+subdirs(gantry_control)
+subdirs(return_control)
 subdirs(serial_test)
 subdirs(usb_cam-develop)

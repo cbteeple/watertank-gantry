@@ -7,15 +7,16 @@ import struct
 
 
 class serial_data(genpy.Message):
-  _md5sum = "1dbb12ecfd1d112426442f51a9aecd31"
+  _md5sum = "708b64347fb146b1e49fddd9e079952d"
   _type = "serial_test/serial_data"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint32 milliseconds
-uint32 rate
-uint16[] data
+int32 rate
+int32[] data
+
 """
   __slots__ = ['milliseconds','rate','data']
-  _slot_types = ['uint32','uint32','uint16[]']
+  _slot_types = ['uint32','int32','int32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -58,10 +59,10 @@ uint16[] data
     """
     try:
       _x = self
-      buff.write(_get_struct_2I().pack(_x.milliseconds, _x.rate))
+      buff.write(_get_struct_Ii().pack(_x.milliseconds, _x.rate))
       length = len(self.data)
       buff.write(_struct_I.pack(length))
-      pattern = '<%sH'%length
+      pattern = '<%si'%length
       buff.write(struct.pack(pattern, *self.data))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
@@ -76,11 +77,11 @@ uint16[] data
       _x = self
       start = end
       end += 8
-      (_x.milliseconds, _x.rate,) = _get_struct_2I().unpack(str[start:end])
+      (_x.milliseconds, _x.rate,) = _get_struct_Ii().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sH'%length
+      pattern = '<%si'%length
       start = end
       end += struct.calcsize(pattern)
       self.data = struct.unpack(pattern, str[start:end])
@@ -97,10 +98,10 @@ uint16[] data
     """
     try:
       _x = self
-      buff.write(_get_struct_2I().pack(_x.milliseconds, _x.rate))
+      buff.write(_get_struct_Ii().pack(_x.milliseconds, _x.rate))
       length = len(self.data)
       buff.write(_struct_I.pack(length))
-      pattern = '<%sH'%length
+      pattern = '<%si'%length
       buff.write(self.data.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
@@ -116,14 +117,14 @@ uint16[] data
       _x = self
       start = end
       end += 8
-      (_x.milliseconds, _x.rate,) = _get_struct_2I().unpack(str[start:end])
+      (_x.milliseconds, _x.rate,) = _get_struct_Ii().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sH'%length
+      pattern = '<%si'%length
       start = end
       end += struct.calcsize(pattern)
-      self.data = numpy.frombuffer(str[start:end], dtype=numpy.uint16, count=length)
+      self.data = numpy.frombuffer(str[start:end], dtype=numpy.int32, count=length)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -132,9 +133,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2I = None
-def _get_struct_2I():
-    global _struct_2I
-    if _struct_2I is None:
-        _struct_2I = struct.Struct("<2I")
-    return _struct_2I
+_struct_Ii = None
+def _get_struct_Ii():
+    global _struct_Ii
+    if _struct_Ii is None:
+        _struct_Ii = struct.Struct("<Ii")
+    return _struct_Ii

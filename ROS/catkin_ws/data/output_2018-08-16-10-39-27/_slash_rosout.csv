@@ -1,0 +1,571 @@
+rosbagTimestamp,header,seq,stamp,secs,nsecs,frame_id,level,name,msg,file,function,line,topics_0
+1534430367823569917,,1,,1534430367,814271955,'',2,"""/record""","""Recording to /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/data/output_2018-08-16-10-39-27.bag.""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""Recorder::startWriting""",395,/rosout
+1534430367823589000,,2,,1534430367,818939175,'',2,"""/record""","""Subscribing to /rosout_agg""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe""",212,/rosout
+1534430368825651427,,3,,1534430368,825502371,'',2,"""/record""","""Subscribing to /object_return""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe""",212,/rosout
+1534430370494929812,,1,,1534430370,494390964,'',2,"""/readStuff""","""milliseconds: 1000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430371495587163,,2,,1534430371,494966983,'',2,"""/readStuff""","""milliseconds: 2000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430372495387324,,3,,1534430372,495018959,'',2,"""/readStuff""","""milliseconds: 3000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430373496219316,,4,,1534430373,495729923,'',2,"""/readStuff""","""milliseconds: 4000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430374496075014,,5,,1534430374,495510101,'',2,"""/readStuff""","""milliseconds: 5000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430374891421880,,1,,1534430374,891145944,'',2,"""/gantry_sendServer""","""message: \""G28\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout
+1534430375497002322,,6,,1534430375,496612071,'',2,"""/readStuff""","""milliseconds: 6000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430375825559168,,4,,1534430375,825380960,'',2,"""/record""","""Subscribing to /to_gantry""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe""",212,/rosout
+1534430376100167313,,2,,1534430376,99431037,'',2,"""/gantry_sendServer""","""error: \""X:0.00 Y:0.00 Z:0.00 E:0.00 Count X:0 Y:0 Z:0\""\nposition: [0.0",0.0,"0.0]""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534430376102155865,,3,,1534430376,101845979,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534430376496691786,,7,,1534430376,496325969,'',2,"""/readStuff""","""milliseconds: 7000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430376825094502,,5,,1534430376,824949642,'',2,"""/record""","""Subscribing to /from_gantry""","""/tmp/binarydeb/ros-kinetic-rosbag-1.12.13/src/recorder.cpp""","""shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe""",212,/rosout
+1534430377497568044,,8,,1534430377,497066974,'',2,"""/readStuff""","""milliseconds: 8000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430378498708264,,9,,1534430378,498122930,'',2,"""/readStuff""","""milliseconds: 9000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430379498589152,,10,,1534430379,497864961,'',2,"""/readStuff""","""milliseconds: 10000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430380499341161,,11,,1534430380,498948097,'',2,"""/readStuff""","""milliseconds: 11000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430381499083140,,12,,1534430381,498775005,'',2,"""/readStuff""","""milliseconds: 12000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430382499910948,,13,,1534430382,499469995,'',2,"""/readStuff""","""milliseconds: 13000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430383499944063,,14,,1534430383,499536037,'',2,"""/readStuff""","""milliseconds: 14000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430384500844197,,15,,1534430384,500277996,'',2,"""/readStuff""","""milliseconds: 15000\nrate: 1000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430388501964559,,16,,1534430388,501589059,'',2,"""/readStuff""","""milliseconds: 19000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430392503761402,,17,,1534430392,503199100,'',2,"""/readStuff""","""milliseconds: 23000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430396506031997,,18,,1534430396,505515098,'',2,"""/readStuff""","""milliseconds: 27000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430400507227941,,19,,1534430400,506834030,'',2,"""/readStuff""","""milliseconds: 31000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430404508569849,,20,,1534430404,508074998,'',2,"""/readStuff""","""milliseconds: 35000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430408510203392,,21,,1534430408,509741067,'',2,"""/readStuff""","""milliseconds: 39000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430412512505458,,22,,1534430412,512018918,'',2,"""/readStuff""","""milliseconds: 43000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430416514150242,,23,,1534430416,513344049,'',2,"""/readStuff""","""milliseconds: 47000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430420515710238,,24,,1534430420,514964103,'',2,"""/readStuff""","""milliseconds: 51000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430424516784167,,25,,1534430424,516272068,'',2,"""/readStuff""","""milliseconds: 55000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430428519011551,,26,,1534430428,518627882,'',2,"""/readStuff""","""milliseconds: 59000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430432520430746,,27,,1534430432,519892930,'',2,"""/readStuff""","""milliseconds: 63000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430436522320482,,28,,1534430436,521492958,'',2,"""/readStuff""","""milliseconds: 67000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430440523277267,,29,,1534430440,522773981,'',2,"""/readStuff""","""milliseconds: 71000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430444525606593,,30,,1534430444,525108098,'',2,"""/readStuff""","""milliseconds: 75000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430448527516094,,31,,1534430448,526722908,'',2,"""/readStuff""","""milliseconds: 79000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430452528642860,,32,,1534430452,527983903,'',2,"""/readStuff""","""milliseconds: 83000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430456529684614,,33,,1534430456,529294967,'',2,"""/readStuff""","""milliseconds: 87000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430460532053319,,34,,1534430460,531626939,'',2,"""/readStuff""","""milliseconds: 91000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430464533671859,,35,,1534430464,533250093,'',2,"""/readStuff""","""milliseconds: 95000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430468535440463,,36,,1534430468,534553050,'',2,"""/readStuff""","""milliseconds: 99000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430472536560272,,37,,1534430472,536170959,'',2,"""/readStuff""","""milliseconds: 103000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430476538863038,,38,,1534430476,538525104,'',2,"""/readStuff""","""milliseconds: 107000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430480539863506,,39,,1534430480,539529085,'',2,"""/readStuff""","""milliseconds: 111000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430484541299104,,40,,1534430484,541003942,'',2,"""/readStuff""","""milliseconds: 115000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430488543150622,,41,,1534430488,542748928,'',2,"""/readStuff""","""milliseconds: 119000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430492545521634,,42,,1534430492,545032978,'',2,"""/readStuff""","""milliseconds: 123000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430496546620825,,43,,1534430496,546309947,'',2,"""/readStuff""","""milliseconds: 127000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430500548385598,,44,,1534430500,547916889,'',2,"""/readStuff""","""milliseconds: 131000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430504549759736,,45,,1534430504,549252033,'',2,"""/readStuff""","""milliseconds: 135000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430508551885590,,46,,1534430508,551558017,'',2,"""/readStuff""","""milliseconds: 139000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430512553254658,,47,,1534430512,552865982,'',2,"""/readStuff""","""milliseconds: 143000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430516554948608,,48,,1534430516,554563045,'',2,"""/readStuff""","""milliseconds: 147000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430520556314136,,49,,1534430520,555735111,'',2,"""/readStuff""","""milliseconds: 151000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430524558517720,,50,,1534430524,558101892,'',2,"""/readStuff""","""milliseconds: 155000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430528560762365,,51,,1534430528,559710025,'',2,"""/readStuff""","""milliseconds: 159000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430532561491292,,52,,1534430532,561002016,'',2,"""/readStuff""","""milliseconds: 163000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430536562757360,,53,,1534430536,562272071,'',2,"""/readStuff""","""milliseconds: 167000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430540564982646,,54,,1534430540,564589023,'',2,"""/readStuff""","""milliseconds: 171000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430544566344816,,55,,1534430544,565989017,'',2,"""/readStuff""","""milliseconds: 175000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430548568145024,,56,,1534430548,567517995,'',2,"""/readStuff""","""milliseconds: 179000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430552569232722,,57,,1534430552,568846940,'',2,"""/readStuff""","""milliseconds: 183000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430556571716595,,58,,1534430556,571094036,'',2,"""/readStuff""","""milliseconds: 187000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430560572976374,,59,,1534430560,572628021,'',2,"""/readStuff""","""milliseconds: 191000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430564574429907,,60,,1534430564,574028968,'',2,"""/readStuff""","""milliseconds: 195000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430568575682902,,61,,1534430568,575340032,'',2,"""/readStuff""","""milliseconds: 199000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430572578392059,,62,,1534430572,577996969,'',2,"""/readStuff""","""milliseconds: 203000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430576579729111,,63,,1534430576,579335927,'',2,"""/readStuff""","""milliseconds: 207000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430580580973288,,64,,1534430580,580575942,'',2,"""/readStuff""","""milliseconds: 211000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430584582773634,,65,,1534430584,581895112,'',2,"""/readStuff""","""milliseconds: 215000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430588585118151,,66,,1534430588,584597110,'',2,"""/readStuff""","""milliseconds: 219000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430592586475741,,67,,1534430592,585789918,'',2,"""/readStuff""","""milliseconds: 223000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430596587486473,,68,,1534430596,587115049,'',2,"""/readStuff""","""milliseconds: 227000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430600589150654,,69,,1534430600,588694095,'',2,"""/readStuff""","""milliseconds: 231000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430604591468305,,70,,1534430604,591053009,'',2,"""/readStuff""","""milliseconds: 235000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430608592847782,,71,,1534430608,592339038,'',2,"""/readStuff""","""milliseconds: 239000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430612594509906,,72,,1534430612,593986034,'',2,"""/readStuff""","""milliseconds: 243000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430616595671413,,73,,1534430616,595263004,'',2,"""/readStuff""","""milliseconds: 247000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430620597946476,,74,,1534430620,597558975,'',2,"""/readStuff""","""milliseconds: 251000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430624599504324,,75,,1534430624,598921060,'',2,"""/readStuff""","""milliseconds: 255000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430628600814928,,76,,1534430628,600428104,'',2,"""/readStuff""","""milliseconds: 259000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430632602103270,,77,,1534430632,601763963,'',2,"""/readStuff""","""milliseconds: 263000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430636604478374,,78,,1534430636,604099988,'',2,"""/readStuff""","""milliseconds: 267000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430640605746746,,79,,1534430640,605417966,'',2,"""/readStuff""","""milliseconds: 271000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430644607402978,,80,,1534430644,607014894,'',2,"""/readStuff""","""milliseconds: 275000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430648609252049,,81,,1534430648,608344078,'',2,"""/readStuff""","""milliseconds: 279000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430652611254286,,82,,1534430652,610658884,'',2,"""/readStuff""","""milliseconds: 283000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430656612658834,,83,,1534430656,612272024,'',2,"""/readStuff""","""milliseconds: 287000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430660614319641,,84,,1534430660,613548040,'',2,"""/readStuff""","""milliseconds: 291000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430664615316184,,85,,1534430664,614854097,'',2,"""/readStuff""","""milliseconds: 295000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430668617612728,,86,,1534430668,617131948,'',2,"""/readStuff""","""milliseconds: 299000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430672619174425,,87,,1534430672,618793964,'',2,"""/readStuff""","""milliseconds: 303000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430676620490235,,88,,1534430676,620095968,'',2,"""/readStuff""","""milliseconds: 307000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430680621988592,,89,,1534430680,621351957,'',2,"""/readStuff""","""milliseconds: 311000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430684624405536,,90,,1534430684,624017000,'',2,"""/readStuff""","""milliseconds: 315000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430688626171226,,91,,1534430688,625314950,'',2,"""/readStuff""","""milliseconds: 319000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430692627203450,,92,,1534430692,626605987,'',2,"""/readStuff""","""milliseconds: 323000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430696628275872,,93,,1534430696,627888917,'',2,"""/readStuff""","""milliseconds: 327000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430700631495849,,94,,1534430700,630568981,'',2,"""/readStuff""","""milliseconds: 331000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430704632179346,,95,,1534430704,631834030,'',2,"""/readStuff""","""milliseconds: 335000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430708633613035,,96,,1534430708,633110046,'',2,"""/readStuff""","""milliseconds: 339000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430712635179260,,97,,1534430712,634803056,'',2,"""/readStuff""","""milliseconds: 343000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430716637562611,,98,,1534430716,637063026,'',2,"""/readStuff""","""milliseconds: 347000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430720638870123,,99,,1534430720,638376951,'',2,"""/readStuff""","""milliseconds: 351000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430724640023003,,100,,1534430724,639632940,'',2,"""/readStuff""","""milliseconds: 355000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430728641750981,,101,,1534430728,641277074,'',2,"""/readStuff""","""milliseconds: 359000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430732644094659,,102,,1534430732,643569946,'',2,"""/readStuff""","""milliseconds: 363000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430736645435611,,103,,1534430736,644875049,'',2,"""/readStuff""","""milliseconds: 367000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430740646753340,,104,,1534430740,646179914,'',2,"""/readStuff""","""milliseconds: 371000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430744648180430,,105,,1534430744,647808074,'',2,"""/readStuff""","""milliseconds: 375000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430748650609456,,106,,1534430748,650096893,'',2,"""/readStuff""","""milliseconds: 379000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430752651888560,,107,,1534430752,651410102,'',2,"""/readStuff""","""milliseconds: 383000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430756653653245,,108,,1534430756,653028964,'',2,"""/readStuff""","""milliseconds: 387000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430760654951803,,109,,1534430760,654337882,'',2,"""/readStuff""","""milliseconds: 391000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430764657000147,,110,,1534430764,656611919,'',2,"""/readStuff""","""milliseconds: 395000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430768658347756,,111,,1534430768,657939910,'',2,"""/readStuff""","""milliseconds: 399000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430772660070560,,112,,1534430772,659553050,'',2,"""/readStuff""","""milliseconds: 403000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430776661302662,,113,,1534430776,660907983,'',2,"""/readStuff""","""milliseconds: 407000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430780663517820,,114,,1534430780,663155078,'',2,"""/readStuff""","""milliseconds: 411000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430784665379916,,115,,1534430784,664840936,'',2,"""/readStuff""","""milliseconds: 415000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430788666594673,,116,,1534430788,666085958,'',2,"""/readStuff""","""milliseconds: 419000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430792667828311,,117,,1534430792,667402029,'',2,"""/readStuff""","""milliseconds: 423000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430796670019539,,118,,1534430796,669683933,'',2,"""/readStuff""","""milliseconds: 427000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430800671845967,,119,,1534430800,671360015,'',2,"""/readStuff""","""milliseconds: 431000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430804673018361,,120,,1534430804,672625064,'',2,"""/readStuff""","""milliseconds: 435000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430808674661041,,121,,1534430808,673892974,'',2,"""/readStuff""","""milliseconds: 439000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430812676700513,,122,,1534430812,676242113,'',2,"""/readStuff""","""milliseconds: 443000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430816678359444,,123,,1534430816,677856922,'',2,"""/readStuff""","""milliseconds: 447000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430820679584005,,124,,1534430820,679204940,'',2,"""/readStuff""","""milliseconds: 451000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430824680820471,,125,,1534430824,680433034,'',2,"""/readStuff""","""milliseconds: 455000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430828684015286,,126,,1534430828,683046102,'',2,"""/readStuff""","""milliseconds: 459000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430832684758869,,127,,1534430832,684374094,'',2,"""/readStuff""","""milliseconds: 463000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430836686360207,,128,,1534430836,685668945,'',2,"""/readStuff""","""milliseconds: 467000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430840687526195,,129,,1534430840,686945915,'',2,"""/readStuff""","""milliseconds: 471000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430844689984689,,130,,1534430844,689594030,'',2,"""/readStuff""","""milliseconds: 475000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430848691581521,,131,,1534430848,690901041,'',2,"""/readStuff""","""milliseconds: 479000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430852692734330,,132,,1534430852,692183971,'',2,"""/readStuff""","""milliseconds: 483000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430856694384079,,133,,1534430856,693837881,'',2,"""/readStuff""","""milliseconds: 487000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430860696636825,,134,,1534430860,696155071,'',2,"""/readStuff""","""milliseconds: 491000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430864697789382,,135,,1534430864,697407960,'',2,"""/readStuff""","""milliseconds: 495000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430868699601693,,136,,1534430868,698786020,'',2,"""/readStuff""","""milliseconds: 499000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430872700716306,,137,,1534430872,700330018,'',2,"""/readStuff""","""milliseconds: 503000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430876703145520,,138,,1534430876,702631950,'',2,"""/readStuff""","""milliseconds: 507000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430880704443620,,139,,1534430880,703944921,'',2,"""/readStuff""","""milliseconds: 511000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430884705960133,,140,,1534430884,705564975,'',2,"""/readStuff""","""milliseconds: 515000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430888707233977,,141,,1534430888,706911087,'',2,"""/readStuff""","""milliseconds: 519000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430892709712675,,142,,1534430892,709191083,'',2,"""/readStuff""","""milliseconds: 523000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430896711499120,,143,,1534430896,710827112,'',2,"""/readStuff""","""milliseconds: 527000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430900712626499,,144,,1534430900,712152957,'',2,"""/readStuff""","""milliseconds: 531000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430904713762796,,145,,1534430904,713370084,'',2,"""/readStuff""","""milliseconds: 535000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430908716250053,,146,,1534430908,715734958,'',2,"""/readStuff""","""milliseconds: 539000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430912717696509,,147,,1534430912,717303991,'',2,"""/readStuff""","""milliseconds: 543000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430916719030597,,148,,1534430916,718640089,'',2,"""/readStuff""","""milliseconds: 547000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430920720430314,,149,,1534430920,719914913,'',2,"""/readStuff""","""milliseconds: 551000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430924722934959,,150,,1534430924,722563028,'',2,"""/readStuff""","""milliseconds: 555000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430928724184999,,151,,1534430928,723823070,'',2,"""/readStuff""","""milliseconds: 559000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430932725457914,,152,,1534430932,725135087,'',2,"""/readStuff""","""milliseconds: 563000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430936727071548,,153,,1534430936,726428985,'',2,"""/readStuff""","""milliseconds: 567000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430940729575189,,154,,1534430940,729048967,'',2,"""/readStuff""","""milliseconds: 571000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430944731002512,,155,,1534430944,730376005,'',2,"""/readStuff""","""milliseconds: 575000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430948732123652,,156,,1534430948,731607913,'',2,"""/readStuff""","""milliseconds: 579000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430952733749197,,157,,1534430952,733272075,'',2,"""/readStuff""","""milliseconds: 583000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430956736233291,,158,,1534430956,735583066,'',2,"""/readStuff""","""milliseconds: 587000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430960737188293,,159,,1534430960,736831903,'',2,"""/readStuff""","""milliseconds: 591000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430964739302303,,160,,1534430964,738544940,'',2,"""/readStuff""","""milliseconds: 595000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430968740111428,,161,,1534430968,739739894,'',2,"""/readStuff""","""milliseconds: 599000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430972742647805,,162,,1534430972,742052078,'',2,"""/readStuff""","""milliseconds: 603000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430976743928307,,163,,1534430976,743367910,'',2,"""/readStuff""","""milliseconds: 607000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430980745312073,,164,,1534430980,744997024,'',2,"""/readStuff""","""milliseconds: 611000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430984746868310,,165,,1534430984,746330022,'',2,"""/readStuff""","""milliseconds: 615000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430988749398251,,166,,1534430988,748568058,'',2,"""/readStuff""","""milliseconds: 619000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430992750636330,,167,,1534430992,750216007,'',2,"""/readStuff""","""milliseconds: 623000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534430996751835886,,168,,1534430996,751472949,'',2,"""/readStuff""","""milliseconds: 627000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431000753422696,,169,,1534431000,752863883,'',2,"""/readStuff""","""milliseconds: 631000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431004755416801,,170,,1534431004,755108118,'',2,"""/readStuff""","""milliseconds: 635000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431008757573310,,171,,1534431008,756735086,'',2,"""/readStuff""","""milliseconds: 639000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431012758548985,,172,,1534431012,758022069,'',2,"""/readStuff""","""milliseconds: 643000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431016759824437,,173,,1534431016,759287118,'',2,"""/readStuff""","""milliseconds: 647000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431020762434637,,174,,1534431020,761940956,'',2,"""/readStuff""","""milliseconds: 651000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431024763575340,,175,,1534431024,763252973,'',2,"""/readStuff""","""milliseconds: 655000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431028765488626,,176,,1534431028,764509916,'',2,"""/readStuff""","""milliseconds: 659000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431032766485446,,177,,1534431032,766169071,'',2,"""/readStuff""","""milliseconds: 663000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431036768835209,,178,,1534431036,768465042,'',2,"""/readStuff""","""milliseconds: 667000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431040770155314,,179,,1534431040,769784927,'',2,"""/readStuff""","""milliseconds: 671000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431044771534832,,180,,1534431044,771059036,'',2,"""/readStuff""","""milliseconds: 675000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431048772950616,,181,,1534431048,772630929,'',2,"""/readStuff""","""milliseconds: 679000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431052775440580,,182,,1534431052,774930953,'',2,"""/readStuff""","""milliseconds: 683000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431056776744441,,183,,1534431056,776287078,'',2,"""/readStuff""","""milliseconds: 687000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431060778382341,,184,,1534431060,777889013,'',2,"""/readStuff""","""milliseconds: 691000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431064779687891,,185,,1534431064,779222011,'',2,"""/readStuff""","""milliseconds: 695000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431068781840850,,186,,1534431068,781512022,'',2,"""/readStuff""","""milliseconds: 699000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431069512017727,,4,,1534431069,510947942,'',2,"""/gantry_sendServer""","""message: \""G28\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431070715903982,,5,,1534431070,715017080,'',2,"""/gantry_sendServer""","""error: \""X:0.00 Y:0.00 Z:0.00 E:0.00 Count X:0 Y:0 Z:0\""\nposition: [0.0",0.0,"0.0]""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431070717954057,,6,,1534431070,717690944,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431072783336282,,187,,1534431072,783056974,'',2,"""/readStuff""","""milliseconds: 703000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431074891795007,,7,,1534431074,891433000,'',2,"""/gantry_sendServer""","""message: \""G28\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431076097900878,,8,,1534431076,97538948,'',2,"""/gantry_sendServer""","""error: \""X:0.00 Y:0.00 Z:0.00 E:0.00 Count X:0 Y:0 Z:0\""\nposition: [0.0",0.0,"0.0]""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431076100615301,,9,,1534431076,99982023,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431076103081375,,10,,1534431076,102607011,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431076109025950,,11,,1534431076,108786106,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431076110878413,,12,,1534431076,110656023,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431076117267253,,13,,1534431076,117010116,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431076119625808,,14,,1534431076,119323015,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431076784767796,,188,,1534431076,784398078,'',2,"""/readStuff""","""milliseconds: 707000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431077125671094,,15,,1534431077,124927043,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431077127972416,,16,,1534431077,127165079,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431077138633061,,17,,1534431077,137346982,'',2,"""/gantry_sendServer""","""error: \""X:0.00 Y:0.00 Z:0.00 E:0.00 Count X:0 Y:0 Z:0\""\nposition: [0.0",0.0,"0.0]""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431077140353635,,18,,1534431077,140049934,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431077142782115,,19,,1534431077,142492055,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431077154213323,,20,,1534431077,153354883,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431077155832481,,21,,1534431077,155553102,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431079161823937,,22,,1534431079,161096096,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431080786270715,,189,,1534431080,785696029,'',2,"""/readStuff""","""milliseconds: 711000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431081160462217,,23,,1534431081,160047054,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431083163776031,,24,,1534431083,162898063,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431084028027770,,25,,1534431084,27612924,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80000\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431084030623933,,26,,1534431084,30388116,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431084032818049,,27,,1534431084,32546997,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431084039855200,,28,,1534431084,38877010,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431084041466029,,29,,1534431084,41177988,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431084596686388,,30,,1534431084,596297979,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431084598730523,,31,,1534431084,598516941,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431084608643054,,32,,1534431084,608402013,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431084610871022,,33,,1534431084,610611915,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431084788733963,,190,,1534431084,788347959,'',2,"""/readStuff""","""milliseconds: 715000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431086616509701,,34,,1534431086,616096973,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431087096372873,,35,,1534431087,95979928,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431087099130508,,36,,1534431087,98884105,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431087100903122,,37,,1534431087,100704908,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431087103479899,,38,,1534431087,103230953,'',2,"""/gantry_sendServer""","""error: \""echo:endstops hit:  Z:0.00\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431087107314734,,39,,1534431087,106945037,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431087109283380,,40,,1534431087,109006881,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431088790032033,,191,,1534431088,789616107,'',2,"""/readStuff""","""milliseconds: 719000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431089115641879,,41,,1534431089,114793062,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431090114560909,,42,,1534431090,113775968,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431090116625859,,43,,1534431090,116355895,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431090126129999,,44,,1534431090,125873088,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431090128763405,,45,,1534431090,128196954,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431092134031834,,46,,1534431092,133609056,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431092617939244,,47,,1534431092,616935968,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431092619997318,,48,,1534431092,619770050,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431092622180418,,49,,1534431092,621920108,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431092628675241,,50,,1534431092,628468990,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431092630941210,,51,,1534431092,630347013,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431092791331995,,192,,1534431092,790946006,'',2,"""/readStuff""","""milliseconds: 723000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431094636758262,,52,,1534431094,636360883,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431096635695163,,53,,1534431096,634943962,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431096637775769,,54,,1534431096,637557029,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431096646281156,,55,,1534431096,642854928,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431096646399458,,56,,1534431096,644876956,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431096652067416,,57,,1534431096,651061058,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431096653230528,,58,,1534431096,653023004,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431096792462630,,193,,1534431096,792093992,'',2,"""/readStuff""","""milliseconds: 727000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431097659366342,,59,,1534431097,658974885,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431097661702635,,60,,1534431097,661447048,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431097672144836,,61,,1534431097,671875000,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431097674764994,,62,,1534431097,674531936,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431097677091524,,63,,1534431097,676862955,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431097683393134,,64,,1534431097,683183908,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431097684889985,,65,,1534431097,684693098,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431097696339392,,66,,1534431097,696114063,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431097699717806,,67,,1534431097,698704957,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431097701105637,,68,,1534431097,700807094,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431097708111782,,69,,1534431097,707772970,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431097709971630,,70,,1534431097,709719896,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431098265547772,,71,,1534431098,265156984,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431098267609855,,72,,1534431098,267357110,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431098277495585,,73,,1534431098,277108907,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431098279522366,,74,,1534431098,279280900,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431100285788284,,75,,1534431100,284977912,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431100765176812,,76,,1534431100,764847040,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431100767904757,,77,,1534431100,767689943,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431100770314674,,78,,1534431100,770039081,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431100776066812,,79,,1534431100,775823116,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431100778249920,,80,,1534431100,777987957,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431100795211659,,194,,1534431100,794841051,'',2,"""/readStuff""","""milliseconds: 731000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431102784588683,,81,,1534431102,783626079,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431103783009770,,82,,1534431103,782680988,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431103785277284,,83,,1534431103,784951925,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431103795123575,,84,,1534431103,794866085,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431103797409172,,85,,1534431103,797168970,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431104796497526,,195,,1534431104,795842885,'',2,"""/readStuff""","""milliseconds: 735000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431105807214972,,86,,1534431105,806241035,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431106286081675,,87,,1534431106,285698890,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431106288461398,,88,,1534431106,288145065,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431106290885485,,89,,1534431106,290473937,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431106298303279,,90,,1534431106,297492980,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431106299564838,,91,,1534431106,299355983,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431108305973197,,92,,1534431108,305185079,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431108798087706,,196,,1534431108,797441959,'',2,"""/readStuff""","""milliseconds: 739000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431110304219771,,93,,1534431110,303700923,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431110306410403,,94,,1534431110,306165933,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431110311758620,,95,,1534431110,311526060,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431110314467665,,96,,1534431110,313823938,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431110320159937,,97,,1534431110,319880008,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431110322357705,,98,,1534431110,322102069,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431111329137234,,99,,1534431111,327769041,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111330267708,,100,,1534431111,330020904,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431111342334086,,101,,1534431111,340693950,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111343575955,,102,,1534431111,343312025,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111345781357,,103,,1534431111,345506906,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431111352213418,,104,,1534431111,351969003,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111353827931,,105,,1534431111,353612899,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431111364658545,,106,,1534431111,364283084,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111366233714,,107,,1534431111,366058111,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111368585233,,108,,1534431111,368396043,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431111372751722,,109,,1534431111,372554063,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111374755459,,110,,1534431111,374536991,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431111930787002,,111,,1534431111,929951906,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111932801067,,112,,1534431111,932524919,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431111944269340,,113,,1534431111,941932916,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431111944339450,,114,,1534431111,943983078,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431112799454295,,197,,1534431112,799031019,'',2,"""/readStuff""","""milliseconds: 743000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431113953853037,,115,,1534431113,953469991,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431114429979990,,116,,1534431114,429586887,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431114432593363,,117,,1534431114,432365894,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431114434657006,,118,,1534431114,434456110,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431114440810325,,119,,1534431114,440581083,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431114442302468,,120,,1534431114,442092895,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431116449339451,,121,,1534431116,448400020,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431116801990761,,198,,1534431116,801342010,'',2,"""/readStuff""","""milliseconds: 747000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431117448222093,,122,,1534431117,447458982,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431117450337771,,123,,1534431117,450006008,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431117459590387,,124,,1534431117,459372043,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431117461936439,,125,,1534431117,461694955,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431119467620625,,126,,1534431119,467253923,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431119950920324,,127,,1534431119,950604915,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431119953552931,,128,,1534431119,953321933,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431119955974559,,129,,1534431119,955707073,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431119962384420,,130,,1534431119,962148904,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431119964690122,,131,,1534431119,964390039,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431120802951595,,199,,1534431120,802625894,'',2,"""/readStuff""","""milliseconds: 751000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431121970360807,,132,,1534431121,969989061,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431123969274801,,133,,1534431123,968954086,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431123972519759,,134,,1534431123,972275972,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431123974929699,,135,,1534431123,974725008,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431123981231077,,136,,1534431123,980575084,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431123982969708,,137,,1534431123,982755899,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431123988835324,,138,,1534431123,988466024,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431123990368368,,139,,1534431123,990067958,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431124804785876,,200,,1534431124,804193973,'',2,"""/readStuff""","""milliseconds: 755000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431124997020425,,140,,1534431124,996702909,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431124998906332,,141,,1534431124,998632907,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431125011011061,,142,,1534431125,9495973,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125012420499,,143,,1534431125,12186050,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125014781771,,144,,1534431125,14441967,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431125021270743,,145,,1534431125,20737886,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125022844372,,146,,1534431125,22581100,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431125034671809,,147,,1534431125,33901929,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125036869570,,148,,1534431125,36562919,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125038753810,,149,,1534431125,38573980,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431125045672119,,150,,1534431125,45444965,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125049176694,,151,,1534431125,48942089,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431125603263525,,152,,1534431125,602942943,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125605450160,,153,,1534431125,605237960,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431125615352094,,154,,1534431125,615067958,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431125617334870,,155,,1534431125,617078065,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431127622551437,,156,,1534431127,622328996,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431128103007048,,157,,1534431128,102583885,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431128105522700,,158,,1534431128,105283021,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431128107834874,,159,,1534431128,107568979,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431128113522335,,160,,1534431128,113308906,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431128115149095,,161,,1534431128,114940881,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431128805915134,,201,,1534431128,805517911,'',2,"""/readStuff""","""milliseconds: 759000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431130122710859,,162,,1534431130,121283054,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431131121365878,,163,,1534431131,120450019,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431131124103166,,164,,1534431131,123756885,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431131133110232,,165,,1534431131,132457017,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431131134983087,,166,,1534431131,134707927,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431132808017580,,202,,1534431132,807728052,'',2,"""/readStuff""","""milliseconds: 763000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431133140855396,,167,,1534431133,140147924,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431133624099493,,168,,1534431133,623796939,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431133626451654,,169,,1534431133,626235008,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431133628737271,,170,,1534431133,628423929,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431133635359953,,171,,1534431133,635134935,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431133637037745,,172,,1534431133,636857986,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431135643673703,,173,,1534431135,642975091,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431136809864921,,203,,1534431136,809425115,'',2,"""/readStuff""","""milliseconds: 767000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431137642006101,,174,,1534431137,641498088,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431137644496468,,175,,1534431137,644159078,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431137649886576,,176,,1534431137,649106025,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431137650934396,,177,,1534431137,650727033,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431137657824704,,178,,1534431137,657583951,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431137660308657,,179,,1534431137,659698009,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431138666275733,,180,,1534431138,665503978,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431138668330506,,181,,1534431138,668044090,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431138678778507,,182,,1534431138,678509950,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431138681282716,,183,,1534431138,681061029,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431138683587773,,184,,1534431138,683315038,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431138690003288,,185,,1534431138,689769029,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431138691711941,,186,,1534431138,691531896,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431138702398476,,187,,1534431138,702207088,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431138704341105,,188,,1534431138,704163074,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431138706127795,,189,,1534431138,705902099,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431138710541794,,190,,1534431138,710236072,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431138712374986,,191,,1534431138,712075948,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431139268166548,,192,,1534431139,267493963,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431139269686155,,193,,1534431139,269478082,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431139280630452,,194,,1534431139,279607057,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431139282358850,,195,,1534431139,281610965,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431140811585422,,204,,1534431140,810745954,'',2,"""/readStuff""","""milliseconds: 771000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431141287351971,,196,,1534431141,286865949,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431141767505663,,197,,1534431141,767198085,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431141769998120,,198,,1534431141,769795894,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431141772136194,,199,,1534431141,771879911,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431141778526567,,200,,1534431141,778037071,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431141779753900,,201,,1534431141,779584884,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431143786536336,,202,,1534431143,786164999,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431144785581863,,203,,1534431144,785281896,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431144787110154,,204,,1534431144,786824941,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431144797885745,,205,,1534431144,796807050,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431144798552397,,206,,1534431144,798233032,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431144812295011,,205,,1534431144,812021970,'',2,"""/readStuff""","""milliseconds: 775000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431146806658226,,207,,1534431146,805033922,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431147285023412,,208,,1534431147,284683942,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431147287571597,,209,,1534431147,287317037,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431147290168101,,210,,1534431147,289705991,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431147296106494,,211,,1534431147,295782089,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431147298405978,,212,,1534431147,298118114,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431148815097465,,206,,1534431148,814713954,'',2,"""/readStuff""","""milliseconds: 779000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431149303997318,,213,,1534431149,303630113,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431151302810335,,214,,1534431151,302211999,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431151306228134,,215,,1534431151,305991888,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431151308961077,,216,,1534431151,308697938,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431151314353707,,217,,1534431151,314121007,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431151316470084,,218,,1534431151,316220998,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431151324007051,,219,,1534431151,322312116,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431151324808586,,220,,1534431151,324557065,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431152330733574,,221,,1534431152,330264091,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152332851691,,222,,1534431152,332581043,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431152343574035,,223,,1534431152,343228101,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152346080714,,224,,1534431152,345849990,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152348407010,,225,,1534431152,348090887,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431152354941611,,226,,1534431152,354598045,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152356181482,,227,,1534431152,355993032,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431152367252297,,228,,1534431152,366806983,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152369061854,,229,,1534431152,368860960,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152370709079,,230,,1534431152,370520114,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431152375484239,,231,,1534431152,374752998,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152376389741,,232,,1534431152,376216888,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431152816390662,,207,,1534431152,815979003,'',2,"""/readStuff""","""milliseconds: 783000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431152933410621,,233,,1534431152,932535886,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152935934051,,234,,1534431152,935059070,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431152945205675,,235,,1534431152,944514989,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431152955198316,,236,,1534431152,954468011,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431154960873229,,237,,1534431154,960390090,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431155433009075,,238,,1534431155,432110071,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431155435144071,,239,,1534431155,434868097,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431155437243868,,240,,1534431155,436943054,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431155443852300,,241,,1534431155,443281888,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431155445518329,,242,,1534431155,445292949,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431156817994360,,208,,1534431156,817289113,'',2,"""/readStuff""","""milliseconds: 787000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431157451419020,,243,,1534431157,451023101,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431158450382354,,244,,1534431158,450026988,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431158452746872,,245,,1534431158,452487945,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431158462163670,,246,,1534431158,461920976,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431158464557028,,247,,1534431158,464338064,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431160470099399,,248,,1534431160,469721078,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431160818927403,,209,,1534431160,818598031,'',2,"""/readStuff""","""milliseconds: 791000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431160953955440,,249,,1534431160,953087091,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431160955865651,,250,,1534431160,955662965,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431160958130301,,251,,1534431160,957889080,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431160965023253,,252,,1534431160,964781999,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431160967147536,,253,,1534431160,966900110,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431162972956150,,254,,1534431162,972517967,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431164821769603,,210,,1534431164,821213960,'',2,"""/readStuff""","""milliseconds: 795000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431164975886107,,255,,1534431164,975147962,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431164978451542,,256,,1534431164,978208065,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431164980550742,,257,,1534431164,980345010,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431164987331661,,258,,1534431164,987113952,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431164989589752,,259,,1534431164,989356040,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431164995275389,,260,,1534431164,994915008,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431164996527755,,261,,1534431164,996309041,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431166003098842,,262,,1534431166,2784013,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166004270013,,263,,1534431166,3983974,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431166015654699,,264,,1534431166,15208959,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166017505562,,265,,1534431166,17266035,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166019102354,,266,,1534431166,18899917,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431166027397798,,267,,1534431166,27235984,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166028896719,,268,,1534431166,28737068,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431166040651261,,269,,1534431166,40143013,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166042360829,,270,,1534431166,42161941,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166044322789,,271,,1534431166,43791055,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431166048102473,,272,,1534431166,47908067,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166050041084,,273,,1534431166,49753904,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431166605742982,,274,,1534431166,605371952,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166608409221,,275,,1534431166,607841968,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431166618152065,,276,,1534431166,617484092,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431166620205425,,277,,1534431166,619950056,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431168625963043,,278,,1534431168,625150918,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431168822942164,,211,,1534431168,822469949,'',2,"""/readStuff""","""milliseconds: 799000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431169108935914,,279,,1534431169,108434915,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431169111279504,,280,,1534431169,111023902,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431169113453654,,281,,1534431169,113202095,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431169120393541,,282,,1534431169,120161056,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431169122689478,,283,,1534431169,122374057,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431171132619971,,284,,1534431171,131906032,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431172129559587,,285,,1534431172,127021074,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431172129861107,,286,,1534431172,129313945,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431172139429160,,287,,1534431172,139172077,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431172141635695,,288,,1534431172,141391992,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431172824204053,,212,,1534431172,823743104,'',2,"""/readStuff""","""milliseconds: 803000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431174147205339,,289,,1534431174,146811008,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431174630406236,,290,,1534431174,630001068,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431174633760679,,291,,1534431174,632886886,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431174635542254,,292,,1534431174,635276079,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431174641747928,,293,,1534431174,641395092,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431174648980444,,294,,1534431174,648746967,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431176657295861,,295,,1534431176,656867027,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431176825618912,,213,,1534431176,825268030,'',2,"""/readStuff""","""milliseconds: 807000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431178652895047,,296,,1534431178,652148962,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431178656010378,,297,,1534431178,654792070,'',2,"""/gantry_sendServer""","""message: \""G1 F5000.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431178660296677,,298,,1534431178,660070896,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431178662460299,,299,,1534431178,662228107,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431178668332262,,300,,1534431178,668045043,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431178669870210,,301,,1534431178,669650077,'',2,"""/gantry_sendServer""","""message: \""G4 P1000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431179676646478,,302,,1534431179,676250934,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431179678915080,,303,,1534431179,678620100,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431179689298588,,304,,1534431179,689058065,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431179691885249,,305,,1534431179,691638946,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431179694170566,,306,,1534431179,693897008,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431179700687707,,307,,1534431179,700459957,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431179702933991,,308,,1534431179,702717065,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431179713800229,,309,,1534431179,713582992,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431179716613231,,310,,1534431179,716396093,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431179718755566,,311,,1534431179,718554973,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431179725235205,,312,,1534431179,725025892,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431179726879234,,313,,1534431179,726681947,'',2,"""/gantry_sendServer""","""message: \""G4 P550\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431180283002043,,314,,1534431180,282471895,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431180285183690,,315,,1534431180,284919023,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z0.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431180294647380,,316,,1534431180,294424057,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431180296844440,,317,,1534431180,296576976,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431180827959518,,214,,1534431180,827594041,'',2,"""/readStuff""","""milliseconds: 811000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431182302642845,,318,,1534431182,302218914,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431182785876870,,319,,1534431182,785480976,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:0.00 E:0.00 Count X:15751 Y:4410 Z:1\""\nposition: [500.0,\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431182788600031,,320,,1534431182,788275003,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431182790949942,,321,,1534431182,790673971,'',2,"""/gantry_sendServer""","""message: \""M106 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431182797495472,,322,,1534431182,796983957,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431182798965537,,323,,1534431182,798644065,'',2,"""/gantry_sendServer""","""message: \""G4 P3000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431184805678694,,324,,1534431184,805000066,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431184829248856,,215,,1534431184,828901052,'',2,"""/readStuff""","""milliseconds: 815000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431185805528775,,325,,1534431185,804078102,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431185806556003,,326,,1534431185,806313991,'',2,"""/gantry_sendServer""","""message: \""G1 X500.0 Y140 Z200.0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431185816312150,,327,,1534431185,815865993,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431185817460758,,328,,1534431185,817254066,'',2,"""/gantry_sendServer""","""message: \""M114\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431187824021612,,329,,1534431187,823453903,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431188307765298,,330,,1534431188,307276964,'',2,"""/gantry_sendServer""","""error: \""X:500.00 Y:140.00 Z:200.00 E:0.00 Count X:15751 Y:4410 Z:80001\""\nposition:\",,"""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431188310173357,,331,,1534431188,309870004,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431188312308119,,332,,1534431188,312077045,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431188319471409,,333,,1534431188,318804979,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431188320785345,,334,,1534431188,320600986,'',2,"""/gantry_sendServer""","""message: \""G4 P4000\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431188831029544,,216,,1534431188,830621957,'',2,"""/readStuff""","""milliseconds: 819000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431190330833717,,335,,1534431190,330404996,'',2,"""/gantry_sendServer""","""error: \""echo:busy: processing\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431192325380939,,336,,1534431192,324986934,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431192327160334,,337,,1534431192,326968908,'',2,"""/gantry_sendServer""","""message: \""M77\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431192334089004,,338,,1534431192,332956075,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431192335119749,,339,,1534431192,334911108,'',2,"""/gantry_sendServer""","""message: \""M107 P0\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431192341627408,,340,,1534431192,341212987,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431192343896644,,341,,1534431192,343029022,'',2,"""/gantry_sendServer""","""message: \""M107 P1\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431192349758559,,342,,1534431192,349221944,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431192351566005,,343,,1534431192,350851058,'',2,"""/gantry_sendServer""","""message: \""M107 P2\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431192357919286,,344,,1534431192,357393980,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431192359461500,,345,,1534431192,359191894,'',2,"""/gantry_sendServer""","""message: \""M18\""""","""sendGcodeSerial.py""","""publishSentData""",84,/to_gantry,/rosout,/from_gantry
+1534431192366275195,,346,,1534431192,365679025,'',2,"""/gantry_sendServer""","""error: \""ok\""\nposition: []""","""sendGcodeSerial.py""","""publishRecievedData""",107,/to_gantry,/rosout,/from_gantry
+1534431192832308207,,217,,1534431192,831844091,'',2,"""/readStuff""","""milliseconds: 823000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431196834806317,,218,,1534431196,834165096,'',2,"""/readStuff""","""milliseconds: 827000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout
+1534431200836284027,,219,,1534431200,835822105,'',2,"""/readStuff""","""milliseconds: 831000\nrate: 4000\ndata: [0","0]""","""serial_data_client.py""","""talker""",33,/object_return,/rosout

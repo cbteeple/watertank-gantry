@@ -1,0 +1,4 @@
+<launch>
+  <rosparam command="load" file="settings_gantry.yaml" />
+  <node name="sendServer" pkg="gantry_control" type="gantry_sendcommand.py"   output="screen" />
+</launch>

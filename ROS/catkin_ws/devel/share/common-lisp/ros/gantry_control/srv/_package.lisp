@@ -1,0 +1,15 @@
+(cl:defpackage gantry_control-srv
+  (:use )
+  (:export
+   "GANTRY_SEND"
+   "<GANTRY_SEND-REQUEST>"
+   "GANTRY_SEND-REQUEST"
+   "<GANTRY_SEND-RESPONSE>"
+   "GANTRY_SEND-RESPONSE"
+   "SERIAL_READ"
+   "<SERIAL_READ-REQUEST>"
+   "SERIAL_READ-REQUEST"
+   "<SERIAL_READ-RESPONSE>"
+   "SERIAL_READ-RESPONSE"
+  ))
+

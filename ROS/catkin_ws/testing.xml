@@ -1,7 +1,0 @@
-<launch>
-  <rosparam command="load" file="settings.yaml" />
-  <node pkg="rosbag" type="record" name="record" output="screen" args="-a -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/data/output"/> 
-  <node name="readStuff"  pkg="serial_test" type="serial_data_client.py" output="screen" />
-  <node name="sendServer" pkg="serial_test" type="serial_sendstuff.py"   output="screen" />
-  <node name="sendClient" pkg="serial_test" type="serial_sendclient.py"  output="screen" />
-</launch>

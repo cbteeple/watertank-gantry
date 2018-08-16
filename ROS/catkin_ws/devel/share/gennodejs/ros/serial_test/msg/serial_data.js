@@ -49,9 +49,9 @@ class serial_data {
     // Serialize message field [milliseconds]
     bufferOffset = _serializer.uint32(obj.milliseconds, buffer, bufferOffset);
     // Serialize message field [rate]
-    bufferOffset = _serializer.uint32(obj.rate, buffer, bufferOffset);
+    bufferOffset = _serializer.int32(obj.rate, buffer, bufferOffset);
     // Serialize message field [data]
-    bufferOffset = _arraySerializer.uint16(obj.data, buffer, bufferOffset, null);
+    bufferOffset = _arraySerializer.int32(obj.data, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -62,15 +62,15 @@ class serial_data {
     // Deserialize message field [milliseconds]
     data.milliseconds = _deserializer.uint32(buffer, bufferOffset);
     // Deserialize message field [rate]
-    data.rate = _deserializer.uint32(buffer, bufferOffset);
+    data.rate = _deserializer.int32(buffer, bufferOffset);
     // Deserialize message field [data]
-    data.data = _arrayDeserializer.uint16(buffer, bufferOffset, null)
+    data.data = _arrayDeserializer.int32(buffer, bufferOffset, null)
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
-    length += 2 * object.data.length;
+    length += 4 * object.data.length;
     return length + 12;
   }
 
@@ -81,15 +81,16 @@ class serial_data {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '1dbb12ecfd1d112426442f51a9aecd31';
+    return '708b64347fb146b1e49fddd9e079952d';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     uint32 milliseconds
-    uint32 rate
-    uint16[] data
+    int32 rate
+    int32[] data
+    
     
     `;
   }

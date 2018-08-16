@@ -82,3 +82,8 @@ TrajPerturbation(x_points, x_grip, trajSettings, N_Trials, PosError,...
 %Combine all of the individual trajectories into a single file
 CombineGCode(folder_name);
 
+%Update the "recent.txt" file
+recentID=fopen(fullfile(saveDir,'recent.txt'),'w');
+fprintf(recentID,file_name);
+fclose(recentID);
+

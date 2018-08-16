@@ -1,9 +1,11 @@
-gantry: 
+gantry:
     devname: '/dev/ttyACM0' # [device string]
     baudrate: 115200        # [baud]
+    traj_folder: 'Test_OptoFingers2'   #[folder string]
+    num_reps: 1             #[number]
 
 object_return: 
-    devname: '/dev/ttyUSB0' # [device string]
+    devname: '/dev/ttyUSB1' # [device string]
     baudrate: 115200        # [baud]
     default_delay: 1000     # [ms]
 

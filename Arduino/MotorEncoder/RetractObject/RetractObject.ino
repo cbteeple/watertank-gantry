@@ -55,12 +55,12 @@ void setup() {
 
 void loop() {
   //wait 1s before starting
-  timeCurr=millis();
   static unsigned long motor_timeout = millis() + 1000;
   static bool motor_go = 0;
 
 
   readSerial();
+  timeCurr=millis();
 
   if (outputsOn && timeCurr-timeLast>= settings.looptime){
     Serial.print(timeCurr);

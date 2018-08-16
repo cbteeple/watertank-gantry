@@ -1,2 +1,2 @@
-motor_control:serial_test:usb_cam-develop
+gantry_control:return_control:serial_test:usb_cam-develop
 -DCATKIN_DEVEL_PREFIX=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install -G Unix Makefiles

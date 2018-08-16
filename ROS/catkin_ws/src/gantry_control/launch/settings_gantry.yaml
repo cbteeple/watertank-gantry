@@ -1,0 +1,16 @@
+gantry: 
+    devname: '/dev/ttyACM0' # [device string]
+    devname_long: motorLong='/dev/serial/by-id/usb-UltiMachine__ultimachine.com__RAMBo_555333438373513031C0-if00'
+    baudrate: 115200        # [baud]
+    folder_paths:
+        trajFolder: 'Trajectories'
+        commonFolder: 'common_moves'
+        gcodeFolder: 'na'
+    common_funs:
+        go_home: 'go_home.gcode'
+        pause_traj: 'pause.gcode'
+        stop_traj: 'stop.gcode'
+        high_five: 'high_five.gcode'
+        low_five: 'low_five.gcode'
+        -r: ' '
+        -s: ' '
