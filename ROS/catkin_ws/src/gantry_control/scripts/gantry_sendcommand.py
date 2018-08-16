@@ -26,14 +26,16 @@ print(commonFunctionDir)
 # Append paths to the system path
 sys.path.append(commonFunctionDir)
 
-
-
+#initialize the motor controller
+s = sendGcodeSerial.begin(params['devname'],params['baudrate'])
+sendGcodeSerial.initialize(s)
 
 
 def send_common_fun(command):
 	command_file=common_funs.get(command)
 	if command_file:
-		s = sendGcodeSerial.begin(params['devname'])
+		#sendGcodeSerial.initialize(s)
+		
 		if command == "-r":
 			sendGcodeSerial.fromFile(s, os.path.join(commonFunctionDir, common_funs['stop_traj']))
 
@@ -43,6 +45,7 @@ def send_common_fun(command):
 		else:
 			# do command
 			sendGcodeSerial.fromFile(s,os.path.join(commonFunctionDir, command_file))
+		
 	else:
 		print('Invalid Command')
 
@@ -63,8 +66,8 @@ def get_traj_files(in_path):
 
 def send_traj(gcodeFiles, numTrials):
 	# Set up serial
-	s = sendGcodeSerial.begin(params['devname'])
-	sendGcodeSerial.initialize(s)
+	# s = sendGcodeSerial.begin(params['devname'],params['baudrate'])
+	# sendGcodeSerial.initialize(s)
 
 	# go home
 	sendGcodeSerial.fromFile(s,os.path.join(commonFunctionDir, common_funs['go_home']))
@@ -81,7 +84,7 @@ def send_traj(gcodeFiles, numTrials):
 	sendGcodeSerial.fromFile(s, os.path.join(commonFunctionDir, common_funs['stop_traj']))
 
 	# Close Serial
-	sendGcodeSerial.end(s)
+	#sendGcodeSerial.end(s)
 
 
 
@@ -109,7 +112,6 @@ def send_to_gantry_server():
 	rospy.spin()
 
 if __name__ == "__main__":
-
 	send_to_gantry_server()
 	
 	

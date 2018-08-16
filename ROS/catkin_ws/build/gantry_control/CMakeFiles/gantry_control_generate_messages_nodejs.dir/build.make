@@ -55,6 +55,7 @@ include gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs.dir/pr
 
 gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/from_gantry.js
 gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/to_gantry.js
+gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/actuation.js
 gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/srv/gantry_send.js
 
 
@@ -68,14 +69,20 @@ gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs: /media/woodla
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from gantry_control/to_gantry.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/gantry_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/to_gantry.msg -Igantry_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p gantry_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg
 
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/actuation.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/actuation.js: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from gantry_control/actuation.msg"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/gantry_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg -Igantry_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p gantry_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg
+
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/srv/gantry_send.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/srv/gantry_send.js: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/srv/gantry_send.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from gantry_control/gantry_send.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from gantry_control/gantry_send.srv"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/gantry_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/srv/gantry_send.srv -Igantry_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p gantry_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/srv
 
 gantry_control_generate_messages_nodejs: gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs
 gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/from_gantry.js
 gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/to_gantry.js
+gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/actuation.js
 gantry_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/srv/gantry_send.js
 gantry_control_generate_messages_nodejs: gantry_control/CMakeFiles/gantry_control_generate_messages_nodejs.dir/build.make
 

@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gantry_control/msg" TYPE FILE FILES
     "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/from_gantry.msg"
     "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/to_gantry.msg"
+    "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg"
     )
 endif()
 

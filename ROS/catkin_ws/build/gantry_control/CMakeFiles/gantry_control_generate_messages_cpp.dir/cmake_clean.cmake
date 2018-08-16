@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/gantry_control_generate_messages_cpp"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/from_gantry.h"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/to_gantry.h"
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/actuation.h"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/gantry_send.h"
 )
 

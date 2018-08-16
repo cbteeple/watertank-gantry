@@ -3,9 +3,10 @@ gantry:
     baudrate: 115200        # [baud]
     traj_folder: 'Test_OptoFingers2'   #[folder string]
     num_reps: 1             #[number]
+    hand_actuation: 'gcode' #[string] OPTIONS - 'gcode', 'standalone'
 
 object_return: 
-    devname: '/dev/ttyUSB1' # [device string]
+    devname: '/dev/ttyUSB0' # [device string]
     baudrate: 115200        # [baud]
     default_delay: 1000     # [ms]
 

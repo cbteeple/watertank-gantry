@@ -55,6 +55,7 @@ include gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/progr
 
 gantry_control/CMakeFiles/gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/from_gantry.h
 gantry_control/CMakeFiles/gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/to_gantry.h
+gantry_control/CMakeFiles/gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/actuation.h
 gantry_control/CMakeFiles/gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/gantry_send.h
 
 
@@ -70,16 +71,23 @@ gantry_control/CMakeFiles/gantry_control_generate_messages_cpp: /media/woodlab/D
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from gantry_control/to_gantry.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/to_gantry.msg -Igantry_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p gantry_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/actuation.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/actuation.h: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/actuation.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from gantry_control/actuation.msg"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg -Igantry_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p gantry_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/gantry_send.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/gantry_send.h: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/srv/gantry_send.srv
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/gantry_send.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/gantry_send.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from gantry_control/gantry_send.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from gantry_control/gantry_send.srv"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/srv/gantry_send.srv -Igantry_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p gantry_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 gantry_control_generate_messages_cpp: gantry_control/CMakeFiles/gantry_control_generate_messages_cpp
 gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/from_gantry.h
 gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/to_gantry.h
+gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/actuation.h
 gantry_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/gantry_send.h
 gantry_control_generate_messages_cpp: gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/build.make
 

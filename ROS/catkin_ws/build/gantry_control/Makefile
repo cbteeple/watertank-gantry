@@ -100,6 +100,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,17 +132,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+gantry_control/CMakeFiles/_gantry_control_generate_messages_check_deps_actuation.dir/rule:
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gantry_control/CMakeFiles/_gantry_control_generate_messages_check_deps_actuation.dir/rule
+.PHONY : gantry_control/CMakeFiles/_gantry_control_generate_messages_check_deps_actuation.dir/rule
+
+# Convenience name for target.
+_gantry_control_generate_messages_check_deps_actuation: gantry_control/CMakeFiles/_gantry_control_generate_messages_check_deps_actuation.dir/rule
+
+.PHONY : _gantry_control_generate_messages_check_deps_actuation
+
+# fast build rule for target.
+_gantry_control_generate_messages_check_deps_actuation/fast:
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f gantry_control/CMakeFiles/_gantry_control_generate_messages_check_deps_actuation.dir/build.make gantry_control/CMakeFiles/_gantry_control_generate_messages_check_deps_actuation.dir/build
+.PHONY : _gantry_control_generate_messages_check_deps_actuation/fast
 
 # Convenience name for target.
 gantry_control/CMakeFiles/gantry_control_generate_messages_py.dir/rule:
@@ -211,36 +226,6 @@ _gantry_control_generate_messages_check_deps_from_gantry/fast:
 .PHONY : _gantry_control_generate_messages_check_deps_from_gantry/fast
 
 # Convenience name for target.
-gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule:
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule
-.PHONY : gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-gantry_control_generate_messages_cpp: gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule
-
-.PHONY : gantry_control_generate_messages_cpp
-
-# fast build rule for target.
-gantry_control_generate_messages_cpp/fast:
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/build.make gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/build
-.PHONY : gantry_control_generate_messages_cpp/fast
-
-# Convenience name for target.
-gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule:
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule
-.PHONY : gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule
-
-# Convenience name for target.
-gantry_control_generate_messages: gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule
-
-.PHONY : gantry_control_generate_messages
-
-# fast build rule for target.
-gantry_control_generate_messages/fast:
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f gantry_control/CMakeFiles/gantry_control_generate_messages.dir/build.make gantry_control/CMakeFiles/gantry_control_generate_messages.dir/build
-.PHONY : gantry_control_generate_messages/fast
-
-# Convenience name for target.
 gantry_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gantry_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : gantry_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -269,6 +254,36 @@ std_msgs_generate_messages_cpp: gantry_control/CMakeFiles/std_msgs_generate_mess
 std_msgs_generate_messages_cpp/fast:
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f gantry_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make gantry_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule:
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule
+.PHONY : gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule
+
+# Convenience name for target.
+gantry_control_generate_messages: gantry_control/CMakeFiles/gantry_control_generate_messages.dir/rule
+
+.PHONY : gantry_control_generate_messages
+
+# fast build rule for target.
+gantry_control_generate_messages/fast:
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f gantry_control/CMakeFiles/gantry_control_generate_messages.dir/build.make gantry_control/CMakeFiles/gantry_control_generate_messages.dir/build
+.PHONY : gantry_control_generate_messages/fast
+
+# Convenience name for target.
+gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule:
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule
+.PHONY : gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+gantry_control_generate_messages_cpp: gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/rule
+
+.PHONY : gantry_control_generate_messages_cpp
+
+# fast build rule for target.
+gantry_control_generate_messages_cpp/fast:
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build && $(MAKE) -f gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/build.make gantry_control/CMakeFiles/gantry_control_generate_messages_cpp.dir/build
+.PHONY : gantry_control_generate_messages_cpp/fast
 
 # Convenience name for target.
 gantry_control/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
@@ -460,14 +475,16 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... _gantry_control_generate_messages_check_deps_actuation"
 	@echo "... gantry_control_generate_messages_py"
 	@echo "... _gantry_control_generate_messages_check_deps_to_gantry"
 	@echo "... install/local"
 	@echo "... _gantry_control_generate_messages_check_deps_from_gantry"
-	@echo "... gantry_control_generate_messages_cpp"
-	@echo "... gantry_control_generate_messages"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... gantry_control_generate_messages"
+	@echo "... gantry_control_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... _gantry_control_generate_messages_check_deps_gantry_send"
@@ -481,7 +498,6 @@ help:
 	@echo "... install/strip"
 	@echo "... gantry_control_generate_messages_nodejs"
 	@echo "... gantry_control_genpy"
-	@echo "... test"
 .PHONY : help
 
 

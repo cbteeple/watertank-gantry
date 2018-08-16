@@ -2,12 +2,12 @@
 
 import serial
 import time
-import rospy
-import parseCommands
+import parseCommand
+import publishROSTopics as pubROS
 
 from gantry_control.msg import *
 
-def begin(deviceLong):
+def begin(devname,baud):
 	"""Start serial communication
 	INPUTS:
 		deviceLong - the long name of the device you want to use
@@ -15,7 +15,25 @@ def begin(deviceLong):
 	OUTPUTS:
 		s - the serial object created
 	"""	
-	s = serial.Serial(deviceLong, 115200)
+	s = serial.Serial(devname, baud)
+	if s.isOpen():
+		s.close()
+	s.open()
+		
+	return s
+	
+def resume(devname,baud):
+	"""Start serial communication
+	INPUTS:
+		deviceLong - the long name of the device you want to use
+
+	OUTPUTS:
+		s - the serial object created
+	"""	
+	s = serial.Serial(devname, baud)
+	if not s.isOpen():
+		s.open()
+		
 	return s
 
 
@@ -56,57 +74,55 @@ def fromFile(s,filename):
 	# Stream g-code to grbl
 	for line in f:
 		l = line.strip()  # Strip all EOL characters for streaming
+		if l.startswith(';'):
+			extCommand=parseCommand.parse(l)
+			parseCommand.execute(extCommand)
+		else:
+			pubROS.publishToGantry(l)
+			print('Sending: ' + l)
+			s.write(l + '\n')  # Send g-code block to grbl
 		
-		publishSentData(l)
-		print('Sending: ' + l)
-		s.write(l + '\n')  # Send g-code block to grbl
-		
-		while True:
-			ack=s.readline()
-			publishRecievedData(ack.strip())
-			# print(' : ' + ack.strip())
-			if "ok" in ack:
-				break
+			while True:
+				ack=s.readline()
+				pubROS.publishFromData(ack.strip())
+				# print(' : ' + ack.strip())
+				if "ok" in ack:
+					break
 
 	# Close file and serial port
 	f.close()
 	
-	
-	
-	
-	
-def publishSentData(out_msg): 
-	pub = rospy.Publisher('to_gantry', to_gantry, queue_size=10)
-	#rospy.init_node('talker',anonymous=True)
-	if not rospy.is_shutdown():
-		msg=to_gantry()
-		msg.message = out_msg
+
+
+def fromArray(s,in_array):
+	"""Send lines from a file
+	INPUTS:
+		[serial]		s - a serial object
+		[string array]	in_array - the array to use
+
+	OUTPUTS:
+		n/a
+	"""
+	# Stream g-code to grbl
+	for line in in_array:
+		l = line.strip()  # Strip all EOL characters for streaming
+		if l.startswith(';'):
+			extCommand=parseCommand.parse(l)
+			parseCommand.execute(extCommand)
+		else:
+			pubROS.publishToGantry(l)
+			print('Sending: ' + l)
+			s.write(l + '\n')  # Send g-code block to grbl
 		
-		rospy.loginfo(msg)
-		pub.publish(msg)
-		
-		
-def publishRecievedData(in_msg): 
-	pub = rospy.Publisher('from_gantry', from_gantry, queue_size=10)
-	#rospy.init_node('talker',anonymous=True)
-	if not rospy.is_shutdown():
-		msg=from_gantry()
-		if "X:" in in_msg:
-			pos=in_msg.split(" ")
-			pos_items=map(pos.__getitem__, {0,1,2})
-						
-			pos_act=[]
-			for pos_item in pos_items:
-				pos_split=pos_item.split(':')
-				pos_act.append(float(pos_split[1]))
-			
-			print(pos_act)
-			msg.position = pos_act
-			
-		msg.response = in_msg
-		
-		rospy.loginfo(msg)
-		pub.publish(msg)
+			while True:
+				ack=s.readline()
+				pubROS.publishFromData(ack.strip())
+				# print(' : ' + ack.strip())
+				if "ok" in ack:
+					break
+
+	
+
 			
 			
 				

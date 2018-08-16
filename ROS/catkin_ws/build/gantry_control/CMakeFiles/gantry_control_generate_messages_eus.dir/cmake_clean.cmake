@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/gantry_control_generate_messages_eus"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/msg/from_gantry.l"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/msg/to_gantry.l"
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/msg/actuation.l"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/srv/gantry_send.l"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/manifest.l"
 )

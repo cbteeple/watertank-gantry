@@ -12,5 +12,7 @@ gantry:
         stop_traj: 'stop.gcode'
         high_five: 'high_five.gcode'
         low_five: 'low_five.gcode'
+        debug_on: 'debug_on.gcode'
+        debug_off: 'debug_off.gcode'
         -r: ' '
         -s: ' '
