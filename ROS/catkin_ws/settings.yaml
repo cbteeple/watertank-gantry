@@ -15,3 +15,5 @@ camera1:
     location: 'Front'       #[string]
     picture_width: 1920     #[px]
     picture_height: 1080    #[px]
+
+cameras_on: 1

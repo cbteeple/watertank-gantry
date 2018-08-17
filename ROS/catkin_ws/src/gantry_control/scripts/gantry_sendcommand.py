@@ -2,6 +2,7 @@
 
 
 from gantry_control.srv import *
+from video_recorder.srv import *
 from std_msgs.msg import String
 import rospy
 import os
@@ -76,7 +77,11 @@ def send_traj(gcodeFiles, numTrials):
 	# Send the main gcode
 	for gcodeFile in gcodeFiles:
 		for x in range(numTrials):
+			rospy.set_param('cameras_on',1)
+			#camera_start()
 			sendGcodeSerial.fromFile(s, gcodeFile)
+			rospy.set_param('cameras_on',0)
+			rospy.sleep(2)
 
 
 	# Stop motor controller
@@ -85,6 +90,22 @@ def send_traj(gcodeFiles, numTrials):
 
 	# Close Serial
 	#sendGcodeSerial.end(s)
+
+
+
+
+
+def camera_start():
+    rospy.wait_for_service('camera_control')
+    try:
+        start_cam = rospy.ServiceProxy('camera_control', cam_control)
+        resp1 = start_cam('Doesnt matter what this is for now')
+        return 1
+    except rospy.ServiceException, e:
+        print "Service call failed: %s"%e
+
+
+
 
 
 

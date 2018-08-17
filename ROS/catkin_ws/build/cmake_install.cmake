@@ -121,6 +121,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control/cmake_install.cmake")
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/serial_test/cmake_install.cmake")
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/usb_cam-develop/cmake_install.cmake")
+  include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/ros-video-recorder-master/cmake_install.cmake")
 
 endif()
 

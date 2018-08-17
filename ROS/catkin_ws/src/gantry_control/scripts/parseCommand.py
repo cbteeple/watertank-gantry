@@ -94,7 +94,7 @@ def camera(value):
 
 
 #Incorrect Commands
-def incorrect():
+def incorrect(value):
 	print('Incorrect Command')
 	
 	

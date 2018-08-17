@@ -1257,6 +1257,162 @@ std_srvs_generate_messages_cpp/fast:
 	$(MAKE) -f usb_cam-develop/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam-develop/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 .PHONY : std_srvs_generate_messages_cpp/fast
 
+#=============================================================================
+# Target rules for targets named video_recorder_generate_messages_py
+
+# Build rule for target.
+video_recorder_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_generate_messages_py
+.PHONY : video_recorder_generate_messages_py
+
+# fast build rule for target.
+video_recorder_generate_messages_py/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_py.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_py.dir/build
+.PHONY : video_recorder_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_gencpp
+
+# Build rule for target.
+video_recorder_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_gencpp
+.PHONY : video_recorder_gencpp
+
+# fast build rule for target.
+video_recorder_gencpp/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_gencpp.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_gencpp.dir/build
+.PHONY : video_recorder_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named _video_recorder_generate_messages_check_deps_cam_control
+
+# Build rule for target.
+_video_recorder_generate_messages_check_deps_cam_control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _video_recorder_generate_messages_check_deps_cam_control
+.PHONY : _video_recorder_generate_messages_check_deps_cam_control
+
+# fast build rule for target.
+_video_recorder_generate_messages_check_deps_cam_control/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/_video_recorder_generate_messages_check_deps_cam_control.dir/build.make ros-video-recorder-master/CMakeFiles/_video_recorder_generate_messages_check_deps_cam_control.dir/build
+.PHONY : _video_recorder_generate_messages_check_deps_cam_control/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_genpy
+
+# Build rule for target.
+video_recorder_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_genpy
+.PHONY : video_recorder_genpy
+
+# fast build rule for target.
+video_recorder_genpy/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_genpy.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_genpy.dir/build
+.PHONY : video_recorder_genpy/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_generate_messages_lisp
+
+# Build rule for target.
+video_recorder_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_generate_messages_lisp
+.PHONY : video_recorder_generate_messages_lisp
+
+# fast build rule for target.
+video_recorder_generate_messages_lisp/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_lisp.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_lisp.dir/build
+.PHONY : video_recorder_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_generate_messages_cpp
+
+# Build rule for target.
+video_recorder_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_generate_messages_cpp
+.PHONY : video_recorder_generate_messages_cpp
+
+# fast build rule for target.
+video_recorder_generate_messages_cpp/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_cpp.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_cpp.dir/build
+.PHONY : video_recorder_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_generate_messages_nodejs
+
+# Build rule for target.
+video_recorder_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_generate_messages_nodejs
+.PHONY : video_recorder_generate_messages_nodejs
+
+# fast build rule for target.
+video_recorder_generate_messages_nodejs/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_nodejs.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_nodejs.dir/build
+.PHONY : video_recorder_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_gennodejs
+
+# Build rule for target.
+video_recorder_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_gennodejs
+.PHONY : video_recorder_gennodejs
+
+# fast build rule for target.
+video_recorder_gennodejs/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_gennodejs.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_gennodejs.dir/build
+.PHONY : video_recorder_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_generate_messages_eus
+
+# Build rule for target.
+video_recorder_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_generate_messages_eus
+.PHONY : video_recorder_generate_messages_eus
+
+# fast build rule for target.
+video_recorder_generate_messages_eus/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_eus.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages_eus.dir/build
+.PHONY : video_recorder_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_generate_messages
+
+# Build rule for target.
+video_recorder_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_generate_messages
+.PHONY : video_recorder_generate_messages
+
+# fast build rule for target.
+video_recorder_generate_messages/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_generate_messages.dir/build
+.PHONY : video_recorder_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_geneus
+
+# Build rule for target.
+video_recorder_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_geneus
+.PHONY : video_recorder_geneus
+
+# fast build rule for target.
+video_recorder_geneus/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_geneus.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_geneus.dir/build
+.PHONY : video_recorder_geneus/fast
+
+#=============================================================================
+# Target rules for targets named video_recorder_genlisp
+
+# Build rule for target.
+video_recorder_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 video_recorder_genlisp
+.PHONY : video_recorder_genlisp
+
+# fast build rule for target.
+video_recorder_genlisp/fast:
+	$(MAKE) -f ros-video-recorder-master/CMakeFiles/video_recorder_genlisp.dir/build.make ros-video-recorder-master/CMakeFiles/video_recorder_genlisp.dir/build
+.PHONY : video_recorder_genlisp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1354,6 +1510,18 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... video_recorder_generate_messages_py"
+	@echo "... video_recorder_gencpp"
+	@echo "... _video_recorder_generate_messages_check_deps_cam_control"
+	@echo "... video_recorder_genpy"
+	@echo "... video_recorder_generate_messages_lisp"
+	@echo "... video_recorder_generate_messages_cpp"
+	@echo "... video_recorder_generate_messages_nodejs"
+	@echo "... video_recorder_gennodejs"
+	@echo "... video_recorder_generate_messages_eus"
+	@echo "... video_recorder_generate_messages"
+	@echo "... video_recorder_geneus"
+	@echo "... video_recorder_genlisp"
 .PHONY : help
 
 

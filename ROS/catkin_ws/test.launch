@@ -1,9 +1,21 @@
+<?xml version="1.0"?>
 <launch>
   <rosparam command="load" file="src/gantry_control/launch/settings_gantry.yaml" />
   <rosparam command="load" file="settings.yaml" />
+  <arg name="video_topic" default="/video_recorder/image_raw" />
  <!-- <node pkg="rosbag" type="record" name="record" output="screen" args="-a -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/data/output"/>
   <node name="readStuff"  pkg="return_control" type="serial_data_client.py" />
   <node name="sendServer" pkg="return_control" type="serial_sendstuff.py"   output="screen" />
   <node name="sendClient" pkg="return_control" type="serial_sendclient.py"  output="screen" />  -->
+  <node name="cv_camera" pkg="cv_camera" type="cv_camera_node" output="screen" required="true">
+  </node>
+  <node name="cam_server_top" pkg="video_recorder" type="recorder_server.py"   output="screen" />
+  
+  <node name="image_view_grid" pkg="image_view" type="image_view" respawn="false" output="screen" required="true">
+      <remap from="image" to="$(arg video_topic)"/>
+      <param name="autosize" value="true" />
+  </node>
+    
+  <rosparam param="source1">"/cv_camera/image_raw,0,0,640,480"</rosparam>
   <node name="gantry_sendServer" pkg="gantry_control" type="gantry_sendcommand.py" />
 </launch>
