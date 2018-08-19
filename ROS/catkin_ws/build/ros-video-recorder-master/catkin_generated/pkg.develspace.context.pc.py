@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "video_recorder"
 PROJECT_SPACE_DIR = "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel"
-PROJECT_VERSION = "0.0.1"
+PROJECT_VERSION = "1.0.0"

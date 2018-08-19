@@ -2,7 +2,7 @@ prefix=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install
 
 Name: gantry_control
 Description: Description of gantry_control
-Version: 0.0.0
+Version: 1.0.0
 Cflags: -I/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install/include
 Libs: -L/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install/lib 
 Requires: 

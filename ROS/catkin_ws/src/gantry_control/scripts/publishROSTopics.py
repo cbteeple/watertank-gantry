@@ -20,7 +20,6 @@ def publishActuation(out_levels):
 
 
 
-
 def publishToGantry(out_msg): 
 	pub = rospy.Publisher('to_gantry', to_gantry, queue_size=10)
 	#rospy.init_node('talker',anonymous=True)

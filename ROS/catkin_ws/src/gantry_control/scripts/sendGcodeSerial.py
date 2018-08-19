@@ -78,24 +78,15 @@ def fromFile(s,filename):
 			extCommand=parseCommand.parse(l)
 			parseCommand.execute(extCommand)
 		else:
-			pubROS.publishToGantry(l)
 			print('Sending: ' + l)
 			s.write(l + '\n')  # Send g-code block to grbl
-		
-			while True:
-				ack=s.readline()
-				pubROS.publishFromData(ack.strip())
-				# print(' : ' + ack.strip())
-				if "ok" in ack:
-					break
-
-	# Close file and serial port
+			# Close file and serial port
 	f.close()
 	
 
 
 def fromArray(s,in_array):
-	"""Send lines from a file
+	"""Send lines from array
 	INPUTS:
 		[serial]		s - a serial object
 		[string array]	in_array - the array to use
@@ -123,6 +114,27 @@ def fromArray(s,in_array):
 
 	
 
-			
+def fromLine(s,line):
+	"""Send line
+	INPUTS:
+		[serial]	s - a serial object
+		[string]	line - the line of gcode to send
+
+	OUTPUTS:
+		n/a
+	"""
+	l = line.strip()  # Strip all EOL characters for streaming
+	if l.startswith(';'):
+		return
+	else:
+		print('Sending: ' + l)
+		s.write(l + '\n')  # Send g-code block to grbl
+
+
+def waitForOK(s):	
+	while True:
+		ack=s.readline()
+		if "ok" in ack:
+			break			
 			
 				

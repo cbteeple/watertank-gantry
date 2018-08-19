@@ -108,6 +108,8 @@ enum EndstopEnum {
     state_M,
     state_M1,
     state_M10,
+    state_M106,
+    state_M107,
     state_M108,
     state_M11,
     state_M112,

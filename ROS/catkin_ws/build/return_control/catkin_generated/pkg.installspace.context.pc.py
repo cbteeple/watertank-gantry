@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "return_control"
 PROJECT_SPACE_DIR = "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install"
-PROJECT_VERSION = "0.0.0"
+PROJECT_VERSION = "1.0.0"

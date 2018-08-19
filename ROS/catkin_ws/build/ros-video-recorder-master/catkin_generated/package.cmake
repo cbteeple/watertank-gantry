@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "video_recorder")
-set(video_recorder_VERSION "0.0.1")
-set(video_recorder_MAINTAINER "Curtis Kim <ildoo@ildoo.net>")
+set(video_recorder_VERSION "1.0.0")
+set(video_recorder_MAINTAINER "Clark Teeple <cbteeple@g.harvard.edu>")
 set(video_recorder_PACKAGE_FORMAT "1")
 set(video_recorder_BUILD_DEPENDS "roscpp" "rospy" "std_msgs" "sensor_msgs" "cv_bridge")
 set(video_recorder_BUILD_EXPORT_DEPENDS "std_msgs" "sensor_msgs" "cv_bridge")

@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "return_control")
-set(return_control_VERSION "0.0.0")
+set(return_control_VERSION "1.0.0")
 set(return_control_MAINTAINER "Clark Teeple <cbteeple@g.harvard.edu>")
 set(return_control_PACKAGE_FORMAT "2")
 set(return_control_BUILD_DEPENDS "rospy" "std_msgs" "message_generation")

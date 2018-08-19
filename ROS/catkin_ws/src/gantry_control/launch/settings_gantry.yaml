@@ -5,7 +5,7 @@ gantry:
     folder_paths:
         trajFolder: 'Trajectories'
         commonFolder: 'common_moves'
-        gcodeFolder: 'na'
+        gcodeFolder: ' '
     common_funs:
         go_home: 'go_home.gcode'
         pause_traj: 'pause.gcode'

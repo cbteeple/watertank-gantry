@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "gantry_control")
-set(gantry_control_VERSION "0.0.0")
+set(gantry_control_VERSION "1.0.0")
 set(gantry_control_MAINTAINER "Clark Teeple <cbteeple@g.harvard.edu>")
 set(gantry_control_PACKAGE_FORMAT "2")
 set(gantry_control_BUILD_DEPENDS "rospy" "std_msgs")

@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gantry_control_generate_messages_nodejs"
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/runFile.js"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/from_gantry.js"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/to_gantry.js"
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/trajectory.js"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/actuation.js"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/srv/gantry_send.js"
 )

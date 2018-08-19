@@ -2,7 +2,7 @@ prefix=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install
 
 Name: video_recorder
 Description: Description of video_recorder
-Version: 0.0.1
+Version: 1.0.0
 Cflags: -I/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install/include
 Libs: -L/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install/lib 
 Requires: 

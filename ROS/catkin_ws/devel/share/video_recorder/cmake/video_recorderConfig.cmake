@@ -99,7 +99,7 @@ if(NOT "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include " 
   elseif(NOT " " STREQUAL " ")
     set(_report "Check the website '' for information and consider reporting the problem.")
   else()
-    set(_report "Report the problem to the maintainer 'Curtis Kim <ildoo@ildoo.net>' and request to fix the problem.")
+    set(_report "Report the problem to the maintainer 'Clark Teeple <cbteeple@g.harvard.edu>' and request to fix the problem.")
   endif()
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})

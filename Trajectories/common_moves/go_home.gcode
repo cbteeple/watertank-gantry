@@ -1,7 +1,1 @@
-;VALVES, 1, 0, 0
 G28
-;VALVES, 0, 0, 0
-;G4 P1000
-;VALVES, 1, 0, 0
-;G4 P4000
-;VALVES, 0, 0, 0

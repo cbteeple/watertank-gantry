@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam command="load" file="src/gantry_control/launch/settings_gantry.yaml" />
+  <rosparam command="load" file="settings.yaml" />
+
+ <!-- <node pkg="rosbag" type="record" name="record" output="screen" args="-a -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/data/output"/>
+  <node name="readStuff"  pkg="return_control" type="serial_data_client.py" />
+  <node name="sendServer" pkg="return_control" type="serial_sendstuff.py"   output="screen" />
+  <node name="sendClient" pkg="return_control" type="serial_sendclient.py"  output="screen" />  -->
+
+  <node name="sendPosition_node" pkg="gantry_control" type="sendPosition.py"  output="screen" />
+  <node name="valve_control_node" pkg="gantry_control" type="valves_gcode_control.py"  output="screen" />
+  <node name="gantry_in_node" pkg="gantry_control" type="gantry_in.py"  output="screen" />
+  <node name="coordinate_node" pkg="gantry_control" type="coordinateMoves.py"  output="screen" />
+</launch>

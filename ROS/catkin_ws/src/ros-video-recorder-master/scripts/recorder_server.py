@@ -187,7 +187,7 @@ def cam_do(req):
     	ft.start_record()
     while 1:
     	if rospy.get_param('cameras_on')==0:
-        	rospy.logerr("[ros-video-recorder] Shutting down+")
+        	# rospy.logerr("[ros-video-recorder] Shutting down+")
         	break
 
     ft.terminate()
