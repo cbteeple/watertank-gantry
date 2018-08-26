@@ -1,0 +1,3 @@
+string traj_folder
+string test_type
+string curr_file

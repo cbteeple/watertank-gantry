@@ -1,0 +1,12 @@
+video_device: '/dev/video0'
+pixel_format: 'mjpeg'
+camera_frame_id: 'usb_cam0'
+camera_name: 'clarkCam'
+io_method: 'mmap'
+framerate: 20
+autofocus: false
+focus: 0    
+autoexposure: false
+exposure: 100
+auto_white_balance: false
+white_balance: 4000

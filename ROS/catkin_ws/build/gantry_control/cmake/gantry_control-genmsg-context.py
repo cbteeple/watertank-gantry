@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/from_gantry.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/to_gantry.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/trajectory.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/runFile.msg"
+messages_str = "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/from_gantry.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/to_gantry.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/trajectory.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/runFile.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/currPos.msg"
 services_str = "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/srv/gantry_send.srv"
 pkg_name = "gantry_control"
 dependencies_str = "std_msgs"

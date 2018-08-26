@@ -3,13 +3,17 @@
 import sys
 import rospy
 import sendGcodeSerial
+from gantry_control.msg import *
 from std_msgs.msg import Bool
 
-ready=True
+ready=False
 
 def callbackReady(data):
+	global ready
 	ready=data.data
 
+def callbackGo(data):
+	go(data.levels)
 
 
 def getArray(values):
@@ -26,6 +30,7 @@ def getArray(values):
 
 
 def go(values):
+	global ready
 	gcode_array = getArray(values)
 	
 	#Set up the serial connection
@@ -33,7 +38,7 @@ def go(values):
 	devname=params['devname']
 	baud=params['baudrate']
 	
-	s = sendGcodeSerial.resume(devname,baud)
+	s = sendGcodeSerial.obtain(devname,baud)
 	
 	#Send the GCODE commands
 	for entry in gcode_array:
@@ -53,7 +58,9 @@ def map28bit(val):
 def server():
 	rospy.init_node('valve_control', anonymous=True)
 	rospy.Subscriber("/gantry/ready", Bool, callbackReady)
-	rospy.spin()  #keep python from exiting until this node is stopped
+	rospy.Subscriber("/gantry/set_actuation", actuation, callbackGo)
+	while not rospy.is_shutdown():
+		rospy.spin()  #keep python from exiting until this node is stopped
 
 
 

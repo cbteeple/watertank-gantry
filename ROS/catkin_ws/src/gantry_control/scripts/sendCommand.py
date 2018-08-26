@@ -5,25 +5,28 @@ import rospy
 import os
 import sys
 from gantry_control.msg import *
+from std_msgs.msg import Bool
 import sendGcodeSerial
+import getFiles as files
 
 
 
 params=rospy.get_param('gantry')
 baud=params['baudrate']
 devname=params['devname']
-folderpaths=params['folder_paths']
 common_funs=params['common_funs']
 
-parentDir = os.path.abspath(os.path.dirname(__file__) + '../../../../../..')
-commonFunctionDir = os.path.join(parentDir, folderpaths['trajFolder'], folderpaths['commonFolder'])
+commonFunctionDir = files.getCommonDir(params)
 
 
 # Append paths to the system path
 sys.path.append(commonFunctionDir)
 
+trueMsg=Bool()
+trueMsg.data=True
 
-s = sendGcodeSerial.resume(devname,baud)
+
+s = sendGcodeSerial.obtain(devname,baud)
 
 def send_common_fun(command):
 	command_file=common_funs.get(command)
@@ -44,25 +47,31 @@ def send_common_fun(command):
 		print('Invalid Command')
 
 
+def raw(command):
+	sendGcodeSerial.fromLine(s,command)
 
 
+def accel(newAccels):
+	outStr='M201'
+	for accel in newAccels:
+		outStr+=(' '+str(accel))
+	outStr=outStr.upper()+'\n'
+	sendGcodeSerial.fromLine(s,outStr)
 
 
-def get_traj_files(in_path):
-	gcodeDir = os.path.join(parentDir, folderpaths['trajFolder'], in_path)
-	sys.path.append(gcodeDir)
-	# Get all the perturbations
-	gcodeFiles = [os.path.join(gcodeDir,f) for f in os.listdir(gcodeDir)
-	if os.path.isfile(os.path.join(gcodeDir, f))
-	and "Perturbation" in os.path.join(gcodeDir, f) ]
-	
-	return gcodeFiles
 
 
 
 def talk(arg):
-	
+	homePub = rospy.Publisher('/gantry/homed', Bool, queue_size=10)
+	rospy.init_node('commandSend_node', anonymous=True)
+
 	send_common_fun(arg)
+	if arg=='go_home':
+		rospy.loginfo("HOME COMMAND SENT")
+		homePub.publish(trueMsg)
+		print("--- I'm going home, to the place where I belong")
+		rospy.sleep(0.5)
 
 
 
@@ -70,6 +79,18 @@ if __name__ == '__main__':
 
 	if len(sys.argv)==2:
 		try:
-		    talk(str(sys.argv[1]))
+			talk(str(sys.argv[1]))
 		except rospy.ROSInterruptException:
-		    pass
+			pass
+	elif len(sys.argv)>2:
+		if sys.argv[1]=='-g':
+			try:
+				raw(sys.argv[2])
+			except rospy.ROSInterruptException:
+				pass
+		elif sys.argv[1]=='-a':
+			try:
+				accel(sys.argv[2:])
+			except rospy.ROSInterruptException:
+				pass
+

@@ -36,7 +36,7 @@ def publishFromData(in_msg):
 	#rospy.init_node('talker',anonymous=True)
 	if not rospy.is_shutdown():
 		msg=from_gantry()
-		if "X:" in in_msg:
+		if in_msg.startswith("X:"):
 			pos=in_msg.split(" ")
 			pos_items=map(pos.__getitem__, {0,1,2})
 						

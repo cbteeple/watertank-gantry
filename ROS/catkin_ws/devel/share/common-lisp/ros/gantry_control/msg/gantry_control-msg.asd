@@ -6,6 +6,8 @@
   :components ((:file "_package")
     (:file "actuation" :depends-on ("_package_actuation"))
     (:file "_package_actuation" :depends-on ("_package"))
+    (:file "currPos" :depends-on ("_package_currPos"))
+    (:file "_package_currPos" :depends-on ("_package"))
     (:file "from_gantry" :depends-on ("_package_from_gantry"))
     (:file "_package_from_gantry" :depends-on ("_package"))
     (:file "runFile" :depends-on ("_package_runFile"))

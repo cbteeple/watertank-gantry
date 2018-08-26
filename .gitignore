@@ -157,5 +157,6 @@ cmake-build-*
 #Python
 *.pyc
 
+ROS/catkin_ws/data
 
 

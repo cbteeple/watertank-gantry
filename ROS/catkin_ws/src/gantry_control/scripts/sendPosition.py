@@ -11,14 +11,14 @@ baud=params['baudrate']
 devname=params['devname']
 
 # Open the serial port
-s = sendGcodeSerial.resume(devname,baud)
+s = sendGcodeSerial.obtain(devname,baud)
 
 #Publish to the "sent" channel
 pubSent = rospy.Publisher('/gantry/sent', to_gantry, queue_size=10)
 pubReady = rospy.Publisher('/gantry/ready', Bool, queue_size=10)
 
 falseMsg=Bool()
-falseMsg.data=True
+falseMsg.data=False
 
 def callback(req):
 	#Unpack trajectory element
@@ -32,10 +32,12 @@ def callback(req):
 	
 	#Send the message to the motor controller
 	sendGcodeSerial.fromLine(s,out_msg)
+	sendGcodeSerial.fromLine(s,"M114\n")
 	
 	#Send a message out to the "sent" channel
 	msg=to_gantry()
 	msg.message = out_msg
+	rospy.loginfo(out_msg)
 	pubSent.publish(msg)
 	
 	
@@ -44,12 +46,16 @@ def callback(req):
 def server():
 	rospy.init_node('sendPosition_server', anonymous=True)
 	rospy.Subscriber("/gantry/set_position", trajectory, callback)
-	
-	rospy.spin()  #keep python from exiting until this node is stopped
+
+	while not rospy.is_shutdown():
+		rospy.spin()  #keep python from exiting until this node is stopped
 
 
 if __name__ == '__main__':
-    server()
+	try:
+		server()
+	except rospy.ROSInterruptException:
+		pass
 
 
 

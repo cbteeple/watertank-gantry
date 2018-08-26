@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<launch>
+  <!-->SETTINGS AND PARAMETERS<-->
+  <rosparam command="load" file="src/gantry_control/launch/settings_gantry.yaml" />
+  <rosparam command="load" file="settings.yaml" />
+  <node name="update_save" pkg="data_manager" type="update_save_loc.py" />
+
+  <!-- <node name="update_bagfile_server" pkg="data_manager" type="startBag.py" output="screen" /> -->
+
+
+<include file="$(find openni_launch_marvin)/launch/kinect_left.launch" />
+
+
+
+  <!-->ROSBAG<-->
+  <!-- <node pkg="rosbag" type="record" name="record" output="screen" args="-a -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/data/output"/> -->
+
+
+
+  <!--OBJECT RETURN-->
+  <!--
+  <node name="readStuff"  pkg="return_control" type="serial_data_client.py" />
+  <node name="sendServer" pkg="return_control" type="serial_sendstuff.py"   output="screen" />
+  <node name="sendClient" pkg="return_control" type="serial_sendclient.py"  output="screen" />  -->
+
+
+
+  <!-->CAMERA STUFF<-->
+  <node name="usb_cam0" pkg="usb_cam" type="usb_cam_node" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="1920" />
+    <param name="image_height" value="1080" />
+    <rosparam command="load" file="settings_cam0.yaml" />
+  </node>
+
+  <node name="cam_server_top" pkg="video_recorder" type="recorder_server.py"   output="screen">
+    <rosparam command="load" file="settings_cam0.yaml" />
+  </node>
+  
+  <node name="image_view_raw" pkg="image_view" type="image_view" respawn="false" required="true">
+        <remap from="image" to="/usb_cam0/image_raw"/>
+        <param name="autosize" value="false" />
+  </node>
+
+  <arg name="video_topic" default="/video_recorder/image_raw" />
+  <node name="image_view_grid" pkg="image_view" type="image_view" respawn="false" required="true">
+      <remap from="image" to="$(arg video_topic)"/>
+      <param name="autosize" value="false" />
+  </node>
+
+
+
+  <!-->MOTION AND ACTUATION CONTROL<-->
+  <node name="gantry_in_node" pkg="gantry_control" type="gantry_in.py"  output="screen" />
+  <node name="sendPosition_node" pkg="gantry_control" type="sendPosition.py"  output="screen" />
+  <node name="valve_control_node" pkg="gantry_control" type="valves_gcode_control.py"  output="screen" />
+  <node name="coordinate_node" pkg="gantry_control" type="coordinateMoves.py"  output="screen" />
+  <node name="test_home" pkg="gantry_control" type="testHome.py"  output="screen" />
+</launch>

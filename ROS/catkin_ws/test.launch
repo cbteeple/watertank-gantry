@@ -7,15 +7,27 @@
   <node name="readStuff"  pkg="return_control" type="serial_data_client.py" />
   <node name="sendServer" pkg="return_control" type="serial_sendstuff.py"   output="screen" />
   <node name="sendClient" pkg="return_control" type="serial_sendclient.py"  output="screen" />  -->
-  <node name="cv_camera" pkg="cv_camera" type="cv_camera_node" output="screen" required="true">
+ <node name="usb_cam0" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="1920" />
+    <param name="image_height" value="1080" />
+    <rosparam command="load" file="settings_cam0.yaml" />
   </node>
   <node name="cam_server_top" pkg="video_recorder" type="recorder_server.py"   output="screen" />
   
+
+  <node name="image_view_raw" pkg="image_view" type="image_view" respawn="false" output="screen" required="true">
+        <remap from="image" to="/usb_cam0/image_raw"/>
+        <param name="autosize" value="false" />
+  </node>
+
+
+
   <node name="image_view_grid" pkg="image_view" type="image_view" respawn="false" output="screen" required="true">
       <remap from="image" to="$(arg video_topic)"/>
-      <param name="autosize" value="true" />
+      <param name="autosize" value="false" />
   </node>
     
-  <rosparam param="source1">"/cv_camera/image_raw,0,0,640,480"</rosparam>
-  <node name="gantry_sendServer" pkg="gantry_control" type="gantry_sendcommand.py" />
+  <rosparam param="source1">"/usb_cam0/image_raw,0,0,640,480"</rosparam>
+ <!--   <node name="gantry_sendServer" pkg="gantry_control" type="gantry_sendcommand.py" /> -->
 </launch>

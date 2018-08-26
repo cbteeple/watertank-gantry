@@ -14,5 +14,7 @@ gantry:
         low_five: 'low_five.gcode'
         debug_on: 'debug_on.gcode'
         debug_off: 'debug_off.gcode'
+        accel_fast: 'accel_fast.gcode'
+        accel_slow: 'accel_slow.gcode'
         -r: ' '
         -s: ' '

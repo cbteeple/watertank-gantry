@@ -3,6 +3,8 @@
   (:export
    "<ACTUATION>"
    "ACTUATION"
+   "<CURRPOS>"
+   "CURRPOS"
    "<FROM_GANTRY>"
    "FROM_GANTRY"
    "<RUNFILE>"

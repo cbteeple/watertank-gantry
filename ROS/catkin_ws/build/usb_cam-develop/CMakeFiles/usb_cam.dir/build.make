@@ -90,6 +90,8 @@ usb_cam_EXTERNAL_OBJECTS =
 
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/libusb_cam.so: usb_cam-develop/CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/libusb_cam.so: usb_cam-develop/CMakeFiles/usb_cam.dir/build.make
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/libusb_cam.so: /usr/lib/x86_64-linux-gnu/libavcodec-ffmpeg.so.56
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/libusb_cam.so: /usr/lib/x86_64-linux-gnu/libswscale-ffmpeg.so.3
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/libusb_cam.so: /opt/ros/kinetic/lib/libimage_transport.so
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/libusb_cam.so: /opt/ros/kinetic/lib/libmessage_filters.so
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/libusb_cam.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so

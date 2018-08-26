@@ -39,6 +39,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/actuation.msg"
     "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/trajectory.msg"
     "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/runFile.msg"
+    "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/gantry_control/msg/currPos.msg"
     )
 endif()
 

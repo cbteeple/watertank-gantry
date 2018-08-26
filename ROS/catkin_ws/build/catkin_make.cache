@@ -1,2 +1,2 @@
-gantry_control:return_control:ros-video-recorder-master:serial_test:usb_cam-develop
+data_manager:gantry_control:libuvc_ros-master/libuvc_camera:libuvc_ros-master/libuvc_ros:record_ros-master:return_control:ros-video-recorder-master:serial_test:usb_cam-develop
 -DCATKIN_DEVEL_PREFIX=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install -G Unix Makefiles

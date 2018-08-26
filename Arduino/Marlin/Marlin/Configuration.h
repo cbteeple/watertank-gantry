@@ -473,9 +473,9 @@
 #define USE_XMIN_PLUG
 #define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG
-//#define USE_XMAX_PLUG
-//#define USE_YMAX_PLUG
-//#define USE_ZMAX_PLUG
+#define USE_XMAX_PLUG
+#define USE_YMAX_PLUG
+#define USE_ZMAX_PLUG
 
 // coarse Endstop Settings
 #define ENDSTOPPULLUPS // Comment this out (using // at the start of the line) to disable the endstop pullup resistors
@@ -544,7 +544,8 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 400, 1000, 1000, 10000 }
+//#define DEFAULT_MAX_ACCELERATION      { 140, 200, 200, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 350, 500, 500, 500 } 
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -555,7 +556,7 @@
  *   M204 T    Travel Acceleration
  */
 #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  5000    // E acceleration for retracts
+#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
@@ -566,10 +567,10 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define DEFAULT_XJERK                100.0
-#define DEFAULT_YJERK                100.0
-#define DEFAULT_ZJERK                  3.0
-#define DEFAULT_EJERK                  5.0
+#define DEFAULT_XJERK                5//100.0
+#define DEFAULT_YJERK                5//100.0
+#define DEFAULT_ZJERK                1//3.0
+#define DEFAULT_EJERK                1//5.0
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -716,7 +717,7 @@
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
 #define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
+#define Z_CLEARANCE_BETWEEN_PROBES  0 // Z Clearance between probe points
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -20
@@ -766,7 +767,7 @@
 
 // @section homing
 
-//#define NO_MOTION_BEFORE_HOMING  // Inhibit movement until all axes have been homed
+#define NO_MOTION_BEFORE_HOMING  // Inhibit movement until all axes have been homed
 
 //#define Z_HOMING_HEIGHT 4  // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
                              // Be sure you have this distance over your Z_MAX_POS in case.
@@ -1040,8 +1041,8 @@
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (50*60)//(4*60) //CHANGED THIS FOR TESTING
+#define HOMING_FEEDRATE_XY (2.0*50*60)
+#define HOMING_FEEDRATE_Z  (1.75*50*60)//(4*60) //CHANGED THIS FOR TESTING
 
 // @section calibrate
 
