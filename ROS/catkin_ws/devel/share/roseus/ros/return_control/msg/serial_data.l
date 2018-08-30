@@ -21,7 +21,7 @@
    (&key
     ((:milliseconds __milliseconds) 0)
     ((:rate __rate) 0)
-    ((:data __data) (make-array 0 :initial-element 0 :element-type :integer))
+    ((:data __data) (make-array 0 :initial-element 0.0 :element-type :float))
     )
    (send-super :init)
    (setq _milliseconds (round __milliseconds))
@@ -44,7 +44,7 @@
     4
     ;; int32 _rate
     4
-    ;; int32[] _data
+    ;; float32[] _data
     (* 4    (length _data)) 4
     ))
   (:serialize
@@ -55,10 +55,10 @@
        (write-long _milliseconds s)
      ;; int32 _rate
        (write-long _rate s)
-     ;; int32[] _data
+     ;; float32[] _data
      (write-long (length _data) s)
      (dotimes (i (length _data))
-       (write-long (elt _data i) s)
+       (sys::poke (elt _data i) (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
        )
      ;;
      (if (null strm) (get-output-stream-string s))))
@@ -68,29 +68,29 @@
      (setq _milliseconds (sys::peek buf ptr- :integer)) (incf ptr- 4)
    ;; int32 _rate
      (setq _rate (sys::peek buf ptr- :integer)) (incf ptr- 4)
-   ;; int32[] _data
+   ;; float32[] _data
    (let (n)
      (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4)
-     (setq _data (instantiate integer-vector n))
+     (setq _data (instantiate float-vector n))
      (dotimes (i n)
-     (setf (elt _data i) (sys::peek buf ptr- :integer)) (incf ptr- 4)
+     (setf (elt _data i) (sys::peek buf ptr- :float)) (incf ptr- 4)
      ))
    ;;
    self)
   )
 
-(setf (get return_control::serial_data :md5sum-) "708b64347fb146b1e49fddd9e079952d")
+(setf (get return_control::serial_data :md5sum-) "d07c74afae0b8cb3770367d6c7e162e3")
 (setf (get return_control::serial_data :datatype-) "return_control/serial_data")
 (setf (get return_control::serial_data :definition-)
       "uint32 milliseconds
 int32 rate
-int32[] data
+float32[] data
 
 
 ")
 
 
 
-(provide :return_control/serial_data "708b64347fb146b1e49fddd9e079952d")
+(provide :return_control/serial_data "d07c74afae0b8cb3770367d6c7e162e3")
 
 

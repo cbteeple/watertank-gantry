@@ -5,6 +5,7 @@ import rospy
 import os
 import datetime
 
+#SAVE_DATA=rospy.get_param('GLOBAL_SAVE_DATA')
 
 def get_ws_dir():
 	return os.path.abspath(os.path.dirname(__file__) + '../../../..')
@@ -13,6 +14,16 @@ def get_ws_dir():
 def make_dir(dir_path):
 	if not os.path.exists(dir_path):
 		os.makedirs(dir_path)
+
+
+
+def updateBagfile(**kwargs):
+	if kwargs['folder']:
+		rospy.set_param('/record/file_name',kwargs['folder'])
+	if kwargs['file']:
+		rospy.set_param('/record/path_save',kwargs['filename'])
+	if kwargs['topics']:
+		rospy.set_param('/record/topic',kwargs['topics'])
 
 
 

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="update_save" pkg="data_manager" type="update_save_loc.py" />
+  <node name="update_bag" pkg="data_manager" type="bag_setup.py" output="screen"/>
+
+</launch>

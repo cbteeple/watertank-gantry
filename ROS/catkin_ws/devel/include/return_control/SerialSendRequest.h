@@ -24,17 +24,22 @@ struct SerialSendRequest_
   typedef SerialSendRequest_<ContainerAllocator> Type;
 
   SerialSendRequest_()
-    : command(0)  {
+    : command()
+    , values()  {
     }
   SerialSendRequest_(const ContainerAllocator& _alloc)
-    : command(0)  {
+    : command(_alloc)
+    , values(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef int16_t _command_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _command_type;
   _command_type command;
+
+   typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _values_type;
+  _values_type values;
 
 
 
@@ -70,7 +75,7 @@ namespace message_traits
 
 
 
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
 // {'return_control': ['/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
@@ -80,12 +85,12 @@ namespace message_traits
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::return_control::SerialSendRequest_<ContainerAllocator> >
-  : TrueType
+  : FalseType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::return_control::SerialSendRequest_<ContainerAllocator> const>
-  : TrueType
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -114,12 +119,12 @@ struct MD5Sum< ::return_control::SerialSendRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "7e9e8174f74cb4650ecb20cd2f2bf4c3";
+    return "95aa4e3087fe2672bbf76af677eaf213";
   }
 
   static const char* value(const ::return_control::SerialSendRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x7e9e8174f74cb465ULL;
-  static const uint64_t static_value2 = 0x0ecb20cd2f2bf4c3ULL;
+  static const uint64_t static_value1 = 0x95aa4e3087fe2672ULL;
+  static const uint64_t static_value2 = 0xbbf76af677eaf213ULL;
 };
 
 template<class ContainerAllocator>
@@ -138,7 +143,8 @@ struct Definition< ::return_control::SerialSendRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int16 command\n\
+    return "string command\n\
+float32[] values\n\
 ";
   }
 
@@ -158,6 +164,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.command);
+      stream.next(m.values);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -177,7 +184,13 @@ struct Printer< ::return_control::SerialSendRequest_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::return_control::SerialSendRequest_<ContainerAllocator>& v)
   {
     s << indent << "command: ";
-    Printer<int16_t>::stream(s, indent + "  ", v.command);
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.command);
+    s << indent << "values[]" << std::endl;
+    for (size_t i = 0; i < v.values.size(); ++i)
+    {
+      s << indent << "  values[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.values[i]);
+    }
   }
 };
 

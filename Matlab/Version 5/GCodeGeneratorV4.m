@@ -13,12 +13,12 @@ topDir = myDir(1:idcs(end-1)-1);
 
 saveDir=fullfile(topDir,'Trajectories');
 
-file_name = 'Test_OptoFingers2';
+file_name = 'Test_NormalFingers';
 
 %Define the location of the home
-locHome  = [500;140;200];
-locGrabStart = [500;140;0];
-locGrabRelease = locHome;%[300;140;150];
+locHome  = [500;140;160];
+locGrabStart = [25;140;160];
+locGrabRelease = [300;140;160];%[300;140;150];
 
 
 x_points=[locHome, locGrabStart, locGrabRelease];
@@ -39,7 +39,7 @@ feedRate = 5000;
 N_Trials = 2; %This will generate an N x N x N lattice
 
 %Error in final position
-PosError = 0;
+PosError = 25;
 
 
 %==========================================================================

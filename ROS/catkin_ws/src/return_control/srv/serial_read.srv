@@ -2,4 +2,4 @@
 ---
 uint32 miliseconds
 uint32 rate
-uint16[] data
+float32[] data

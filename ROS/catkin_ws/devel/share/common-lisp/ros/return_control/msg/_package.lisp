@@ -3,5 +3,7 @@
   (:export
    "<SERIAL_DATA>"
    "SERIAL_DATA"
+   "<SETPOINT>"
+   "SETPOINT"
   ))
 

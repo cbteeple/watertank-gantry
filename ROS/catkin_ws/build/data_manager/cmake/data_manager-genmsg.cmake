@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "data_manager: 1 messages, 0 services")
+message(STATUS "data_manager: 1 messages, 1 services")
 
 set(MSG_I_FLAGS "-Idata_manager:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,11 @@ add_custom_target(_data_manager_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "data_manager" "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg" ""
 )
 
+get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv" NAME_WE)
+add_custom_target(_data_manager_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "data_manager" "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -36,6 +41,12 @@ _generate_msg_cpp(data_manager
 )
 
 ### Generating Services
+_generate_srv_cpp(data_manager
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/data_manager
+)
 
 ### Generating Module File
 _generate_module_cpp(data_manager
@@ -50,6 +61,8 @@ add_dependencies(data_manager_generate_messages data_manager_generate_messages_c
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg" NAME_WE)
+add_dependencies(data_manager_generate_messages_cpp _data_manager_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv" NAME_WE)
 add_dependencies(data_manager_generate_messages_cpp _data_manager_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -69,6 +82,12 @@ _generate_msg_eus(data_manager
 )
 
 ### Generating Services
+_generate_srv_eus(data_manager
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/data_manager
+)
 
 ### Generating Module File
 _generate_module_eus(data_manager
@@ -83,6 +102,8 @@ add_dependencies(data_manager_generate_messages data_manager_generate_messages_e
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg" NAME_WE)
+add_dependencies(data_manager_generate_messages_eus _data_manager_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv" NAME_WE)
 add_dependencies(data_manager_generate_messages_eus _data_manager_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -102,6 +123,12 @@ _generate_msg_lisp(data_manager
 )
 
 ### Generating Services
+_generate_srv_lisp(data_manager
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/data_manager
+)
 
 ### Generating Module File
 _generate_module_lisp(data_manager
@@ -116,6 +143,8 @@ add_dependencies(data_manager_generate_messages data_manager_generate_messages_l
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg" NAME_WE)
+add_dependencies(data_manager_generate_messages_lisp _data_manager_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv" NAME_WE)
 add_dependencies(data_manager_generate_messages_lisp _data_manager_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,6 +164,12 @@ _generate_msg_nodejs(data_manager
 )
 
 ### Generating Services
+_generate_srv_nodejs(data_manager
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/data_manager
+)
 
 ### Generating Module File
 _generate_module_nodejs(data_manager
@@ -149,6 +184,8 @@ add_dependencies(data_manager_generate_messages data_manager_generate_messages_n
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg" NAME_WE)
+add_dependencies(data_manager_generate_messages_nodejs _data_manager_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv" NAME_WE)
 add_dependencies(data_manager_generate_messages_nodejs _data_manager_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +205,12 @@ _generate_msg_py(data_manager
 )
 
 ### Generating Services
+_generate_srv_py(data_manager
+  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/data_manager
+)
 
 ### Generating Module File
 _generate_module_py(data_manager
@@ -182,6 +225,8 @@ add_dependencies(data_manager_generate_messages data_manager_generate_messages_p
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg" NAME_WE)
+add_dependencies(data_manager_generate_messages_py _data_manager_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv" NAME_WE)
 add_dependencies(data_manager_generate_messages_py _data_manager_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

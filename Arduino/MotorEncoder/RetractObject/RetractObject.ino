@@ -67,9 +67,9 @@ void loop() {
     Serial.print('\t');
     Serial.print(timeCurr-timeLast);
     Serial.print('\t');
-    Serial.print(servo.getRequestedPosition()-encoder_offset);
+    Serial.print(float(servo.getRequestedPosition()-encoder_offset)/dcmoto_encoder_1_rev,6);
     Serial.print('\t');
-    Serial.print(servo.getActualPosition()-encoder_offset);
+    Serial.print(float(servo.getActualPosition()-encoder_offset)/dcmoto_encoder_1_rev,6);
     Serial.print('\n');
     timeLast=timeCurr;  
   }
@@ -169,6 +169,7 @@ void setMode(){
 
 void loadSettings(){
   EEPROM_readAnything(settingsStart,settings);
+  servo.myPID->SetTunings(settings.PID_Tunings[0],settings.PID_Tunings[1],settings.PID_Tunings[2]);
   }
 
 void saveSettings(){

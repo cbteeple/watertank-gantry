@@ -96,16 +96,16 @@ import struct
 
 
 class serial_readResponse(genpy.Message):
-  _md5sum = "b191cc1f130fc908db72dc38712947ff"
+  _md5sum = "3f98f1a5483b4ecb6d2f1d6b2f9ad9b4"
   _type = "return_control/serial_readResponse"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """uint32 miliseconds
 uint32 rate
-uint16[] data
+float32[] data
 
 """
   __slots__ = ['miliseconds','rate','data']
-  _slot_types = ['uint32','uint32','uint16[]']
+  _slot_types = ['uint32','uint32','float32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -151,7 +151,7 @@ uint16[] data
       buff.write(_get_struct_2I().pack(_x.miliseconds, _x.rate))
       length = len(self.data)
       buff.write(_struct_I.pack(length))
-      pattern = '<%sH'%length
+      pattern = '<%sf'%length
       buff.write(struct.pack(pattern, *self.data))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
@@ -170,7 +170,7 @@ uint16[] data
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sH'%length
+      pattern = '<%sf'%length
       start = end
       end += struct.calcsize(pattern)
       self.data = struct.unpack(pattern, str[start:end])
@@ -190,7 +190,7 @@ uint16[] data
       buff.write(_get_struct_2I().pack(_x.miliseconds, _x.rate))
       length = len(self.data)
       buff.write(_struct_I.pack(length))
-      pattern = '<%sH'%length
+      pattern = '<%sf'%length
       buff.write(self.data.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
@@ -210,10 +210,10 @@ uint16[] data
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sH'%length
+      pattern = '<%sf'%length
       start = end
       end += struct.calcsize(pattern)
-      self.data = numpy.frombuffer(str[start:end], dtype=numpy.uint16, count=length)
+      self.data = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -230,6 +230,6 @@ def _get_struct_2I():
     return _struct_2I
 class serial_read(object):
   _type          = 'return_control/serial_read'
-  _md5sum = 'b191cc1f130fc908db72dc38712947ff'
+  _md5sum = '3f98f1a5483b4ecb6d2f1d6b2f9ad9b4'
   _request_class  = serial_readRequest
   _response_class = serial_readResponse

@@ -1,0 +1,15 @@
+(cl:defpackage data_manager-srv
+  (:use )
+  (:export
+   "BAG_UPDATE"
+   "<BAG_UPDATE-REQUEST>"
+   "BAG_UPDATE-REQUEST"
+   "<BAG_UPDATE-RESPONSE>"
+   "BAG_UPDATE-RESPONSE"
+   "TRAJECTORY"
+   "<TRAJECTORY-REQUEST>"
+   "TRAJECTORY-REQUEST"
+   "<TRAJECTORY-RESPONSE>"
+   "TRAJECTORY-RESPONSE"
+  ))
+

@@ -22,13 +22,20 @@ class SerialSendRequest {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.command = null;
+      this.values = null;
     }
     else {
       if (initObj.hasOwnProperty('command')) {
         this.command = initObj.command
       }
       else {
-        this.command = 0;
+        this.command = '';
+      }
+      if (initObj.hasOwnProperty('values')) {
+        this.values = initObj.values
+      }
+      else {
+        this.values = [];
       }
     }
   }
@@ -36,7 +43,9 @@ class SerialSendRequest {
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type SerialSendRequest
     // Serialize message field [command]
-    bufferOffset = _serializer.int16(obj.command, buffer, bufferOffset);
+    bufferOffset = _serializer.string(obj.command, buffer, bufferOffset);
+    // Serialize message field [values]
+    bufferOffset = _arraySerializer.float32(obj.values, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -45,12 +54,17 @@ class SerialSendRequest {
     let len;
     let data = new SerialSendRequest(null);
     // Deserialize message field [command]
-    data.command = _deserializer.int16(buffer, bufferOffset);
+    data.command = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [values]
+    data.values = _arrayDeserializer.float32(buffer, bufferOffset, null)
     return data;
   }
 
   static getMessageSize(object) {
-    return 2;
+    let length = 0;
+    length += object.command.length;
+    length += 4 * object.values.length;
+    return length + 8;
   }
 
   static datatype() {
@@ -60,13 +74,14 @@ class SerialSendRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '7e9e8174f74cb4650ecb20cd2f2bf4c3';
+    return '95aa4e3087fe2672bbf76af677eaf213';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    int16 command
+    string command
+    float32[] values
     
     `;
   }
@@ -81,7 +96,14 @@ class SerialSendRequest {
       resolved.command = msg.command;
     }
     else {
-      resolved.command = 0
+      resolved.command = ''
+    }
+
+    if (msg.values !== undefined) {
+      resolved.values = msg.values;
+    }
+    else {
+      resolved.values = []
     }
 
     return resolved;
@@ -163,6 +185,6 @@ class SerialSendResponse {
 module.exports = {
   Request: SerialSendRequest,
   Response: SerialSendResponse,
-  md5sum() { return '4a85f0858e5941ef92944e5dd453320b'; },
+  md5sum() { return '7d12e4d9c96639392fbf6fb3d0d04203'; },
   datatype() { return 'return_control/SerialSend'; }
 };

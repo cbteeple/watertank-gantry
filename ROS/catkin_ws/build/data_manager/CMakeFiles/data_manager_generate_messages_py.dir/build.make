@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build
 include data_manager/CMakeFiles/data_manager_generate_messages_py.dir/progress.make
 
 data_manager/CMakeFiles/data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/_metadata.py
+data_manager/CMakeFiles/data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/_bag_update.py
 data_manager/CMakeFiles/data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/__init__.py
+data_manager/CMakeFiles/data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/__init__.py
 
 
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/_metadata.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
@@ -62,14 +64,28 @@ data_manager/CMakeFiles/data_manager_generate_messages_py: /media/woodlab/DATAPA
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG data_manager/metadata"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg -Idata_manager:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p data_manager -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg
 
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/_bag_update.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/_bag_update.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV data_manager/bag_update"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv -Idata_manager:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p data_manager -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv
+
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/_metadata.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for data_manager"
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/_bag_update.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for data_manager"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg --initpy
+
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/_metadata.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/_bag_update.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for data_manager"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv --initpy
 
 data_manager_generate_messages_py: data_manager/CMakeFiles/data_manager_generate_messages_py
 data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/_metadata.py
+data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/_bag_update.py
 data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/__init__.py
+data_manager_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/__init__.py
 data_manager_generate_messages_py: data_manager/CMakeFiles/data_manager_generate_messages_py.dir/build.make
 
 .PHONY : data_manager_generate_messages_py

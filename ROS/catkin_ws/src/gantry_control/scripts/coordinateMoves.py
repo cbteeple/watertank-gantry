@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import rospy
-import rosbag
 from gantry_control.msg import *
 from std_msgs.msg import Bool
+from std_srvs.srv import Trigger, TriggerResponse
 import math
 
 import valves_gcode_control
@@ -56,6 +56,17 @@ def callbackHomed(data):
 
 
 
+def queryPosition():
+	rospy.wait_for_service('/gantry/get_pos')
+	query=rospy.ServiceProxy('/gantry/get_pos', Trigger)
+	try:
+		resp1 = query()
+	except rospy.ServiceException as exc:
+		if DEBUG:
+			print("Service did not process request: " + str(exc))
+
+
+
 def server():
 	global posReached
 	global curr_pos
@@ -77,7 +88,7 @@ def server():
 
 	rate = rospy.Rate(100)
 	outerRate=rospy.Rate(5)
-	waitRate=rospy.Rate(100)
+	waitRate=rospy.Rate(5)
 	while not rospy.is_shutdown():
 		if homed and fileNames:
 			#Read the next line in the file
@@ -87,10 +98,6 @@ def server():
 			pubRun.publish(True)
 			f = open(fileNames[0],'r')
 
-			#Open the bag file
-			if SAVE_DATA:
-				bagfull = rospy.get_param('MAIN/output_bagpath')
-				bag = rosbag.Bag(bagfull, 'a')
 			# Interpret trajectory line by aine
 			for line in f:
 				if not homed:
@@ -113,17 +120,18 @@ def server():
 				if speed==0.0:
 					speed=math.sqrt(sum([(a-b)**2 for a,b in zip(curr_pos,position)]))/curr_timestep*60*factor
 
+				if speed==0.0:
+					speed=500
+
 				#Send actuation if it's different than before
 				#Wait for the ready signal after each send
 				act=actuation()
 				act.levels=new_pos[5:]
 				rospy.loginfo(act)
 				pubAct.publish(act)
-				if SAVE_DATA:
-					bag.write('gantry/set_actuation',act)
 				
 				#Send position if it's different than before
-				#Wait for the ready signal after each send	
+				#Wait for the ready signal after each send
 				pos=trajectory()
 				pos.position=position
 				pos.speed=speed
@@ -132,8 +140,6 @@ def server():
 				
 				rospy.loginfo(pos)
 				pubPos.publish(pos)
-				if SAVE_DATA:
-					bag.write('gantry/set_position',pos)
 				#Sleep for the specified length
 				#print('Sleep for %f sec'%(curr_timestep))
 				
@@ -151,6 +157,7 @@ def server():
 							print("READY: %d\tPOS REACHED: %d"%(ready,posReached))
 						if (ready and posReached):
 							break
+						queryPosition()
 						waitRate.sleep()
 				
 			# Close file and serial port

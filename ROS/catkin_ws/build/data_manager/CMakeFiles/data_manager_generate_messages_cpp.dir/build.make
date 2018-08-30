@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build
 include data_manager/CMakeFiles/data_manager_generate_messages_cpp.dir/progress.make
 
 data_manager/CMakeFiles/data_manager_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/metadata.h
+data_manager/CMakeFiles/data_manager_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/bag_update.h
 
 
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/metadata.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
@@ -62,8 +63,16 @@ data_manager/CMakeFiles/data_manager_generate_messages_cpp: /media/woodlab/DATAP
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from data_manager/metadata.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg -Idata_manager:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p data_manager -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/bag_update.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/bag_update.h: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/bag_update.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/bag_update.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from data_manager/bag_update.srv"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv -Idata_manager:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p data_manager -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 data_manager_generate_messages_cpp: data_manager/CMakeFiles/data_manager_generate_messages_cpp
 data_manager_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/metadata.h
+data_manager_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/bag_update.h
 data_manager_generate_messages_cpp: data_manager/CMakeFiles/data_manager_generate_messages_cpp.dir/build.make
 
 .PHONY : data_manager_generate_messages_cpp

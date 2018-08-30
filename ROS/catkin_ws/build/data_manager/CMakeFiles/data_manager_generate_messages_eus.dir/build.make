@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build
 include data_manager/CMakeFiles/data_manager_generate_messages_eus.dir/progress.make
 
 data_manager/CMakeFiles/data_manager_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/msg/metadata.l
+data_manager/CMakeFiles/data_manager_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/srv/bag_update.l
 data_manager/CMakeFiles/data_manager_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/manifest.l
 
 
@@ -62,12 +63,18 @@ data_manager/CMakeFiles/data_manager_generate_messages_eus: /media/woodlab/DATAP
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from data_manager/metadata.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg/metadata.msg -Idata_manager:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p data_manager -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/msg
 
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/srv/bag_update.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/srv/bag_update.l: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from data_manager/bag_update.srv"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/srv/bag_update.srv -Idata_manager:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/data_manager/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p data_manager -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/srv
+
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for data_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for data_manager"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager data_manager std_msgs
 
 data_manager_generate_messages_eus: data_manager/CMakeFiles/data_manager_generate_messages_eus
 data_manager_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/msg/metadata.l
+data_manager_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/srv/bag_update.l
 data_manager_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/manifest.l
 data_manager_generate_messages_eus: data_manager/CMakeFiles/data_manager_generate_messages_eus.dir/build.make
 

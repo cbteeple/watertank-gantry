@@ -51,7 +51,7 @@ class serial_data {
     // Serialize message field [rate]
     bufferOffset = _serializer.int32(obj.rate, buffer, bufferOffset);
     // Serialize message field [data]
-    bufferOffset = _arraySerializer.int32(obj.data, buffer, bufferOffset, null);
+    bufferOffset = _arraySerializer.float32(obj.data, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -64,7 +64,7 @@ class serial_data {
     // Deserialize message field [rate]
     data.rate = _deserializer.int32(buffer, bufferOffset);
     // Deserialize message field [data]
-    data.data = _arrayDeserializer.int32(buffer, bufferOffset, null)
+    data.data = _arrayDeserializer.float32(buffer, bufferOffset, null)
     return data;
   }
 
@@ -81,7 +81,7 @@ class serial_data {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '708b64347fb146b1e49fddd9e079952d';
+    return 'd07c74afae0b8cb3770367d6c7e162e3';
   }
 
   static messageDefinition() {
@@ -89,7 +89,7 @@ class serial_data {
     return `
     uint32 milliseconds
     int32 rate
-    int32[] data
+    float32[] data
     
     
     `;

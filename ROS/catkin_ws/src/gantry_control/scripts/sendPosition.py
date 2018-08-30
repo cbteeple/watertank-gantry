@@ -2,6 +2,7 @@
 import rospy
 from gantry_control.msg import *
 from std_msgs.msg import Bool
+from std_srvs.srv import Trigger, TriggerResponse
 
 import sendGcodeSerial
 
@@ -40,12 +41,16 @@ def callback(req):
 	rospy.loginfo(out_msg)
 	pubSent.publish(msg)
 	
-	
+
+def getPos(req):
+	sendGcodeSerial.fromLine(s,"M114\n")
+	return TriggerResponse(True,'We did it!')
 
 
 def server():
 	rospy.init_node('sendPosition_server', anonymous=True)
 	rospy.Subscriber("/gantry/set_position", trajectory, callback)
+	rospy.Service('/gantry/get_pos',Trigger,getPos)
 
 	while not rospy.is_shutdown():
 		rospy.spin()  #keep python from exiting until this node is stopped

@@ -107,7 +107,7 @@ class serial_readResponse {
     // Serialize message field [rate]
     bufferOffset = _serializer.uint32(obj.rate, buffer, bufferOffset);
     // Serialize message field [data]
-    bufferOffset = _arraySerializer.uint16(obj.data, buffer, bufferOffset, null);
+    bufferOffset = _arraySerializer.float32(obj.data, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -120,13 +120,13 @@ class serial_readResponse {
     // Deserialize message field [rate]
     data.rate = _deserializer.uint32(buffer, bufferOffset);
     // Deserialize message field [data]
-    data.data = _arrayDeserializer.uint16(buffer, bufferOffset, null)
+    data.data = _arrayDeserializer.float32(buffer, bufferOffset, null)
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
-    length += 2 * object.data.length;
+    length += 4 * object.data.length;
     return length + 12;
   }
 
@@ -137,7 +137,7 @@ class serial_readResponse {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'b191cc1f130fc908db72dc38712947ff';
+    return '3f98f1a5483b4ecb6d2f1d6b2f9ad9b4';
   }
 
   static messageDefinition() {
@@ -145,7 +145,7 @@ class serial_readResponse {
     return `
     uint32 miliseconds
     uint32 rate
-    uint16[] data
+    float32[] data
     
     
     `;
@@ -185,6 +185,6 @@ class serial_readResponse {
 module.exports = {
   Request: serial_readRequest,
   Response: serial_readResponse,
-  md5sum() { return 'b191cc1f130fc908db72dc38712947ff'; },
+  md5sum() { return '3f98f1a5483b4ecb6d2f1d6b2f9ad9b4'; },
   datatype() { return 'return_control/serial_read'; }
 };

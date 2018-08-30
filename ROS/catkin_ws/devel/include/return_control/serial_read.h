@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::return_control::serial_read > {
   static const char* value()
   {
-    return "b191cc1f130fc908db72dc38712947ff";
+    return "3f98f1a5483b4ecb6d2f1d6b2f9ad9b4";
   }
 
   static const char* value(const ::return_control::serial_read&) { return value(); }

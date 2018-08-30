@@ -38,7 +38,11 @@ falseMsg.data=False
 
 def getNewData(s):
 	if s.in_waiting:
-		ack=s.readline()
+		try:
+			ack=s.readline()
+		except serial.serialutil.SerialException:
+			rospy.logerr('GANTRY CONTROL: Serial read error...ignoring it')
+			return
 		#pubROS.publishFromData(ack.strip())
 		if DEBUG:
 			print(' : ' + ack.strip())

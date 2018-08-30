@@ -43,7 +43,7 @@ struct serial_readResponse_
    typedef uint32_t _rate_type;
   _rate_type rate;
 
-   typedef std::vector<uint16_t, typename ContainerAllocator::template rebind<uint16_t>::other >  _data_type;
+   typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _data_type;
   _data_type data;
 
 
@@ -124,12 +124,12 @@ struct MD5Sum< ::return_control::serial_readResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "b191cc1f130fc908db72dc38712947ff";
+    return "3f98f1a5483b4ecb6d2f1d6b2f9ad9b4";
   }
 
   static const char* value(const ::return_control::serial_readResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xb191cc1f130fc908ULL;
-  static const uint64_t static_value2 = 0xdb72dc38712947ffULL;
+  static const uint64_t static_value1 = 0x3f98f1a5483b4ecbULL;
+  static const uint64_t static_value2 = 0x6d2f1d6b2f9ad9b4ULL;
 };
 
 template<class ContainerAllocator>
@@ -150,7 +150,7 @@ struct Definition< ::return_control::serial_readResponse_<ContainerAllocator> >
   {
     return "uint32 miliseconds\n\
 uint32 rate\n\
-uint16[] data\n\
+float32[] data\n\
 \n\
 ";
   }
@@ -199,7 +199,7 @@ struct Printer< ::return_control::serial_readResponse_<ContainerAllocator> >
     for (size_t i = 0; i < v.data.size(); ++i)
     {
       s << indent << "  data[" << i << "]: ";
-      Printer<uint16_t>::stream(s, indent + "  ", v.data[i]);
+      Printer<float>::stream(s, indent + "  ", v.data[i]);
     }
   }
 };

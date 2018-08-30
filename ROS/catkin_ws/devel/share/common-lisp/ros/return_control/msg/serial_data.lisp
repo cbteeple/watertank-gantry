@@ -20,8 +20,8 @@
    (data
     :reader data
     :initarg :data
-    :type (cl:vector cl:integer)
-   :initform (cl:make-array 0 :element-type 'cl:integer :initial-element 0)))
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0)))
 )
 
 (cl:defclass serial_data (<serial_data>)
@@ -63,12 +63,11 @@
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
-  (cl:map cl:nil #'(cl:lambda (ele) (cl:let* ((signed ele) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
-    ))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-single-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
    (cl:slot-value msg 'data))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <serial_data>) istream)
@@ -91,12 +90,12 @@
   (cl:setf (cl:slot-value msg 'data) (cl:make-array __ros_arr_len))
   (cl:let ((vals (cl:slot-value msg 'data)))
     (cl:dotimes (i __ros_arr_len)
-    (cl:let ((unsigned 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:aref vals i) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296)))))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-single-float-bits bits))))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<serial_data>)))
@@ -107,16 +106,16 @@
   "return_control/serial_data")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<serial_data>)))
   "Returns md5sum for a message object of type '<serial_data>"
-  "708b64347fb146b1e49fddd9e079952d")
+  "d07c74afae0b8cb3770367d6c7e162e3")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'serial_data)))
   "Returns md5sum for a message object of type 'serial_data"
-  "708b64347fb146b1e49fddd9e079952d")
+  "d07c74afae0b8cb3770367d6c7e162e3")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<serial_data>)))
   "Returns full string definition for message of type '<serial_data>"
-  (cl:format cl:nil "uint32 milliseconds~%int32 rate~%int32[] data~%~%~%~%"))
+  (cl:format cl:nil "uint32 milliseconds~%int32 rate~%float32[] data~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'serial_data)))
   "Returns full string definition for message of type 'serial_data"
-  (cl:format cl:nil "uint32 milliseconds~%int32 rate~%int32[] data~%~%~%~%"))
+  (cl:format cl:nil "uint32 milliseconds~%int32 rate~%float32[] data~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <serial_data>))
   (cl:+ 0
      4

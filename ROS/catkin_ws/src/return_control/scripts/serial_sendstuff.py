@@ -1,22 +1,31 @@
 #!/usr/bin/env python
 
 
-from serial_test.srv import *
+from return_control.srv import *
 from std_msgs.msg import String
 import rospy
-import serial
+import serial_coms
 
 devname = '0'
 baud = 0
 
+
+
 def send_stuff(req):
-	com = serial.Serial(devname,baudrate=baud)
-	command_toSend = 'TIME;' +str(req.command)+'\n'
-	com.write(command_toSend)
-	com.write('ON'+'\n')
-	com.close()
+	com = serial_coms.resume(devname,baud)
+
+
+	print(req)
+	valStr=''
+	for val in req.values:
+		valStr+=';'+str(val)
+
+	command_toSend = req.command.upper() +valStr+'\n'
+	print(command_toSend)
+	com.write(command_toSend)	
 	return SerialSendResponse(1)
 	
+
 
 def send_to_objectReturn_server():
 	rospy.init_node('send_to_objectReturn_server')

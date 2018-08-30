@@ -32,10 +32,10 @@
   "return_control/serial_readRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<serial_read-request>)))
   "Returns md5sum for a message object of type '<serial_read-request>"
-  "b191cc1f130fc908db72dc38712947ff")
+  "3f98f1a5483b4ecb6d2f1d6b2f9ad9b4")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'serial_read-request)))
   "Returns md5sum for a message object of type 'serial_read-request"
-  "b191cc1f130fc908db72dc38712947ff")
+  "3f98f1a5483b4ecb6d2f1d6b2f9ad9b4")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<serial_read-request>)))
   "Returns full string definition for message of type '<serial_read-request>"
   (cl:format cl:nil "~%~%~%"))
@@ -65,8 +65,8 @@
    (data
     :reader data
     :initarg :data
-    :type (cl:vector cl:fixnum)
-   :initform (cl:make-array 0 :element-type 'cl:fixnum :initial-element 0)))
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0)))
 )
 
 (cl:defclass serial_read-response (<serial_read-response>)
@@ -106,8 +106,11 @@
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
-  (cl:map cl:nil #'(cl:lambda (ele) (cl:write-byte (cl:ldb (cl:byte 8 0) ele) ostream)
-  (cl:write-byte (cl:ldb (cl:byte 8 8) ele) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-single-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
    (cl:slot-value msg 'data))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <serial_read-response>) istream)
@@ -128,8 +131,12 @@
   (cl:setf (cl:slot-value msg 'data) (cl:make-array __ros_arr_len))
   (cl:let ((vals (cl:slot-value msg 'data)))
     (cl:dotimes (i __ros_arr_len)
-    (cl:setf (cl:ldb (cl:byte 8 0) (cl:aref vals i)) (cl:read-byte istream))
-    (cl:setf (cl:ldb (cl:byte 8 8) (cl:aref vals i)) (cl:read-byte istream)))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-single-float-bits bits))))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<serial_read-response>)))
@@ -140,21 +147,21 @@
   "return_control/serial_readResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<serial_read-response>)))
   "Returns md5sum for a message object of type '<serial_read-response>"
-  "b191cc1f130fc908db72dc38712947ff")
+  "3f98f1a5483b4ecb6d2f1d6b2f9ad9b4")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'serial_read-response)))
   "Returns md5sum for a message object of type 'serial_read-response"
-  "b191cc1f130fc908db72dc38712947ff")
+  "3f98f1a5483b4ecb6d2f1d6b2f9ad9b4")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<serial_read-response>)))
   "Returns full string definition for message of type '<serial_read-response>"
-  (cl:format cl:nil "uint32 miliseconds~%uint32 rate~%uint16[] data~%~%~%~%"))
+  (cl:format cl:nil "uint32 miliseconds~%uint32 rate~%float32[] data~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'serial_read-response)))
   "Returns full string definition for message of type 'serial_read-response"
-  (cl:format cl:nil "uint32 miliseconds~%uint32 rate~%uint16[] data~%~%~%~%"))
+  (cl:format cl:nil "uint32 miliseconds~%uint32 rate~%float32[] data~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <serial_read-response>))
   (cl:+ 0
      4
      4
-     4 (cl:reduce #'cl:+ (cl:slot-value msg 'data) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 2)))
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'data) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <serial_read-response>))
   "Converts a ROS message object to a list"

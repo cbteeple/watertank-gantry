@@ -1,4 +1,5 @@
 # Hashes of file build rules.
+bfe6267dc4d93e82a0ecf6346cee583f /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/bag_update.h
 30e99774a108d9114187c5c9a6e67bdd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/data_manager/metadata.h
 a75b48b721c520316180f467b36eadc9 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/actuation.h
 9775d230bc4f00aef7bd7ab1f66632d3 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/gantry_control/currPos.h
@@ -14,6 +15,7 @@ fbd01ac334681d2a54e95fb9cfc14985 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 59258e72e027d956222291c5630861a0 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h
 9fdd78867f8cf0aab46b8b38d7efbac6 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_data.h
 b5e64507c5a2371d9b1444a7d112f416 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h
+c3fbdd1426b5a9b2c8391fc4c43852c5 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/setpoint.h
 6911a00c6634110ce372902870349e89 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/serial_test/SerialSend.h
 f56e0c26417754342da8610630a5d18a /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/serial_test/serial_data.h
 3dcf6e6194b083df2b6b99b4e193db46 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/serial_test/serial_read.h
@@ -21,6 +23,8 @@ c2134a0d973cc2ac1c640092d13d5358 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 fc585d390440aac5619146a1c13d5287 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/video_recorder/cam_control.h
 72add62b080a32c94a45a3668dd189dd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/__init__.py
 9b1007cb9a78a7f1053f8c436e29b1e8 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/msg/_metadata.py
+b9f0e6f30439a245e0fc048e5cd05063 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/__init__.py
+bb515bf796a204d06da00767da3e60aa /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/data_manager/srv/_bag_update.py
 f222942cdbd2a8fadc312970ced4f23c /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/gantry_control/msg/__init__.py
 581cae85a6826ef99e187692b21b03ca /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/gantry_control/msg/_actuation.py
 6a7d1f4a0457723c21e1f8e3babf1f08 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/gantry_control/msg/_currPos.py
@@ -36,6 +40,7 @@ a92b6d3f59d68b4fd1e35852cc3a2e16 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 94037d7ce14f165d49c446ff2ef9c761 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/record_ros/srv/__init__.py
 75985aa8f37813dc11636470ed2b3393 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py
 dcbd14495d9940777cbecf9c6774607e /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_serial_data.py
+add675ffb41804cec23121146e8402f1 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_setpoint.py
 a887d1df2ea6005b6d6bd7176e569355 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_SerialSend.py
 9563e733c739c3814334e82ba5eed7d6 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py
 c763c2d9a9edabdc4208de73a95dc489 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_serial_read.py
@@ -48,6 +53,7 @@ f24fa67843efe77d30565209daaa5661 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 f7153abfba901e1c26a662bff4f09a87 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/video_recorder/srv/__init__.py
 0927b5eae71b397ef9f44e4d74b0c082 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/video_recorder/srv/_cam_control.py
 26293c4b95f1d3d3a355352ab5a4e39a /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/data_manager/msg/metadata.lisp
+faca825c29274c98475d2244e11099c0 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/data_manager/srv/bag_update.lisp
 42919769003e57eb37d2f0838c109ac3 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/gantry_control/msg/actuation.lisp
 18b3ddd02e6b68cb3d381d06cad90e5d /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/gantry_control/msg/currPos.lisp
 0a7905c618a5f298bc05a27c44da56b9 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/gantry_control/msg/curr_pos.lisp
@@ -59,6 +65,7 @@ bc10be080168a85feeae555393337ad3 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 b9ea670f9c93dd00b392ed8a6028bdab /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/gantry_control/srv/gantry_send.lisp
 cf751cd1e444287418aeb91998e9ae73 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/record_ros/srv/String_cmd.lisp
 4bdb3566237341a0c79526e79f25912a /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg/serial_data.lisp
+6cc5905563cad909a6e65b2866e39c15 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg/setpoint.lisp
 3c5909ca32be0a80786e13edc1d6e9e6 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/SerialSend.lisp
 2ade8667c8a5d9a0927ab4f272a47c48 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/serial_read.lisp
 43a6c746f392adc8678894d00ed0c331 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/serial_test/msg/serial_data.lisp
@@ -67,6 +74,7 @@ bdff756e3f138babc18d60485f8bf0d9 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 ecd70ef09430e068eae62737c341c70b /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/serial_test/srv/serial_send.lisp
 5092632e1543df9574a1906173ead57b /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/video_recorder/srv/cam_control.lisp
 fc15a0b3fc55d57ad5bab1a3fa64e597 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/data_manager/msg/metadata.js
+390af3b8b9fb7f748c3f570ecfc7e02f /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/data_manager/srv/bag_update.js
 a8ddf0f91a3709ecfa136a89181da4e4 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/actuation.js
 98358caafd692cfca181e6d1cee58cf5 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/currPos.js
 12a197a692d9a4b2f35cadd47c3c69a9 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/msg/curr_pos.js
@@ -78,6 +86,7 @@ ba615f11d4fb91f42b26691b0b84c8b8 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 a1e81a6167b53bfcc5170547f04aad9d /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/gantry_control/srv/gantry_send.js
 6613cc3b703b7215e8abac604a9521fd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/record_ros/srv/String_cmd.js
 523bbbc0c8c8a93e25aa389dc51453ba /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/serial_data.js
+c34842cc6830e0c9f6d985aeeba13dbe /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/setpoint.js
 355bed1a7a49a9d2c0d9e9d624c5e7d1 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/SerialSend.js
 178864f77ad1e2bc089b08fb69a07a33 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/serial_read.js
 41e66216f22594a94bcbd73954334573 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/serial_test/msg/serial_data.js
@@ -87,6 +96,7 @@ d017f458b4c028a13bd68ad6d5dd87f3 /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 949dc82dae9e4d7295cde6e0dafd78f5 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/video_recorder/srv/cam_control.js
 9ff882540ff1d4efd1f1cba67bd1a92f /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/manifest.l
 0a5f3c5966f9db924d0eb84fda45f3e9 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/msg/metadata.l
+5169f0f6ec7bec71645b91ed6720b69e /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/data_manager/srv/bag_update.l
 3a3dcc3e50be3cd874248c4acf1a1ed2 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/manifest.l
 974b348eb692dfe025b1dd66400bad68 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/msg/actuation.l
 7cac58aac258c9a8b42b9d2f0904ae8c /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/gantry_control/msg/currPos.l
@@ -101,6 +111,7 @@ ef9d17ee097d5e5aeacf0a58e3534b7e /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 2330d69bd964b5957058990ae8dc758f /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/record_ros/srv/String_cmd.l
 e6704d34a1b6fc732d074bd6cd561c31 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/manifest.l
 2a394de8dfc251a52ba71833c13669ba /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/msg/serial_data.l
+1a8c84c32c41f19f1d4fc89b81d6666f /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/msg/setpoint.l
 41c68cc3bebdd9e36af674ee7a4c9bdf /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/SerialSend.l
 30ad9109273062fb66408729b97076fd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/serial_read.l
 a390df05b3f2dd16a8771136f41738d4 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/serial_test/manifest.l
@@ -111,6 +122,7 @@ a798bebc6b3cecbd0969017760e3bcce /media/woodlab/DATAPART1/watertank-gantry/ROS/c
 2b2a02bd2cbec5e29fa8af0252edef55 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/video_recorder/manifest.l
 f177df2c1e6e603a07a8bac177c0edb7 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/video_recorder/srv/cam_control.l
 c5d044944d0c2f8c93238b740de06e74 CMakeFiles/clean_test_results
+214a9f2633a29e9223d2286bd60047d3 data_manager/CMakeFiles/_data_manager_generate_messages_check_deps_bag_update
 1b785064e7fc122ba7a31d132c4f1e28 data_manager/CMakeFiles/_data_manager_generate_messages_check_deps_metadata
 182f391a5263b2a2935a0e91b0dd8dcb data_manager/CMakeFiles/data_manager_generate_messages_cpp
 182f391a5263b2a2935a0e91b0dd8dcb data_manager/CMakeFiles/data_manager_generate_messages_eus
@@ -139,6 +151,7 @@ d254c0b61ede496b25e664b1fcf2642e record_ros-master/CMakeFiles/_record_ros_genera
 deb2799a630e736a8f18625d5af7173e return_control/CMakeFiles/_return_control_generate_messages_check_deps_SerialSend
 8b9c1c4f248e7737590989e39b4ad6fd return_control/CMakeFiles/_return_control_generate_messages_check_deps_serial_data
 8686ac01b4f408bd0f0efe378093f6d3 return_control/CMakeFiles/_return_control_generate_messages_check_deps_serial_read
+08c2905effe0ca1532629815b5bb7438 return_control/CMakeFiles/_return_control_generate_messages_check_deps_setpoint
 761739bc67b72c56785f6dd56203ac96 return_control/CMakeFiles/return_control_generate_messages_cpp
 761739bc67b72c56785f6dd56203ac96 return_control/CMakeFiles/return_control_generate_messages_eus
 761739bc67b72c56785f6dd56203ac96 return_control/CMakeFiles/return_control_generate_messages_lisp
