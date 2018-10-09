@@ -1,6 +1,6 @@
 MAIN:
     num_reps: 1             #[number]
-    testType: 'AttainmentRegion2'
+    testType: 'Linguini_GrabNShake'
     data_dir: 'data'
     output_dir_format: '[timestamp] - [trajdir] - [testtype]'
     save_topics:
@@ -10,7 +10,7 @@ MAIN:
 gantry:
     devname: '/dev/ttyACM0' # [device string]
     baudrate: 115200        # [baud]
-    traj_folder: 'Test_NormalFingers6'   #[folder string]
+    traj_folder: 'Ninas_first_trajectory'   #[folder string]
     hand_actuation: 'gcode' #[string] OPTIONS - 'gcode', 'standalone'
     DEBUG: True
 
@@ -19,6 +19,7 @@ object_return:
     baudrate: 115200        # [baud]
     default_delay: 200     # [ms]
     DEBUG: False
+    
 
 cameras: 
     camera0:

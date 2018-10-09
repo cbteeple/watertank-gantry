@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!-->DATA MANAGER NODES<-->
+  <include file="$(find record_ros)/launch/record_ros.launch" />
+
+</launch>

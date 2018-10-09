@@ -61,5 +61,6 @@
 
   <!-->DATA MANAGER NODES<-->
   <include file="$(find data_manager)/launch/manage_data.launch" />
+  <include file="$(find record_ros)/launch/record_ros.launch" />
 
 </launch>

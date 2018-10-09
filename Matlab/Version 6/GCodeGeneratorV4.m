@@ -13,17 +13,23 @@ topDir = myDir(1:idcs(end-1)-1);
 
 saveDir=fullfile(topDir,'Trajectories');
 
-file_name = 'Test_NormalFingers6';
+file_name = 'Ninas_first_trajectory'; %No extention, also no spaces
 
 %Define the location of the home
 locHome  = [500;150;200];
-locGrabStart = [12.5;150;200];
+locGrabStart = [50;150;200];
+locShake = [300;150;200];
+locShake2 = [300;180;200];
+locShake3 = [300;100;200];
 locGrabRelease = [300;150;200];%[300;140;150];
 
-t_moves=[0, 2.0, 2.0];
-x_points=[locHome, locGrabStart, locGrabRelease];
+t_moves=[0, 2.0,2.0,0.2,0.2,.2];
+x_points=[locHome, locGrabStart, locShake,locShake2, locShake3, locGrabRelease];
 x_grip = {[worldParams.timeHome, 0, 0, 0],...
           [worldParams.timeGrasp, 1, 0, 0],...
+          [10, 1, 0, 0],...
+          [10, 1, 0, 0],...
+          [10, 1, 0, 0],...
           [worldParams.timeRelease, 0, 0, 0]};
 
 subdiv   = 5;
@@ -36,10 +42,11 @@ functionType = 'none'; %power, subdiv, none
 feedRate = 5000;
 
 %Desired number of perturbation trials per direction
-N_Trials = 3; %This will generate an N x N x N lattice
+gap=10;
+N_Trials = 5; %This will generate an N x N x N lattice
 
 %Error in final position
-PosError = 12.5;
+PosError = gap*N_Trials/2; %width of cube is 2x this
 
 
 %==========================================================================
@@ -60,7 +67,6 @@ if exist(folder_name,'dir')
 end
 mkdir(folder_name) %make a new folder
 file_base=[folder_name,'/',file_name];
-
 
 %Plot the trajectories
 %figure(1);
