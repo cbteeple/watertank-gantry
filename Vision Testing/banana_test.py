@@ -6,20 +6,33 @@ import math
 
 
 def loadImage():
-	img_original = cv2.imread('finger_test.jpg')
-	inputImage = cv2.resize(img_original, (0,0), fx=0.5, fy=0.5) 
+	img_original = cv2.imread('finger.jpg')
+	img_bckgrnd = cv2.imread('background.jpg')
+	#img_original = img_original - img_bckgrnd
 
-	#inputImage = cv2.imread("finger_test.jpg")
+	inputImage = cv2.resize(img_original, (0,0), fx=0.5, fy=0.5) 
 	inputImageGray = cv2.cvtColor(inputImage, cv2.COLOR_BGR2GRAY)
+
+
+	# Set threshold and maxValue
+	thresh = 200
+	maxValue = 255
+ 
+	# Basic threshold example
+	th, dst_1 = cv2.threshold(inputImageGray, thresh, maxValue, cv2.THRESH_BINARY);
 
 	kernel = np.ones((10,10),np.float32)/25
 
 	dst = cv2.filter2D(inputImageGray,-1,kernel)
 
+	#possibility to attach two blobs or more and do blob detection
+
 	#edges = cv2.Canny(inputImageGray,150,300,apertureSize = 3)
 	
     
 	edges = cv2.Canny(dst,150,300,apertureSize = 3)
+
+	median = cv2.medianBlur(edges,5)
 
 	minLineLength = 30
 	maxLineGap = 5
@@ -33,6 +46,7 @@ def loadImage():
 
 	font = cv2.FONT_HERSHEY_SIMPLEX
 	cv2.putText(inputImage,"Tracks Detected", (500, 250), font, 0.5, 255)
+	cv2.imshow('Threshold', dst_1)
 	cv2.imshow("Lines", inputImage)
 	cv2.imshow('edge', edges)
 	cv2.imshow('dst', dst)
