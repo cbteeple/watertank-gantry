@@ -51,15 +51,8 @@ def loadImage():
 	cv2.imshow('edge', edges)
 	cv2.imshow('dst', dst)
 	cv2.waitKey(0)
-		
-	#TRY CATch
-
-	#terminate the function !!!!
 	cv2.destroyAllWindows()
 
-
-
-	print "Hay"
 	return;
 
 def curvatureCalculation(poly,arg1, arg2):
@@ -92,14 +85,3 @@ arg2 = 3
 
 loadImage = loadImage()
 
-#k = curvatureCalculation(poly,arg1, arg2)
-
-
-
-
-
-# load and process the image
-# calibrating...
-# Filter detect the lines
-# choose the right points
-# implemenet curvature
