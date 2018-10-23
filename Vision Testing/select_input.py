@@ -6,17 +6,17 @@ import colorsys as cs
 import numpy as np
 import cv2
 
+x = 0
 
 image = cv2.imread("finger.png")
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 img = mpimg.imread('finger.png')
 imgplot = plt.imshow(img)
 
-x = 0
-
+#get points of interest
 while x == 0:
 	print("Please click")
-	x = plt.ginput(2)
+	x = plt.ginput(4)
 	print("clicked", x)
 	#plt.show()
 	break;
@@ -33,22 +33,25 @@ x_2 = x[1][1]
 y_3 = x[2][0]
 x_3 = x[2][1]
 
-px_hsv_1 = hsv[x_1, y_1]
-px_hsv_2 = hsv[x_2, y_2]
-px_hsv_3 = hsv[x_3, y_3]
-print 'HSV point 1: ', px_hsv_1
-print 'HSV point 2: ', px_hsv_2
+y_4 = x[3][0]
+x_4 = x[3][1]
+
+#returning hsv values of points of interest
+px_hsv_1 = hsv[0.5 * (x_1 + x_2), 0.5 * (y_1 + y_2)]
+px_hsv_2 = hsv[0.5 * (x_3 + x_4), 0.5 * (y_3 + y_4)]
+
+if px_hsv_1[0] <= px_hsv_2[0]:
+	low = px_hsv_1
+	high = px_hsv_2
+else:
+	high = px_hsv_1
+	low = px_hsv_2
+
+print 'Lower H bound: ', low
+print 'Higher H bound: ', high
 
 
 
-hsv_final = (px_hsv_1, px_hsv_2)
-
-
-
-
-
-#px_bgr = image[x_1, y_1]
-#print 'BGR: ', px_bgr
 
 
 
