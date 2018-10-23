@@ -28,13 +28,14 @@ pressureController controller[numSensors];
 
 //Create valvepair objects (right now only 1)
   //valvePair valves(3,4);
-  int valvePins[][2]= {{3,5},{6,9},{10,11}};
+  //int valvePins[][2]= {{3,5},{6,9},{10,11}};
+  int valvePins[][2]= {{6,9},{10,11}};
   int sensePins[]={A0,A1,A2,A3};
 
 //Create controller objects for pressure control (right now only 1)
 float deadzone_start=0.25;
 float setpoint_start=0;
-float pid_start[]={0.5,0,0};
+float pid_start[]={0.2,0,0};
 int mode_start = 1;
 
 
