@@ -2,6 +2,9 @@
 
 import cv2
 import numpy as np
+from select_input import colorSampling
+from termcolor import colored
+
 
 cap = cv2.VideoCapture(0)
 
@@ -13,18 +16,30 @@ choose filtering mode:
 '''
 
 f = 3
+increment = 0
 
-while(1):
+while(1):    
+
     _, frame = cap.read()
+    
+    if increment == 0:
+        lower_boundary, upper_boundary = colorSampling(frame)
+        increment = 1
+        pass;
+
+    print colored('DEBUG', 'yellow')
+    
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    
-    lower_boundary = np.array([20,100,100])
-    upper_boundary = np.array([60,255,180])
-    
+
+    #lower_boundary = np.array([20,100,100])
+    #upper_boundary = np.array([60,255,180])
+
+    #the format of lower and upper boundary are wrong
     mask = cv2.inRange(hsv, lower_boundary, upper_boundary)
     res = cv2.bitwise_and(frame,frame, mask= mask)
 
     cv2.imshow('frame',frame)
+    cv2.imshow('hsv', hsv)
     #cv2.imshow('mask',mask)
     cv2.imshow('res',res)
 
@@ -44,11 +59,10 @@ while(1):
     else:
         pass
 
-    egdges = cv2.Canny(median, 100, 200)
-    cv2.imshow('egdges', egdges)
+    edges = cv2.Canny(median, 100, 200)
+    #shape = edges.shape
 
-
-
+    cv2.imshow('edges', edges)
         
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
