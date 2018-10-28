@@ -16,25 +16,33 @@ choose filtering mode:
 '''
 
 f = 3
-increment = 0
+increment = 1
 
 while(1):    
 
     _, frame = cap.read()
     
     if increment == 0:
-        lower_boundary, upper_boundary = colorSampling(frame)
+        low, high = colorSampling(frame)
+        lower_boundary = np.array([low[0, 0, 0], low[0, 0, 1], low[0, 0, 2]])
+        upper_boundary = np.array([high[0, 0, 0], high[0, 0, 1], high[0, 0, 2]])
         increment = 1
+
+        print colored('Lower H bound: ', 'green')
+        print lower_boundary
+        print colored('Higher H bound: ', 'green')
+        print upper_boundary
         pass;
 
+    
+        #problem here with the BOUNDARIES
     print colored('DEBUG', 'yellow')
     
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    #lower_boundary = np.array([20,100,100])
-    #upper_boundary = np.array([60,255,180])
+    lower_boundary = np.array([20,100,100])
+    upper_boundary = np.array([60,255,180])
 
-    #the format of lower and upper boundary are wrong
     mask = cv2.inRange(hsv, lower_boundary, upper_boundary)
     res = cv2.bitwise_and(frame,frame, mask= mask)
 

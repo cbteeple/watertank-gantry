@@ -21,7 +21,7 @@ def colorSampling(image):
 
 	#get points of interest
 	print colored("Please click", 'green')
-	x = plt.ginput(4)
+	x = plt.ginput(2)
 	print("clicked", x)
 	plt.show()
 
@@ -31,31 +31,33 @@ def colorSampling(image):
 	y_2 = x[1][0]
 	x_2 = x[1][1]
 
-	y_3 = x[2][0]
-	x_3 = x[2][1]
+	#y_3 = x[2][0]
+	#x_3 = x[2][1]
 
-	y_4 = x[3][0]
-	x_4 = x[3][1]
+	#y_4 = x[3][0]
+	#x_4 = x[3][1]
 
 	#BGR value of the points
 	px_BGR_1 = image[x_1, y_1]
+	print colored('BGR 1: ', 'green')
 	print px_BGR_1
-	px_BGR_2 = image[x_3 , y_3]
+	px_BGR_2 = image[x_2 , y_2]
+	print colored('BGR 2: ', 'green')
 	print px_BGR_2
 
-	px_hsv_1 = hsv_image[x_1, y_1]   #get the hsv value of the pixel or convert the rgb to hsv!!!
-	px_hsv_2 = hsv_image[x_3, y_3]
-
+	point_1 = np.uint8([[[ px_BGR_1[0],px_BGR_1[1],px_BGR_1[2] ]]])
+	point_2 = np.uint8([[[ px_BGR_2[0],px_BGR_2[1],px_BGR_2[2] ]]])
+	
 	#converting to hsv
+	hsv_1 = cv2.cvtColor(point_1, cv2.COLOR_BGR2HSV)
+	hsv_2 = cv2.cvtColor(point_2, cv2.COLOR_BGR2HSV)	
 
-
-
-	if px_hsv_1[0] <= px_hsv_2[0]:
-		low = px_hsv_1
-		high = px_hsv_2
+	if hsv_1[0,0,0] <= hsv_2[0,0,0]:
+		low = hsv_1
+		high = hsv_2
 	else:
-		high = px_hsv_1
-		low = px_hsv_2
+		high = hsv_1
+		low = hsv_2
 
 	print colored('Lower H bound: ', 'green')
 	print low

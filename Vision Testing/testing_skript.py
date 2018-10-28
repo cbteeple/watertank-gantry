@@ -38,4 +38,7 @@ print coordinates
 
 image = cv2.imread("finger.png")
 
-low,upper = colorSampling(image)
+lower,upper = colorSampling(image)
+
+print lower
+print upper
