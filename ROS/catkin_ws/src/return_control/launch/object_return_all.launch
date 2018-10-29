@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+  <!--OBJECT RETURN-->
+<launch>
+  <group>
+    <node name="readStuff"  pkg="return_control" type="serial_data_client.py" />
+    <node name="sendServer" pkg="return_control" type="serial_sendstuff.py"   output="screen" />
+    <node name="sendClient" pkg="return_control" type="serial_sendclient.py"  output="screen" />
+    <node name="sendSetpoint" pkg="return_control" type="return_sendMoves.py"  output="screen" /> 
+  </group>
+</launch>

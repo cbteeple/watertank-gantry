@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <group>
+    <node name="gantry_in_node" pkg="gantry_control" type="gantry_in.py"  output="screen" />
+    <node name="sendPosition_node" pkg="gantry_control" type="sendPosition.py"  output="screen" />
+    <node name="valve_control_node" pkg="gantry_control" type="valves_gcode_control.py"  output="screen" />
+    <node name="coordinate_node" pkg="gantry_control" type="coordinateMoves.py"  output="screen" />
+    <node name="test_home" pkg="gantry_control" type="testHome.py"  output="screen" />
+  </group>
+</launch>

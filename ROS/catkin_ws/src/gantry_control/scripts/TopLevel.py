@@ -21,6 +21,7 @@ camState=False
 runComplete=False
 
 SAVE_DATA=rospy.get_param('GLOBAL_SAVE_DATA')
+CAMS_ON=rospy.get_param('GLOBAL_CAMS_ON')
 DEBUG=False
 
 def callbackCams(data):
