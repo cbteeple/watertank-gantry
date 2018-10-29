@@ -7,6 +7,31 @@ import colorsys as cs
 import numpy as np
 import cv2
 
+def nothing(x):
+	pass;
+
+def trackBars():
+	cv2.namedWindow('image')
+	cv2.createTrackbar('Hlo', 'image', 4, 255, nothing)
+	cv2.createTrackbar('HUP', 'image', 20, 255, nothing)
+	cv2.createTrackbar('Slo', 'image', 144, 255, nothing)
+	cv2.createTrackbar('SUP', 'image', 255, 255, nothing)
+	cv2.createTrackbar('Vlo', 'image', 126, 255, nothing)
+	cv2.createTrackbar('VUP', 'image', 255, 255, nothing)
+	return;
+
+def getTrackValues():
+	hlo = cv2.getTrackbarPos('HLo', 'image')
+	hup = cv2.getTrackbarPos('HUP', 'image')
+	slo = cv2.getTrackbarPos('Slo', 'image')
+	sup = cv2.getTrackbarPos('SUP', 'image')
+	vlo = cv2.getTrackbarPos('Vlo', 'image')
+	vup = cv2.getTrackbarPos('VUP', 'image')
+
+	low = np.array([hlo,slo,vlo])
+	high = np.array([hup,sup,vup])
+	return low, high;
+
 
 def colorSampling(image):
 

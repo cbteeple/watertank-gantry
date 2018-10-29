@@ -2,7 +2,7 @@
 
 import cv2
 import numpy as np
-from select_input import colorSampling
+from select_input import colorSampling, trackBars, getTrackValues
 from termcolor import colored
 
 
@@ -14,35 +14,42 @@ choose filtering mode:
 2: Gaussian blur
 3: median blur
 '''
-
 f = 3
-increment = 1
+
+'''
+choose filtering mode: 
+1: Input select from image (lagy)
+2: Hardcoding
+3: Trackbar HSV selection
+'''
+mode = 3
+
+trackBars()
 
 while(1):    
 
     _, frame = cap.read()
     
-    if increment == 0:
+    if mode == 0:
         low, high = colorSampling(frame)
-        lower_boundary = np.array([low[0, 0, 0], low[0, 0, 1], low[0, 0, 2]])
-        upper_boundary = np.array([high[0, 0, 0], high[0, 0, 1], high[0, 0, 2]])
+        lower_boundary = np.array([low[0, 0, 0] -5, low[0, 0, 1], low[0, 0, 2]])
+        upper_boundary = np.array([high[0, 0, 0] + 5, high[0, 0, 1], high[0, 0, 2]])
         increment = 1
-
-        print colored('Lower H bound: ', 'green')
-        print lower_boundary
-        print colored('Higher H bound: ', 'green')
-        print upper_boundary
         pass;
-
     
-        #problem here with the BOUNDARIES
-    print colored('DEBUG', 'yellow')
-    
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    if mode == 2:
+        lower_boundary = np.array([35,100,100])
+        upper_boundary = np.array([60,255,255])
 
-    lower_boundary = np.array([20,100,100])
-    upper_boundary = np.array([60,255,180])
+    if mode == 3:
+        lower_boundary, upper_boundary = getTrackValues()
 
+    print colored('Lower H bound: ', 'green')
+    print lower_boundary
+    print colored('Higher H bound: ', 'green')
+    print upper_boundary
+
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
     mask = cv2.inRange(hsv, lower_boundary, upper_boundary)
     res = cv2.bitwise_and(frame,frame, mask= mask)
 
