@@ -32,8 +32,8 @@ while(1):
     
     if mode == 0:
         low, high = colorSampling(frame)
-        lower_boundary = np.array([low[0, 0, 0] -5, low[0, 0, 1], low[0, 0, 2]])
-        upper_boundary = np.array([high[0, 0, 0] + 5, high[0, 0, 1], high[0, 0, 2]])
+        lower_boundary = np.array([low[0, 0, 0], low[0, 0, 1], low[0, 0, 2]])
+        upper_boundary = np.array([high[0, 0, 0], high[0, 0, 1], high[0, 0, 2]])
         increment = 1
         pass;
     

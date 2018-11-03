@@ -8,8 +8,9 @@ import math
 def loadImage():
 	img_original = cv2.imread('finger.jpg')
 	img_bckgrnd = cv2.imread('background.jpg')
+	
 	#img_original = img_original - img_bckgrnd
-
+	'''
 	inputImage = cv2.resize(img_original, (0,0), fx=0.5, fy=0.5) 
 	inputImageGray = cv2.cvtColor(inputImage, cv2.COLOR_BGR2GRAY)
 
@@ -52,8 +53,15 @@ def loadImage():
 	cv2.imshow('dst', dst)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()
-
+	'''
 	return;
+
+def pointExtractor(image):
+	
+
+
+	return POINTS OR POLYNOM; 
+
 
 def curvatureCalculation(poly,arg1, arg2):
 	# polynom is an array of coefficients.
