@@ -3,13 +3,14 @@
 import cv2
 import numpy as np
 from select_input import colorSampling, trackBars, getTrackValues
+from point_extractor import pointExtractor
 from termcolor import colored
 
 
 cap = cv2.VideoCapture(0)
 
 '''
-choose filtering mode: 
+choose filter: 
 1: average
 2: Gaussian blur
 3: median blur
@@ -17,7 +18,7 @@ choose filtering mode:
 f = 3
 
 '''
-choose filtering mode: 
+choose Sampling mode: 
 1: Input select from image (lagy)
 2: Hardcoding
 3: Trackbar HSV selection
@@ -44,18 +45,20 @@ while(1):
     if mode == 3:
         lower_boundary, upper_boundary = getTrackValues()
 
+    '''
     print colored('Lower H bound: ', 'green')
     print lower_boundary
     print colored('Higher H bound: ', 'green')
     print upper_boundary
+    '''
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
     mask = cv2.inRange(hsv, lower_boundary, upper_boundary)
     res = cv2.bitwise_and(frame,frame, mask= mask)
 
-    cv2.imshow('frame',frame)
-    cv2.imshow('hsv', hsv)
     #cv2.imshow('mask',mask)
+    cv2.imshow('frame',frame)
+    cv2.imshow('hsv', hsv)    
     cv2.imshow('res',res)
 
     if f == 1:
@@ -78,6 +81,12 @@ while(1):
     #shape = edges.shape
 
     cv2.imshow('edges', edges)
+
+
+    frame_with_points = pointExtractor(edges, frame, 0)
+
+    cv2.imshow('frame_with_points',frame_with_points)
+
         
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
