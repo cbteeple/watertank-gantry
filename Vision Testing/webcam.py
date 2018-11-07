@@ -5,6 +5,7 @@ import numpy as np
 from select_input import colorSampling, trackBars, getTrackValues
 from point_extractor import pointExtractor
 from termcolor import colored
+#from polyfit import ###
 
 
 cap = cv2.VideoCapture(0)
@@ -24,6 +25,10 @@ choose Sampling mode:
 3: Trackbar HSV selection
 '''
 mode = 3
+
+#degree of the polynomial fit
+
+degree = 3
 
 trackBars()
 
@@ -45,21 +50,9 @@ while(1):
     if mode == 3:
         lower_boundary, upper_boundary = getTrackValues()
 
-    '''
-    print colored('Lower H bound: ', 'green')
-    print lower_boundary
-    print colored('Higher H bound: ', 'green')
-    print upper_boundary
-    '''
-
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
     mask = cv2.inRange(hsv, lower_boundary, upper_boundary)
     res = cv2.bitwise_and(frame,frame, mask= mask)
-
-    #cv2.imshow('mask',mask)
-    cv2.imshow('frame',frame)
-    cv2.imshow('hsv', hsv)    
-    cv2.imshow('res',res)
 
     if f == 1:
         kernel = np.ones((15,15), np.float32)/225
@@ -78,19 +71,27 @@ while(1):
         pass
 
     edges = cv2.Canny(median, 100, 200)
-    #shape = edges.shape
+    
+    #returns the original image and the list of points
+    frame_with_points, curvature = pointExtractor(edges, frame, 0, 5, degree)
 
-    cv2.imshow('edges', edges)
 
+    print colored('Curvature K', 'green')
+    print curvature
 
-    frame_with_points = pointExtractor(edges, frame, 0)
-
-    cv2.imshow('frame_with_points',frame_with_points)
+    #show images
+    cv2.imshow('Original frame', frame)        
+    cv2.imshow('Result', res)
+    cv2.imshow('Edges', edges)
+    cv2.imshow('Frame with points', frame_with_points)
 
         
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
         break
+
+cv2.destroyAllWindows()
+cap.release()
 
 '''
     kernel1 = np.ones((15,15), np.float32)
@@ -106,8 +107,3 @@ while(1):
     cv2.imshow('dilation',dilation)
     cv2.imshow('opening',opening)
 '''
-
-
-
-cv2.destroyAllWindows()
-cap.release()

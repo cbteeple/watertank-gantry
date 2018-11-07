@@ -56,13 +56,6 @@ def loadImage():
 	'''
 	return;
 
-def pointExtractor(image):
-	
-
-
-	return POINTS OR POLYNOM; 
-
-
 def curvatureCalculation(poly,arg1, arg2):
 	# polynom is an array of coefficients.
 	poly1 = derivativeFirstDegree(poly)
