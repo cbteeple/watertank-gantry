@@ -2,8 +2,8 @@
 
 import cv2
 import numpy as np
-from select_input import colorSampling, trackBars, getTrackValues
-from point_extractor import pointExtractor
+from select_input_TESTING import colorSampling, trackBars, getTrackValues
+from point_extractor_TESTING import pointExtractor
 from termcolor import colored
 #from polyfit import ###
 
