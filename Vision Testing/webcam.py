@@ -8,7 +8,7 @@ from termcolor import colored
 #from polyfit import ###
 
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 '''
 choose filter: 
