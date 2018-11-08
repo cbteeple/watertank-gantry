@@ -5,8 +5,8 @@ import numpy as np
 from select_input import colorSampling, trackBars, getTrackValues
 from point_extractor import pointExtractor
 from termcolor import colored
+import matplotlib.pyplot as plt
 #from polyfit import ###
-
 
 cap = cv2.VideoCapture(1)
 
@@ -26,7 +26,7 @@ choose Sampling mode:
 '''
 mode = 3
 
-#degree of the polynomial fit
+#degree of the polynomial fit. not interchangeable yet
 
 degree = 3
 
@@ -73,19 +73,18 @@ while(1):
     edges = cv2.Canny(median, 100, 200)
     
     #returns the original image and the list of points
-    frame_with_points, curvature = pointExtractor(edges, frame, 0, 5, degree)
+    frame_with_points, curvature = pointExtractor(edges, frame, 0, 40, degree)
 
-    '''
+    
     print colored('Curvature K', 'green')
     print curvature
-    '''
+    
 
     #show images
     cv2.imshow('Original frame', frame)        
     cv2.imshow('Result', res)
     cv2.imshow('Edges', edges)
     cv2.imshow('Frame with points', frame_with_points)
-
         
     k = cv2.waitKey(5) & 0xFF
     if k == 27:

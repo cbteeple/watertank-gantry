@@ -18,17 +18,14 @@ def pointExtractor(img, originalImg, parameter,increment, degree):
 	pointList = [0]
 	x = [0]
 	y = [0]
+	lines,columns = img.shape
 
 
 	if parameter == 0:
 		indices = np.where(img != [0])
-		print colored('Indices', 'blue')
-		print indices
 		coordinates = zip(indices[0], indices[1])
 		coordinates = sorted(coordinates,key=itemgetter(1))
 		length = len(coordinates)
-		print colored('Coordinates', 'green')
-		print coordinates
 
 	if parameter == 1:
 		img = cv2.resize(img,None,fx=0.5, fy=0.5, interpolation = cv2.INTER_CUBIC)
@@ -38,7 +35,7 @@ def pointExtractor(img, originalImg, parameter,increment, degree):
 		coordinates = sorted(coordinates,key=itemgetter(1))
 		length = len(coordinates)
 	
-
+	#first item is the line, second item is the column. 
 	for i in range(0,length - 1):	
 		if coordinates[i + 1][1] == coordinates[i][1]:
 			i = i + increment
@@ -47,21 +44,22 @@ def pointExtractor(img, originalImg, parameter,increment, degree):
 			i = i + increment
 
 	for i in range(1, len(pointList) -1):
-		a = pointList[i][0]
-		b = pointList[i][1]
+		line = pointList[i][0] #line
+		column = pointList[i][1]	#column
+		x.append(column)
+		y.append(lines - line)
 
-		x.append(a)
-		y.append(b)
-
-		cv2.circle(originalImg,(b, a), 5, (0, 0, 255), +1) 
+		cv2.circle(originalImg,(column, line), 5, (0, 0, 255), +1) 
 
 	poly = np.polyfit(x, y, degree, rcond=None, full=False, w=None, cov=False)
 	p = np.poly1d(poly)
-
+	
+	#draw fitted function into original frame
 	for i in range(1, len(x)-1):
-		sumK = sumK + curvatureCalculation(poly, x[i])
+		sumK = sumK + curvatureCalculation(poly, y[i])
 
+	print poly	
 
-	k = sumK / len(x)
-
+	k = sumK / len(y)
+	
 	return originalImg, k;
