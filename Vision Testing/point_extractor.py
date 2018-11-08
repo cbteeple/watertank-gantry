@@ -42,14 +42,14 @@ def pointExtractor(img, originalImg, parameter,increment, degree):
 		elif coordinates[i + 1][1] > coordinates[i][1]:
 			pointList.append(coordinates[i])
 			i = i + increment
-
+	
 	for i in range(1, len(pointList) -1):
-		line = pointList[i][0] #line
-		column = pointList[i][1]	#column
+		column = pointList[i][0] #line
+		line = pointList[i][1]	#column
 		x.append(column)
 		y.append(lines - line)
 
-		cv2.circle(originalImg,(column, line), 5, (0, 0, 255), +1) 
+		cv2.circle(originalImg,(line, column), 5, (0, 0, 255), +1) 
 
 	poly = np.polyfit(x, y, degree, rcond=None, full=False, w=None, cov=False)
 	p = np.poly1d(poly)

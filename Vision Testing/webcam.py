@@ -56,35 +56,32 @@ while(1):
 
     if f == 1:
         kernel = np.ones((15,15), np.float32)/225
-        smoothed = cv2.filter2D(res, -1, kernel)
-        cv2.imshow('smoothed',smoothed)
+        filtered = cv2.filter2D(res, -1, kernel)        
 
     elif f == 2:
-        blur = cv2.GaussianBlur(res, (15,15),0)
-        cv2.imshow('gaussian blur',blur)
+        filtered = cv2.GaussianBlur(res, (15,15),0)        
 
     elif f == 3:
-        median = cv2.medianBlur(res,15)
-        cv2.imshow('median blur',median)
+        filtered = cv2.medianBlur(res,15)
+        
 
     else:
         pass
 
-    edges = cv2.Canny(median, 100, 200)
+    edges = cv2.Canny(filtered, 100, 200)
     
     #returns the original image and the list of points
     frame_with_points, curvature = pointExtractor(edges, frame, 0, 40, degree)
-
     
     print colored('Curvature K', 'green')
     print curvature
+    edges_3_channel = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR)    
     
-
     #show images
-    cv2.imshow('Original frame', frame)        
-    cv2.imshow('Result', res)
-    cv2.imshow('Edges', edges)
-    cv2.imshow('Frame with points', frame_with_points)
+    numpy_horizontal_1 = np.hstack((res, filtered))
+    numpy_horizontal_2 = np.hstack((edges_3_channel, frame))
+    numpy_vertical = np.vstack((numpy_horizontal_1, numpy_horizontal_2))
+    cv2.imshow('Mask, Filter, Canny Edge, Detected points', numpy_vertical)
         
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
