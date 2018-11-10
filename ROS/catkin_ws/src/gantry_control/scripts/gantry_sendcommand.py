@@ -9,9 +9,6 @@ import os
 import sys
 import sendGcodeSerial
 
-devname = '0'
-baud = 0
-
 #Get Settings
 params=rospy.get_param('gantry')
 baud=params['baudrate']
