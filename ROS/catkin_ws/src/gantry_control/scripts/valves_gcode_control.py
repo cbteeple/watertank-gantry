@@ -8,26 +8,23 @@ from std_msgs.msg import Bool
 
 
 class valvesGcode(object):
-    def __init__(self):
-        self.node_name = 'valve_control_gcode_node'
+	def __init__(self):
+		self.node_name = 'valve_control_gcode_node'
 
-        #Set up variables
-        self.ready=False
-
+		#Set up variables
 		params=rospy.get_param('gantry')
 		self.devname=params['devname']
 		self.baud=params['baudrate']
 
-        #Set up publishers and subscribers
-        self.sub_ready = rospy.Subscriber("/gantry/ready", Bool, self.callbackReady)
+		#Set up publishers and subscribers
 		self.sub_set   = rospy.Subscriber("/gantry/set_actuation", actuation, self.callbackGo)
 
 		#Send a "start" message
 		rospy.loginfo("[%s] has started", self.node_name)
 
 
-	def callbackReady(self, data):
-		self.ready=data.data
+	def __del__(self):
+		None
 
 
 	def callbackGo(self, data):
@@ -55,10 +52,7 @@ class valvesGcode(object):
 		#Send the GCODE commands
 		for entry in gcode_array:
 			sendGcodeSerial.fromLine(s,entry)
-			
-			while True:
-				if self.ready:
-					break
+			sendGcodeSerial.waitForOk(s);
 	
 
 
