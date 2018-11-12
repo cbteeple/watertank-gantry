@@ -28,13 +28,20 @@ mode = 3
 
 #degree of the polynomial fit. not interchangeable yet
 
-degree = 3
+degree = 2
+
+#dpoint incrementation
+
+increment = 10
+
+counter = 0
 
 trackBars()
 
 while(1):    
 
     _, frame = cap.read()
+    print frame.shape
     
     if mode == 0:
         low, high = colorSampling(frame)
@@ -56,14 +63,16 @@ while(1):
 
     if f == 1:
         kernel = np.ones((15,15), np.float32)/225
-        filtered = cv2.filter2D(res, -1, kernel)        
+        filtered = cv2.filter2D(res, -1, kernel)
+        fltr = 'Average'        
 
     elif f == 2:
         filtered = cv2.GaussianBlur(res, (15,15),0)        
+        fltr = 'Gaussian'
 
     elif f == 3:
         filtered = cv2.medianBlur(res,15)
-        
+        fltr = 'Median'
 
     else:
         pass
@@ -71,12 +80,28 @@ while(1):
     edges = cv2.Canny(filtered, 100, 200)
     
     #returns the original image and the list of points
-    frame_with_points, curvature = pointExtractor(edges, frame, 0, 40, degree)
+    frame_with_points, curvature = pointExtractor(edges, frame, 0, increment, degree, counter)
     
     print colored('Curvature K', 'green')
     print curvature
-    edges_3_channel = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR)    
-    
+    print colored('Counter', 'yellow')
+    print counter
+    counter = counter + 1    
+
+       
+        
+    #write on images
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    s = str(increment)
+
+    edges_3_channel = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR) 
+    cv2.putText(res, 'Mask', (0,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+    cv2.putText(filtered, 'Filtered Mask', (0,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+    cv2.putText(filtered, 'type:' + fltr, (450,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+
+    cv2.putText(edges_3_channel, 'Canny Edge', (0,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+    cv2.putText(frame, 'Original Frame', (0,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
+    cv2.putText(frame,'inc:' + s, (450,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
     #show images
     numpy_horizontal_1 = np.hstack((res, filtered))
     numpy_horizontal_2 = np.hstack((edges_3_channel, frame))
@@ -89,6 +114,9 @@ while(1):
 
 cv2.destroyAllWindows()
 cap.release()
+
+counter = counter + 1
+
 
 '''
     kernel1 = np.ones((15,15), np.float32)
