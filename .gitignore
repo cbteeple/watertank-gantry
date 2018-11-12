@@ -156,6 +156,7 @@ cmake-build-*
 *.pyc
 
 ROS/catkin_ws/data
+ROS/catkin_ws/build
 
 
 Arduino/pressure_controller/
