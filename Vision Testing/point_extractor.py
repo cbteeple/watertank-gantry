@@ -1,23 +1,25 @@
 #!/usr/bin/env python
-
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-import colorsys as cs
 import numpy as np
 import cv2
+import colorsys as cs
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
 from termcolor import colored
 from polyfit import curvatureCalculation
 from operator import itemgetter
 
+
 # input: cannyedge, Original Image, parameter: 1 for reduced size, zero full size, 
 # increment between recorded points ((higher increment = fewer points)
 # degree: degree of the polynomial fit
+
 def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 
-	sumK = 0
-	pointList = [0]
-	x = [0]
-	y = [0]
+	V = 0
+	pointList = []
+	x = []
+	y = []
 	lines,columns = img.shape
 
 
@@ -42,7 +44,7 @@ def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 	for i in range(1, len(pointList) -1):
 		line = pointList[i][0]
 		column = pointList[i][1]	
-		y.append(-line)
+		y.append(-line + lines)
 		x.append(column)
 
 		cv2.circle(originalImg,(column, line), 5, (0, 0, 255), +1) 
@@ -53,9 +55,6 @@ def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 	p = np.poly1d(poly)
 	pdgr_1 = np.poly1d(poly_1)
 
-
-
-
 	print pointList
 	print colored('X', 'blue')
 	print x
@@ -65,24 +64,16 @@ def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 
 	if counter > 300:
 		plt.plot(x, y, 'ro')
-		plt.ylim(-lines,0)
+		_ = plt.plot(x, y, '.', x, p(x), '-', x, pdgr_1(x), '--')
+		plt.ylim(0, lines)
 		plt.xlim(0, columns)
 		plt.show()
 	'''
+	for i in range(0, len(x)):
+		V = V + curvatureCalculation(poly, x)
 
-	#xp = np.linspace(0, columns, 200)
-	_ = plt.plot(x, y, '.', x, p(x), '-', x, pdgr_1(x), '--')
-	plt.ylim(0,lines)
-	plt.show()
-
-	
-	
-	#draw fitted function into original frame?
-	for i in range(1, len(x)-1):
-		sumK = sumK + curvatureCalculation(poly, y[i])
-	'''	
-
-	k = sumK / len(y)
-
+	k = V / len(x)
+	'''
+	k = 1
 	
 	return originalImg, k;

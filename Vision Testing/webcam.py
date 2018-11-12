@@ -1,11 +1,17 @@
 #!/usr/bin/env python
-
-import cv2
 import numpy as np
+import cv2
+import colorsys as cs
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+from termcolor import colored
+from polyfit import curvatureCalculation
+from operator import itemgetter
+
 from select_input import colorSampling, trackBars, getTrackValues
 from point_extractor import pointExtractor
-from termcolor import colored
-import matplotlib.pyplot as plt
+
 #from polyfit import ###
 
 cap = cv2.VideoCapture(1)
@@ -28,13 +34,13 @@ mode = 3
 
 #degree of the polynomial fit. not interchangeable yet
 
-degree = 2
+degree = 3
 
 #dpoint incrementation
 
-increment = 10
+increment = 25
 
-counter = 0
+counter = 1
 
 trackBars()
 
@@ -77,24 +83,25 @@ while(1):
     else:
         pass
 
+    #Canny edge
     edges = cv2.Canny(filtered, 100, 200)
-    
+    edges_3_channel = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR)
+
     #returns the original image and the list of points
     frame_with_points, curvature = pointExtractor(edges, frame, 0, increment, degree, counter)
     
     print colored('Curvature K', 'green')
     print curvature
+    
+    #Debugging counter for plotting
     print colored('Counter', 'yellow')
     print counter
-    counter = counter + 1    
-
-       
+    counter = counter + 1           
         
     #write on images
     font = cv2.FONT_HERSHEY_SIMPLEX
-    s = str(increment)
-
-    edges_3_channel = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR) 
+    s = str(increment)   
+ 
     cv2.putText(res, 'Mask', (0,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.putText(filtered, 'Filtered Mask', (0,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.putText(filtered, 'type:' + fltr, (450,460), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
@@ -115,7 +122,7 @@ while(1):
 cv2.destroyAllWindows()
 cap.release()
 
-counter = counter + 1
+
 
 
 '''
