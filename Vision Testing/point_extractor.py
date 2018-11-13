@@ -55,6 +55,8 @@ def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 	p = np.poly1d(poly)
 	pdgr_1 = np.poly1d(poly_1)
 
+	print poly
+
 	print pointList
 	print colored('X', 'blue')
 	print x
@@ -70,10 +72,10 @@ def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 		plt.show()
 	'''
 	for i in range(0, len(x)):
-		V = V + curvatureCalculation(poly, x)
+		V = V + curvatureCalculation(poly[0], poly[1], poly[2], x[i])
 
 	k = V / len(x)
 	'''
-	k = 1
+	k = 0
 	
 	return originalImg, k;

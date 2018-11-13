@@ -14,7 +14,7 @@ from point_extractor import pointExtractor
 
 #from polyfit import ###
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 '''
 choose filter: 
