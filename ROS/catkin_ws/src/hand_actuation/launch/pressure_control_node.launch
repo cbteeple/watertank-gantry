@@ -1,0 +1,4 @@
+<launch>
+  <rosparam command="load" file="settings_gantry.yaml" />
+  <node name="pressure_control_node" pkg="hand_actuation" type="pressure_control.py"   output="screen" />
+</launch>

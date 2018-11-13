@@ -14,6 +14,13 @@ gantry:
     hand_actuation: 'gcode' #[string] OPTIONS - 'gcode', 'standalone'
     DEBUG: True
 
+hand:
+    devname: '/dev/ttyUSB1' # [device string]
+    baudrate: 115200        # [baud]
+    num_fingers: 3          # [number]
+    default_delay: 200      # [ms]
+    DEBUG: False
+
 object_return: 
     devname: '/dev/ttyUSB0' # [device string]
     baudrate: 115200        # [baud]

@@ -50,7 +50,7 @@ find_package(catkin REQUIRED COMPONENTS
  add_message_files(
    FILES
    set_valves.msg
-   set_finger_pressure.msg
+   set_pressure.msg
  )
 
 # Generate services in the 'srv' folder

@@ -1,0 +1,4 @@
+<launch>
+  <rosparam command="load" file="settings_gantry.yaml" />
+  <node name="gcode_valve_control_node" pkg="hand_actuation" type="gcode_valve_control.py"   output="screen" />
+</launch>

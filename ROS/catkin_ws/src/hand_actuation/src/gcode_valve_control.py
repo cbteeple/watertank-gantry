@@ -24,7 +24,7 @@ class valvesGcode(object):
 
 
 	def __del__(self):
-		None
+		None #This syntax might not work
 
 
 	def callbackGo(self, data):
