@@ -57,6 +57,10 @@ def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 
 	print poly
 
+	poly_rounded = [ round(elem, 2) for elem in poly ]
+
+	print poly_rounded
+
 	print pointList
 	print colored('X', 'blue')
 	print x
@@ -64,18 +68,18 @@ def pointExtractor(img, originalImg, parameter,increment, degree,counter):
 	print y
 
 
-	if counter > 300:
+	if counter > 2000:
+	
 		plt.plot(x, y, 'ro')
 		_ = plt.plot(x, y, '.', x, p(x), '-', x, pdgr_1(x), '--')
 		plt.ylim(0, lines)
 		plt.xlim(0, columns)
 		plt.show()
-	'''
+
+	
 	for i in range(0, len(x)):
 		V = V + curvatureCalculation(poly[0], poly[1], poly[2], x[i])
 
 	k = V / len(x)
-	'''
-	k = 0
 	
 	return originalImg, k;

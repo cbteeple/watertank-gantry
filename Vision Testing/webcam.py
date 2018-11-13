@@ -14,7 +14,7 @@ from point_extractor import pointExtractor
 
 #from polyfit import ###
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 '''
 choose filter: 
@@ -38,7 +38,7 @@ degree = 3
 
 #dpoint incrementation
 
-increment = 25
+increment = 5
 
 counter = 1
 
