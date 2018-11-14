@@ -16,11 +16,11 @@ import numpy as np
 class objectReturn(object):
 	def __init__(self):
 		self.node_name = rospy.get_name()
-        rospy.loginfo("[%s] Initializing......" %(self.node_name))
+		rospy.loginfo("[%s] Initializing......" %(self.node_name))
 		#Get params
-		params=rospy.get_param('object_return')
-		self.baud=params['baudrate']
-		self.devname=params['devname']
+		#params=rospy.get_param('object_return')
+		self.baud=rospy.get_param('baudrate')
+		self.devname=rospy.get_param('devname')
 
 		#Set up serial communication
 		self.serial_obj = serial_coms.resume(self.devname,self.baud)
@@ -40,7 +40,7 @@ class objectReturn(object):
 
 
 	#Start the serial port
-	def startSerial(self)
+	def startSerial(self):
 		serial_coms.initialize(self.serial_obj)
 
 
@@ -116,7 +116,7 @@ class objectReturn(object):
 
 
 	#Execute a trajectory from an array
-	def sendSetpointTraj(self,setpoint_traj, timestep)
+	def sendSetpointTraj(self,setpoint_traj, timestep):
 	#Send a smooth trajectory
 		rate=rospy.Rate(1/timestep)
 		for setpoint_curr in setpoint_traj:

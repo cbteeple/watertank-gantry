@@ -36,14 +36,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/return_control/msg" TYPE FILE FILES
     "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/serial_data.msg"
     "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg"
+    "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/send_command.msg"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/return_control/srv" TYPE FILE FILES
-    "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv"
-    "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
-    )
+  include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

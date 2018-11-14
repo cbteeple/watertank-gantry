@@ -55,8 +55,7 @@ include return_control/CMakeFiles/return_control_generate_messages_nodejs.dir/pr
 
 return_control/CMakeFiles/return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/serial_data.js
 return_control/CMakeFiles/return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/setpoint.js
-return_control/CMakeFiles/return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/serial_read.js
-return_control/CMakeFiles/return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/SerialSend.js
+return_control/CMakeFiles/return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/send_command.js
 
 
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/serial_data.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
@@ -69,21 +68,15 @@ return_control/CMakeFiles/return_control_generate_messages_nodejs: /media/woodla
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from return_control/setpoint.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg
 
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/serial_read.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/serial_read.js: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from return_control/serial_read.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv
-
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/SerialSend.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/SerialSend.js: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from return_control/SerialSend.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/send_command.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/send_command.js: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/send_command.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from return_control/send_command.msg"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/send_command.msg -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg
 
 return_control_generate_messages_nodejs: return_control/CMakeFiles/return_control_generate_messages_nodejs
 return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/serial_data.js
 return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/setpoint.js
-return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/serial_read.js
-return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/srv/SerialSend.js
+return_control_generate_messages_nodejs: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/gennodejs/ros/return_control/msg/send_command.js
 return_control_generate_messages_nodejs: return_control/CMakeFiles/return_control_generate_messages_nodejs.dir/build.make
 
 .PHONY : return_control_generate_messages_nodejs

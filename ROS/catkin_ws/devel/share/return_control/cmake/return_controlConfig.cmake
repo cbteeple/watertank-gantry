@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(return_control_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include " STREQUAL " ")
+if(NOT "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/include " STREQUAL " ")
   set(return_control_INCLUDE_DIRS "")
-  set(_include_dirs "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include")
+  set(_include_dirs "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")

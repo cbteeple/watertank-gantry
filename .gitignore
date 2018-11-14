@@ -157,6 +157,8 @@ cmake-build-*
 
 ROS/catkin_ws/data
 ROS/catkin_ws/build
+ROS/catkin_ws/devel
+ROS/catkin_ws/install
 
 
 Arduino/pressure_controller/

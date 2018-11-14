@@ -55,8 +55,7 @@ include return_control/CMakeFiles/return_control_generate_messages_cpp.dir/progr
 
 return_control/CMakeFiles/return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_data.h
 return_control/CMakeFiles/return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/setpoint.h
-return_control/CMakeFiles/return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h
-return_control/CMakeFiles/return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h
+return_control/CMakeFiles/return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/send_command.h
 
 
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_data.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
@@ -71,25 +70,16 @@ return_control/CMakeFiles/return_control_generate_messages_cpp: /media/woodlab/D
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from return_control/setpoint.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control -e /opt/ros/kinetic/share/gencpp/cmake/..
 
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from return_control/serial_read.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control -e /opt/ros/kinetic/share/gencpp/cmake/..
-
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from return_control/SerialSend.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control -e /opt/ros/kinetic/share/gencpp/cmake/..
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/send_command.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/send_command.h: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/send_command.msg
+/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/send_command.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from return_control/send_command.msg"
+	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control && /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/send_command.msg -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 return_control_generate_messages_cpp: return_control/CMakeFiles/return_control_generate_messages_cpp
 return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_data.h
 return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/setpoint.h
-return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h
-return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h
+return_control_generate_messages_cpp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/send_command.h
 return_control_generate_messages_cpp: return_control/CMakeFiles/return_control_generate_messages_cpp.dir/build.make
 
 .PHONY : return_control_generate_messages_cpp

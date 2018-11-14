@@ -68,6 +68,12 @@ find_package(catkin REQUIRED COMPONENTS
 #   Action2.action
 # )
 
+
+#Python setup - set up stuff using "setup.py"
+catkin_python_setup()
+
+
+
 # Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
@@ -97,10 +103,6 @@ find_package(catkin REQUIRED COMPONENTS
 ###################################
 ## catkin specific configuration ##
 ###################################
-
-#Python setup - set up stuff using "setup.py"
-catkin_python_setup()
-
 ## The catkin_package macro generates cmake config files for your package
 ## Declare things to be passed to dependent projects
 ## INCLUDE_DIRS: uncomment this if your package contains header files
@@ -108,7 +110,7 @@ catkin_python_setup()
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS include
 #  LIBRARIES serial_test
 #  CATKIN_DEPENDS rospy std_msgs
    CATKIN_DEPENDS message_runtime
@@ -122,7 +124,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+ include
   ${catkin_INCLUDE_DIRS}
 )
 

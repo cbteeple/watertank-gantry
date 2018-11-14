@@ -20,6 +20,7 @@ class setpoint {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.setpoint = null;
       this.time = null;
+      this.num_segs = null;
     }
     else {
       if (initObj.hasOwnProperty('setpoint')) {
@@ -34,6 +35,12 @@ class setpoint {
       else {
         this.time = 0.0;
       }
+      if (initObj.hasOwnProperty('num_segs')) {
+        this.num_segs = initObj.num_segs
+      }
+      else {
+        this.num_segs = 0.0;
+      }
     }
   }
 
@@ -43,6 +50,8 @@ class setpoint {
     bufferOffset = _serializer.float32(obj.setpoint, buffer, bufferOffset);
     // Serialize message field [time]
     bufferOffset = _serializer.float32(obj.time, buffer, bufferOffset);
+    // Serialize message field [num_segs]
+    bufferOffset = _serializer.float32(obj.num_segs, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -54,11 +63,13 @@ class setpoint {
     data.setpoint = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [time]
     data.time = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [num_segs]
+    data.num_segs = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 8;
+    return 12;
   }
 
   static datatype() {
@@ -68,7 +79,7 @@ class setpoint {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '69dccf7b66123a7863bfbf542606a1d6';
+    return 'e3524edac9991421d91a71414a35e726';
   }
 
   static messageDefinition() {
@@ -76,6 +87,7 @@ class setpoint {
     return `
     float32 setpoint
     float32 time
+    float32 num_segs
     
     
     
@@ -100,6 +112,13 @@ class setpoint {
     }
     else {
       resolved.time = 0.0
+    }
+
+    if (msg.num_segs !== undefined) {
+      resolved.num_segs = msg.num_segs;
+    }
+    else {
+      resolved.num_segs = 0.0
     }
 
     return resolved;

@@ -8,4 +8,6 @@
     (:file "_package_gantry_send" :depends-on ("_package"))
     (:file "serial_read" :depends-on ("_package_serial_read"))
     (:file "_package_serial_read" :depends-on ("_package"))
+    (:file "trajectory" :depends-on ("_package_trajectory"))
+    (:file "_package_trajectory" :depends-on ("_package"))
   ))

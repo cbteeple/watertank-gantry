@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>grasp-timer</name>
+  <name>grasp_timer</name>
   <version>1.0.0</version>
   <description>Coordinates high-level timing of a robot, hand, and object return device</description>
 

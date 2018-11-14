@@ -7,16 +7,17 @@ import struct
 
 
 class setpoint(genpy.Message):
-  _md5sum = "69dccf7b66123a7863bfbf542606a1d6"
+  _md5sum = "e3524edac9991421d91a71414a35e726"
   _type = "return_control/setpoint"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """float32 setpoint
 float32 time
+float32 num_segs
 
 
 """
-  __slots__ = ['setpoint','time']
-  _slot_types = ['float32','float32']
+  __slots__ = ['setpoint','time','num_segs']
+  _slot_types = ['float32','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +27,7 @@ float32 time
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       setpoint,time
+       setpoint,time,num_segs
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -39,9 +40,12 @@ float32 time
         self.setpoint = 0.
       if self.time is None:
         self.time = 0.
+      if self.num_segs is None:
+        self.num_segs = 0.
     else:
       self.setpoint = 0.
       self.time = 0.
+      self.num_segs = 0.
 
   def _get_types(self):
     """
@@ -56,7 +60,7 @@ float32 time
     """
     try:
       _x = self
-      buff.write(_get_struct_2f().pack(_x.setpoint, _x.time))
+      buff.write(_get_struct_3f().pack(_x.setpoint, _x.time, _x.num_segs))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -69,8 +73,8 @@ float32 time
       end = 0
       _x = self
       start = end
-      end += 8
-      (_x.setpoint, _x.time,) = _get_struct_2f().unpack(str[start:end])
+      end += 12
+      (_x.setpoint, _x.time, _x.num_segs,) = _get_struct_3f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -84,7 +88,7 @@ float32 time
     """
     try:
       _x = self
-      buff.write(_get_struct_2f().pack(_x.setpoint, _x.time))
+      buff.write(_get_struct_3f().pack(_x.setpoint, _x.time, _x.num_segs))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -98,8 +102,8 @@ float32 time
       end = 0
       _x = self
       start = end
-      end += 8
-      (_x.setpoint, _x.time,) = _get_struct_2f().unpack(str[start:end])
+      end += 12
+      (_x.setpoint, _x.time, _x.num_segs,) = _get_struct_3f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -108,9 +112,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2f = None
-def _get_struct_2f():
-    global _struct_2f
-    if _struct_2f is None:
-        _struct_2f = struct.Struct("<2f")
-    return _struct_2f
+_struct_3f = None
+def _get_struct_3f():
+    global _struct_3f
+    if _struct_3f is None:
+        _struct_3f = struct.Struct("<3f")
+    return _struct_3f

@@ -25,11 +25,13 @@ struct setpoint_
 
   setpoint_()
     : setpoint(0.0)
-    , time(0.0)  {
+    , time(0.0)
+    , num_segs(0.0)  {
     }
   setpoint_(const ContainerAllocator& _alloc)
     : setpoint(0.0)
-    , time(0.0)  {
+    , time(0.0)
+    , num_segs(0.0)  {
   (void)_alloc;
     }
 
@@ -40,6 +42,9 @@ struct setpoint_
 
    typedef float _time_type;
   _time_type time;
+
+   typedef float _num_segs_type;
+  _num_segs_type num_segs;
 
 
 
@@ -119,12 +124,12 @@ struct MD5Sum< ::return_control::setpoint_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "69dccf7b66123a7863bfbf542606a1d6";
+    return "e3524edac9991421d91a71414a35e726";
   }
 
   static const char* value(const ::return_control::setpoint_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x69dccf7b66123a78ULL;
-  static const uint64_t static_value2 = 0x63bfbf542606a1d6ULL;
+  static const uint64_t static_value1 = 0xe3524edac9991421ULL;
+  static const uint64_t static_value2 = 0xd91a71414a35e726ULL;
 };
 
 template<class ContainerAllocator>
@@ -145,6 +150,7 @@ struct Definition< ::return_control::setpoint_<ContainerAllocator> >
   {
     return "float32 setpoint\n\
 float32 time\n\
+float32 num_segs\n\
 \n\
 \n\
 ";
@@ -167,6 +173,7 @@ namespace serialization
     {
       stream.next(m.setpoint);
       stream.next(m.time);
+      stream.next(m.num_segs);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -189,6 +196,8 @@ struct Printer< ::return_control::setpoint_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.setpoint);
     s << indent << "time: ";
     Printer<float>::stream(s, indent + "  ", v.time);
+    s << indent << "num_segs: ";
+    Printer<float>::stream(s, indent + "  ", v.num_segs);
   }
 };
 

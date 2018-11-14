@@ -10,6 +10,12 @@
 #ifndef __libuvc_camera__UVCCAMERACONFIG_H__
 #define __libuvc_camera__UVCCAMERACONFIG_H__
 
+#if __cplusplus >= 201103L
+#define DYNAMIC_RECONFIGURE_FINAL final
+#else
+#define DYNAMIC_RECONFIGURE_FINAL
+#endif
+
 #include <dynamic_reconfigure/config_tools.h>
 #include <limits>
 #include <ros/node_handle.h>
@@ -51,8 +57,10 @@ namespace libuvc_camera
     typedef boost::shared_ptr<AbstractParamDescription> AbstractParamDescriptionPtr;
     typedef boost::shared_ptr<const AbstractParamDescription> AbstractParamDescriptionConstPtr;
 
+    // Final keyword added to class because it has virtual methods and inherits
+    // from a class with a non-virtual destructor.
     template <class T>
-    class ParamDescription : public AbstractParamDescription
+    class ParamDescription DYNAMIC_RECONFIGURE_FINAL : public AbstractParamDescription
     {
     public:
       ParamDescription(std::string a_name, std::string a_type, uint32_t a_level,
@@ -137,8 +145,10 @@ namespace libuvc_camera
     typedef boost::shared_ptr<AbstractGroupDescription> AbstractGroupDescriptionPtr;
     typedef boost::shared_ptr<const AbstractGroupDescription> AbstractGroupDescriptionConstPtr;
 
+    // Final keyword added to class because it has virtual methods and inherits
+    // from a class with a non-virtual destructor.
     template<class T, class PT>
-    class GroupDescription : public AbstractGroupDescription
+    class GroupDescription DYNAMIC_RECONFIGURE_FINAL : public AbstractGroupDescription
     {
     public:
       GroupDescription(std::string a_name, std::string a_type, int a_parent, int a_id, bool a_s, T PT::* a_f) : AbstractGroupDescription(a_name, a_type, a_parent, a_id, a_s), field(a_f)
@@ -310,79 +320,79 @@ double white_balance_RV;
 
 
 
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       std::string vendor;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       std::string product;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       std::string serial;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int index;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int width;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int height;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       std::string video_mode;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double frame_rate;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       std::string timestamp_method;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       std::string frame_id;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       std::string camera_info_url;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int scanning_mode;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int auto_exposure;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int auto_exposure_priority;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double exposure_absolute;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double iris_absolute;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool auto_focus;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int focus_absolute;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int pan_absolute;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int tilt_absolute;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int roll_absolute;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool privacy;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int backlight_compensation;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int brightness;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int contrast;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int gain;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int power_line_frequency;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool auto_hue;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double hue;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int saturation;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int sharpness;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double gamma;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool auto_white_balance;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int white_balance_temperature;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double white_balance_BU;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double white_balance_RV;
-//#line 218 "/opt/ros/kinetic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
+//#line 228 "/opt/ros/kinetic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
     bool __fromMessage__(dynamic_reconfigure::Config &msg)
     {
@@ -520,371 +530,371 @@ double white_balance_RV;
     UVCCameraConfigStatics()
     {
 UVCCameraConfig::GroupDescription<UVCCameraConfig::DEFAULT, UVCCameraConfig> Default("Default", "", 0, 0, true, &UVCCameraConfig::groups);
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.vendor = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.vendor = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.vendor = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("vendor", "str", 3, "Vendor ID, hex digits (use camera of any vendor if null).", "", &UVCCameraConfig::vendor)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("vendor", "str", 3, "Vendor ID, hex digits (use camera of any vendor if null).", "", &UVCCameraConfig::vendor)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.product = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.product = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.product = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("product", "str", 3, "Product ID, hex digits (use camera of any model if null).", "", &UVCCameraConfig::product)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("product", "str", 3, "Product ID, hex digits (use camera of any model if null).", "", &UVCCameraConfig::product)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.serial = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.serial = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.serial = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("serial", "str", 3, "Serial number, arbitrary string (use camera of any serial number if null).", "", &UVCCameraConfig::serial)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("serial", "str", 3, "Serial number, arbitrary string (use camera of any serial number if null).", "", &UVCCameraConfig::serial)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.index = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.index = 2147483647;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.index = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("index", "int", 3, "Index into the list of cameras that match the above parameters.", "", &UVCCameraConfig::index)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("index", "int", 3, "Index into the list of cameras that match the above parameters.", "", &UVCCameraConfig::index)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.width = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.width = 2147483647;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.width = 640;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("width", "int", 3, "Image width.", "", &UVCCameraConfig::width)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("width", "int", 3, "Image width.", "", &UVCCameraConfig::width)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.height = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.height = 2147483647;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.height = 480;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("height", "int", 3, "Image height.", "", &UVCCameraConfig::height)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("height", "int", 3, "Image height.", "", &UVCCameraConfig::height)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.video_mode = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.video_mode = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.video_mode = "uncompressed";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("video_mode", "str", 3, "Format of video stream from camera.", "{'enum_description': 'Video stream format', 'enum': [{'srcline': 36, 'description': 'Use any uncompressed format', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'uncompressed', 'ctype': 'std::string', 'type': 'str', 'name': 'uncompressed'}, {'srcline': 37, 'description': 'User any compressed format', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'compressed', 'ctype': 'std::string', 'type': 'str', 'name': 'compressed'}, {'srcline': 38, 'description': 'YUYV', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'yuyv', 'ctype': 'std::string', 'type': 'str', 'name': 'yuyv'}, {'srcline': 39, 'description': 'UYVY', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'uyvy', 'ctype': 'std::string', 'type': 'str', 'name': 'uyvy'}, {'srcline': 40, 'description': 'RGB', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'rgb', 'ctype': 'std::string', 'type': 'str', 'name': 'rgb'}, {'srcline': 41, 'description': 'BGR', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'bgr', 'ctype': 'std::string', 'type': 'str', 'name': 'bgr'}, {'srcline': 42, 'description': 'MJPEG', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'mjpeg', 'ctype': 'std::string', 'type': 'str', 'name': 'mjpeg'}, {'srcline': 43, 'description': 'gray8', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'gray8', 'ctype': 'std::string', 'type': 'str', 'name': 'gray8'}]}", &UVCCameraConfig::video_mode)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("video_mode", "str", 3, "Format of video stream from camera.", "{'enum_description': 'Video stream format', 'enum': [{'srcline': 36, 'description': 'Use any uncompressed format', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'uncompressed', 'ctype': 'std::string', 'type': 'str', 'name': 'uncompressed'}, {'srcline': 37, 'description': 'User any compressed format', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'compressed', 'ctype': 'std::string', 'type': 'str', 'name': 'compressed'}, {'srcline': 38, 'description': 'YUYV', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'yuyv', 'ctype': 'std::string', 'type': 'str', 'name': 'yuyv'}, {'srcline': 39, 'description': 'UYVY', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'uyvy', 'ctype': 'std::string', 'type': 'str', 'name': 'uyvy'}, {'srcline': 40, 'description': 'RGB', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'rgb', 'ctype': 'std::string', 'type': 'str', 'name': 'rgb'}, {'srcline': 41, 'description': 'BGR', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'bgr', 'ctype': 'std::string', 'type': 'str', 'name': 'bgr'}, {'srcline': 42, 'description': 'MJPEG', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'mjpeg', 'ctype': 'std::string', 'type': 'str', 'name': 'mjpeg'}, {'srcline': 43, 'description': 'gray8', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'gray8', 'ctype': 'std::string', 'type': 'str', 'name': 'gray8'}]}", &UVCCameraConfig::video_mode)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.frame_rate = 0.1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.frame_rate = 1000.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.frame_rate = 15.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("frame_rate", "double", 3, "Camera speed, frames per second.", "", &UVCCameraConfig::frame_rate)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("frame_rate", "double", 3, "Camera speed, frames per second.", "", &UVCCameraConfig::frame_rate)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.timestamp_method = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.timestamp_method = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.timestamp_method = "start";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("timestamp_method", "str", 3, "Method for determining the timestamp.", "{'enum_description': 'Methods for determining the timestamp', 'enum': [{'srcline': 53, 'description': 'Time of publication', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'pub', 'ctype': 'std::string', 'type': 'str', 'name': 'PubTime'}, {'srcline': 54, 'description': 'Time when raw frame capture began', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'start', 'ctype': 'std::string', 'type': 'str', 'name': 'FrameStartTime'}, {'srcline': 55, 'description': 'Time when raw frame capture ended', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'stop', 'ctype': 'std::string', 'type': 'str', 'name': 'FrameStopTime'}, {'srcline': 56, 'description': 'Time when camera-to-host transfer completed', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'hostrcpt', 'ctype': 'std::string', 'type': 'str', 'name': 'HostReceiptTime'}]}", &UVCCameraConfig::timestamp_method)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("timestamp_method", "str", 3, "Method for determining the timestamp.", "{'enum_description': 'Methods for determining the timestamp', 'enum': [{'srcline': 53, 'description': 'Time of publication', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'pub', 'ctype': 'std::string', 'type': 'str', 'name': 'PubTime'}, {'srcline': 54, 'description': 'Time when raw frame capture began', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'start', 'ctype': 'std::string', 'type': 'str', 'name': 'FrameStartTime'}, {'srcline': 55, 'description': 'Time when raw frame capture ended', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'stop', 'ctype': 'std::string', 'type': 'str', 'name': 'FrameStopTime'}, {'srcline': 56, 'description': 'Time when camera-to-host transfer completed', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const char * const', 'value': 'hostrcpt', 'ctype': 'std::string', 'type': 'str', 'name': 'HostReceiptTime'}]}", &UVCCameraConfig::timestamp_method)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.frame_id = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.frame_id = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.frame_id = "camera";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("frame_id", "str", 0, "ROS tf frame of reference, resolved with tf_prefix unless absolute.", "", &UVCCameraConfig::frame_id)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("frame_id", "str", 0, "ROS tf frame of reference, resolved with tf_prefix unless absolute.", "", &UVCCameraConfig::frame_id)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.camera_info_url = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.camera_info_url = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.camera_info_url = "";
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("camera_info_url", "str", 0, "Path to camera calibration file.", "", &UVCCameraConfig::camera_info_url)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<std::string>("camera_info_url", "str", 0, "Path to camera calibration file.", "", &UVCCameraConfig::camera_info_url)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.scanning_mode = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.scanning_mode = 1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.scanning_mode = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("scanning_mode", "int", 0, "Scanning mode.", "{'enum_description': 'Scanning modes', 'enum': [{'srcline': 72, 'description': '', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Interlaced'}, {'srcline': 73, 'description': '', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Progressive'}]}", &UVCCameraConfig::scanning_mode)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("scanning_mode", "int", 0, "Scanning mode.", "{'enum_description': 'Scanning modes', 'enum': [{'srcline': 72, 'description': '', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Interlaced'}, {'srcline': 73, 'description': '', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Progressive'}]}", &UVCCameraConfig::scanning_mode)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.auto_exposure = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.auto_exposure = 3;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.auto_exposure = 3;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("auto_exposure", "int", 0, "Auto exposure mode.", "{'enum_description': 'Auto-exposure modes', 'enum': [{'srcline': 80, 'description': 'Manual exposure, manual iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Manual'}, {'srcline': 81, 'description': 'Auto exposure, auto iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Auto'}, {'srcline': 82, 'description': 'manual exposure, auto iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'Shutter_Priority'}, {'srcline': 83, 'description': 'auto exposure, manual iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 3, 'ctype': 'int', 'type': 'int', 'name': 'Aperture_Priority'}]}", &UVCCameraConfig::auto_exposure)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("auto_exposure", "int", 0, "Auto exposure mode.", "{'enum_description': 'Auto-exposure modes', 'enum': [{'srcline': 80, 'description': 'Manual exposure, manual iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Manual'}, {'srcline': 81, 'description': 'Auto exposure, auto iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Auto'}, {'srcline': 82, 'description': 'manual exposure, auto iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'Shutter_Priority'}, {'srcline': 83, 'description': 'auto exposure, manual iris', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 3, 'ctype': 'int', 'type': 'int', 'name': 'Aperture_Priority'}]}", &UVCCameraConfig::auto_exposure)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.auto_exposure_priority = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.auto_exposure_priority = 1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.auto_exposure_priority = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("auto_exposure_priority", "int", 0, "In auto mode or shutter priority mode, allow the device to vary frame rate.", "", &UVCCameraConfig::auto_exposure_priority)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("auto_exposure_priority", "int", 0, "In auto mode or shutter priority mode, allow the device to vary frame rate.", "", &UVCCameraConfig::auto_exposure_priority)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.exposure_absolute = 0.0001;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.exposure_absolute = 10.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.exposure_absolute = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("exposure_absolute", "double", 0, "Length of exposure, seconds.", "", &UVCCameraConfig::exposure_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("exposure_absolute", "double", 0, "Length of exposure, seconds.", "", &UVCCameraConfig::exposure_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.iris_absolute = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.iris_absolute = 655.35;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.iris_absolute = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("iris_absolute", "double", 0, "Aperture, f.", "", &UVCCameraConfig::iris_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("iris_absolute", "double", 0, "Aperture, f.", "", &UVCCameraConfig::iris_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.auto_focus = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.auto_focus = 1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.auto_focus = 1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("auto_focus", "bool", 0, "Maintain focus automatically.", "", &UVCCameraConfig::auto_focus)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("auto_focus", "bool", 0, "Maintain focus automatically.", "", &UVCCameraConfig::auto_focus)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.focus_absolute = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.focus_absolute = 65536;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.focus_absolute = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("focus_absolute", "int", 0, "Absolute focal distance, millimeters.", "", &UVCCameraConfig::focus_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("focus_absolute", "int", 0, "Absolute focal distance, millimeters.", "", &UVCCameraConfig::focus_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.pan_absolute = -648000;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.pan_absolute = 648000;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.pan_absolute = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("pan_absolute", "int", 0, "Pan (clockwise), arc seconds.", "", &UVCCameraConfig::pan_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("pan_absolute", "int", 0, "Pan (clockwise), arc seconds.", "", &UVCCameraConfig::pan_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.tilt_absolute = -648000;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.tilt_absolute = 648000;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.tilt_absolute = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("tilt_absolute", "int", 0, "Tilt (up), arc seconds.", "", &UVCCameraConfig::tilt_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("tilt_absolute", "int", 0, "Tilt (up), arc seconds.", "", &UVCCameraConfig::tilt_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.roll_absolute = -180;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.roll_absolute = 180;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.roll_absolute = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("roll_absolute", "int", 0, "Roll (clockwise), degrees.", "", &UVCCameraConfig::roll_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("roll_absolute", "int", 0, "Roll (clockwise), degrees.", "", &UVCCameraConfig::roll_absolute)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.privacy = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.privacy = 1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.privacy = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("privacy", "bool", 0, "Image capture disabled.", "", &UVCCameraConfig::privacy)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("privacy", "bool", 0, "Image capture disabled.", "", &UVCCameraConfig::privacy)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.backlight_compensation = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.backlight_compensation = 65536;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.backlight_compensation = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("backlight_compensation", "int", 0, "Backlight compensation, device-dependent (zero for none, increasing compensation above zero).", "", &UVCCameraConfig::backlight_compensation)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("backlight_compensation", "int", 0, "Backlight compensation, device-dependent (zero for none, increasing compensation above zero).", "", &UVCCameraConfig::backlight_compensation)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.brightness = -32768;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.brightness = 32767;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.brightness = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("brightness", "int", 0, "Brightness, device dependent.", "", &UVCCameraConfig::brightness)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("brightness", "int", 0, "Brightness, device dependent.", "", &UVCCameraConfig::brightness)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.contrast = -32768;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.contrast = 32767;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.contrast = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("contrast", "int", 0, "Contrast, device dependent.", "", &UVCCameraConfig::contrast)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("contrast", "int", 0, "Contrast, device dependent.", "", &UVCCameraConfig::contrast)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.gain = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.gain = 65536;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.gain = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("gain", "int", 0, "Gain, device dependent.", "", &UVCCameraConfig::gain)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("gain", "int", 0, "Gain, device dependent.", "", &UVCCameraConfig::gain)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.power_line_frequency = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.power_line_frequency = 2;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.power_line_frequency = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("power_line_frequency", "int", 0, "Power line frequency anti-flicker processing.", "{'enum_description': 'Power line frequency modes', 'enum': [{'srcline': 146, 'description': 'Disabled', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Disabled'}, {'srcline': 147, 'description': '50 Hz', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Freq_50'}, {'srcline': 148, 'description': '60 Hz', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Freq_60'}]}", &UVCCameraConfig::power_line_frequency)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("power_line_frequency", "int", 0, "Power line frequency anti-flicker processing.", "{'enum_description': 'Power line frequency modes', 'enum': [{'srcline': 146, 'description': 'Disabled', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Disabled'}, {'srcline': 147, 'description': '50 Hz', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Freq_50'}, {'srcline': 148, 'description': '60 Hz', 'srcfile': '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Freq_60'}]}", &UVCCameraConfig::power_line_frequency)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.auto_hue = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.auto_hue = 1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.auto_hue = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("auto_hue", "bool", 0, "Automatic hue control.", "", &UVCCameraConfig::auto_hue)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("auto_hue", "bool", 0, "Automatic hue control.", "", &UVCCameraConfig::auto_hue)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.hue = -180.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.hue = 180.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.hue = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("hue", "double", 0, "Hue, degrees.", "", &UVCCameraConfig::hue)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("hue", "double", 0, "Hue, degrees.", "", &UVCCameraConfig::hue)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.saturation = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.saturation = 65536;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.saturation = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("saturation", "int", 0, "Saturation, device dependent (zero for grayscale).", "", &UVCCameraConfig::saturation)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("saturation", "int", 0, "Saturation, device dependent (zero for grayscale).", "", &UVCCameraConfig::saturation)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.sharpness = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.sharpness = 65536;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.sharpness = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("sharpness", "int", 0, "Image sharpness, device dependent.", "", &UVCCameraConfig::sharpness)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("sharpness", "int", 0, "Image sharpness, device dependent.", "", &UVCCameraConfig::sharpness)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.gamma = 0.01;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.gamma = 5.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.gamma = 1.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("gamma", "double", 0, "Gamma.", "", &UVCCameraConfig::gamma)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("gamma", "double", 0, "Gamma.", "", &UVCCameraConfig::gamma)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.auto_white_balance = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.auto_white_balance = 1;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.auto_white_balance = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("auto_white_balance", "bool", 0, "Automatic white balance.", "", &UVCCameraConfig::auto_white_balance)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<bool>("auto_white_balance", "bool", 0, "Automatic white balance.", "", &UVCCameraConfig::auto_white_balance)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.white_balance_temperature = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.white_balance_temperature = 65536;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.white_balance_temperature = 0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("white_balance_temperature", "int", 0, "White balance temperature, degrees.", "", &UVCCameraConfig::white_balance_temperature)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<int>("white_balance_temperature", "int", 0, "White balance temperature, degrees.", "", &UVCCameraConfig::white_balance_temperature)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.white_balance_BU = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.white_balance_BU = 65536.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.white_balance_BU = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("white_balance_BU", "double", 0, "Blue or U component of white balance, device-dependent.", "", &UVCCameraConfig::white_balance_BU)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("white_balance_BU", "double", 0, "Blue or U component of white balance, device-dependent.", "", &UVCCameraConfig::white_balance_BU)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.white_balance_RV = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.white_balance_RV = 65536.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.white_balance_RV = 0.0;
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("white_balance_RV", "double", 0, "Red or V component of white balance, device-dependent.", "", &UVCCameraConfig::white_balance_RV)));
-//#line 292 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+//#line 290 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(UVCCameraConfig::AbstractParamDescriptionConstPtr(new UVCCameraConfig::ParamDescription<double>("white_balance_RV", "double", 0, "Red or V component of white balance, device-dependent.", "", &UVCCameraConfig::white_balance_RV)));
 //#line 245 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.convertParams();
 //#line 245 "/opt/ros/kinetic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __group_descriptions__.push_back(UVCCameraConfig::AbstractGroupDescriptionConstPtr(new UVCCameraConfig::GroupDescription<UVCCameraConfig::DEFAULT, UVCCameraConfig>(Default)));
-//#line 356 "/opt/ros/kinetic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
+//#line 366 "/opt/ros/kinetic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
       for (std::vector<UVCCameraConfig::AbstractGroupDescriptionConstPtr>::const_iterator i = __group_descriptions__.begin(); i != __group_descriptions__.end(); ++i)
       {
@@ -1002,5 +1012,7 @@ UVCCameraConfig::GroupDescription<UVCCameraConfig::DEFAULT, UVCCameraConfig> Def
 //#line 148 "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/libuvc_ros-master/libuvc_camera/cfg/UVCCamera.cfg"
       const int UVCCamera_Freq_60 = 1;
 }
+
+#undef DYNAMIC_RECONFIGURE_FINAL
 
 #endif // __UVCCAMERARECONFIGURATOR_H__

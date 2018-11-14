@@ -3,4 +3,6 @@
           SETPOINT
           TIME-VAL
           TIME
+          NUM_SEGS-VAL
+          NUM_SEGS
 ))
