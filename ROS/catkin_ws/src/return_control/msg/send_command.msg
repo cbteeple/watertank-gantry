@@ -1,4 +1,2 @@
 string command
 float32[] values
----
-int16 ack

@@ -1,0 +1,4 @@
+<launch>
+  <rosparam command="load" file="settings_gantry.yaml" />
+  <node name="object_return_node" pkg="return_control" type="object_return_node.py"   output="screen" />
+</launch>

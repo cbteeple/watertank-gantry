@@ -1,5 +1,0 @@
-
----
-uint32 miliseconds
-uint32 rate
-float32[] data

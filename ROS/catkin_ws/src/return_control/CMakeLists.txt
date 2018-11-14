@@ -51,14 +51,15 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    serial_data.msg
    setpoint.msg
+   send_command.msg
  )
 
 # Generate services in the 'srv' folder
- add_service_files(
-   FILES
-   serial_read.srv
-   SerialSend.srv
- )
+# add_service_files(
+#   FILES
+#   serial_read.srv
+#   SerialSend.srv
+# )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -96,6 +97,10 @@ find_package(catkin REQUIRED COMPONENTS
 ###################################
 ## catkin specific configuration ##
 ###################################
+
+#Python setup - set up stuff using "setup.py"
+catkin_python_setup()
+
 ## The catkin_package macro generates cmake config files for your package
 ## Declare things to be passed to dependent projects
 ## INCLUDE_DIRS: uncomment this if your package contains header files
