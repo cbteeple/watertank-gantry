@@ -19,7 +19,8 @@ class genericArduinoSerial(object):
 		rospy.loginfo("[%s] Initializing......" %(self.node_name))
 		#Get params
 		#params=rospy.get_param('object_return')
-		self.baud=rospy.get_param('baudrate')  #Trying to somehow keep these parameters local to this node... not working currently though...
+		#Trying to somehow keep these parameters local to this node... not working currently though...
+		self.baud=rospy.get_param('baudrate')
 		self.devname=rospy.get_param('devname')
 
 		#Set up serial communication
