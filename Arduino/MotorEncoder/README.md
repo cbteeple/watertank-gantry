@@ -1,6 +1,9 @@
 # MotorRetract
 This code enables a motor with encoder to follow a setpoint with PID values given over serial
 
+## Dependencies
+ - [EEPROMAnything Library](https://github.com/collin80/EEPROMAnything) by collin80
+ 
 ## Commands
 *All commands must be sent with a newline character at the en, and are processed immediately*
 
