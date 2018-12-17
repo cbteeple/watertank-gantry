@@ -1,8 +1,0 @@
-prefix=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install
-
-Name: libuvc_camera
-Description: Description of libuvc_camera
-Version: 0.0.10
-Cflags: -I/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install/include
-Libs: -L/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/install/lib -llibuvc_camera_nodelet
-Requires: roscpp camera_info_manager dynamic_reconfigure image_transport nodelet sensor_msgs

@@ -1,8 +1,0 @@
-prefix=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel
-
-Name: return_control
-Description: Description of return_control
-Version: 1.0.0
-Cflags: -I/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include -I/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/include
-Libs: -L/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib 
-Requires: message_runtime
