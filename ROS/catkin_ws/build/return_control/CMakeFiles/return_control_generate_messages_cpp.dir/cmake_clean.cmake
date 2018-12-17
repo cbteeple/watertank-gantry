@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/return_control_generate_messages_cpp"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_data.h"
   "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/setpoint.h"
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/serial_read.h"
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include/return_control/SerialSend.h"
 )
 
 # Per-language clean rules from dependency scanning.

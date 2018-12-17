@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "return_control: 2 messages, 2 services")
+message(STATUS "return_control: 2 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -27,16 +27,6 @@ add_custom_target(_return_control_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "return_control" "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg" ""
 )
 
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv" NAME_WE)
-add_custom_target(_return_control_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "return_control" "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv" ""
-)
-
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv" NAME_WE)
-add_custom_target(_return_control_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "return_control" "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv" ""
-)
-
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -57,18 +47,6 @@ _generate_msg_cpp(return_control
 )
 
 ### Generating Services
-_generate_srv_cpp(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/return_control
-)
-_generate_srv_cpp(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/return_control
-)
 
 ### Generating Module File
 _generate_module_cpp(return_control
@@ -85,10 +63,6 @@ add_dependencies(return_control_generate_messages return_control_generate_messag
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/serial_data.msg" NAME_WE)
 add_dependencies(return_control_generate_messages_cpp _return_control_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg" NAME_WE)
-add_dependencies(return_control_generate_messages_cpp _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv" NAME_WE)
-add_dependencies(return_control_generate_messages_cpp _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv" NAME_WE)
 add_dependencies(return_control_generate_messages_cpp _return_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -114,18 +88,6 @@ _generate_msg_eus(return_control
 )
 
 ### Generating Services
-_generate_srv_eus(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/return_control
-)
-_generate_srv_eus(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/return_control
-)
 
 ### Generating Module File
 _generate_module_eus(return_control
@@ -142,10 +104,6 @@ add_dependencies(return_control_generate_messages return_control_generate_messag
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/serial_data.msg" NAME_WE)
 add_dependencies(return_control_generate_messages_eus _return_control_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg" NAME_WE)
-add_dependencies(return_control_generate_messages_eus _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv" NAME_WE)
-add_dependencies(return_control_generate_messages_eus _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv" NAME_WE)
 add_dependencies(return_control_generate_messages_eus _return_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -171,18 +129,6 @@ _generate_msg_lisp(return_control
 )
 
 ### Generating Services
-_generate_srv_lisp(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/return_control
-)
-_generate_srv_lisp(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/return_control
-)
 
 ### Generating Module File
 _generate_module_lisp(return_control
@@ -199,10 +145,6 @@ add_dependencies(return_control_generate_messages return_control_generate_messag
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/serial_data.msg" NAME_WE)
 add_dependencies(return_control_generate_messages_lisp _return_control_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg" NAME_WE)
-add_dependencies(return_control_generate_messages_lisp _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv" NAME_WE)
-add_dependencies(return_control_generate_messages_lisp _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv" NAME_WE)
 add_dependencies(return_control_generate_messages_lisp _return_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -228,18 +170,6 @@ _generate_msg_nodejs(return_control
 )
 
 ### Generating Services
-_generate_srv_nodejs(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/return_control
-)
-_generate_srv_nodejs(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/return_control
-)
 
 ### Generating Module File
 _generate_module_nodejs(return_control
@@ -256,10 +186,6 @@ add_dependencies(return_control_generate_messages return_control_generate_messag
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/serial_data.msg" NAME_WE)
 add_dependencies(return_control_generate_messages_nodejs _return_control_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg" NAME_WE)
-add_dependencies(return_control_generate_messages_nodejs _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv" NAME_WE)
-add_dependencies(return_control_generate_messages_nodejs _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv" NAME_WE)
 add_dependencies(return_control_generate_messages_nodejs _return_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -285,18 +211,6 @@ _generate_msg_py(return_control
 )
 
 ### Generating Services
-_generate_srv_py(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/return_control
-)
-_generate_srv_py(return_control
-  "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/return_control
-)
 
 ### Generating Module File
 _generate_module_py(return_control
@@ -313,10 +227,6 @@ add_dependencies(return_control_generate_messages return_control_generate_messag
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/serial_data.msg" NAME_WE)
 add_dependencies(return_control_generate_messages_py _return_control_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg" NAME_WE)
-add_dependencies(return_control_generate_messages_py _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv" NAME_WE)
-add_dependencies(return_control_generate_messages_py _return_control_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv" NAME_WE)
 add_dependencies(return_control_generate_messages_py _return_control_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

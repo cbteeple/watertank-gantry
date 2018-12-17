@@ -55,8 +55,6 @@ include return_control/CMakeFiles/return_control_generate_messages_lisp.dir/prog
 
 return_control/CMakeFiles/return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg/serial_data.lisp
 return_control/CMakeFiles/return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg/setpoint.lisp
-return_control/CMakeFiles/return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/serial_read.lisp
-return_control/CMakeFiles/return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/SerialSend.lisp
 
 
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg/serial_data.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
@@ -69,21 +67,9 @@ return_control/CMakeFiles/return_control_generate_messages_lisp: /media/woodlab/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from return_control/setpoint.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg
 
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/serial_read.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/serial_read.lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from return_control/serial_read.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv
-
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/SerialSend.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/SerialSend.lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from return_control/SerialSend.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv
-
 return_control_generate_messages_lisp: return_control/CMakeFiles/return_control_generate_messages_lisp
 return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg/serial_data.lisp
 return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/msg/setpoint.lisp
-return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/serial_read.lisp
-return_control_generate_messages_lisp: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/common-lisp/ros/return_control/srv/SerialSend.lisp
 return_control_generate_messages_lisp: return_control/CMakeFiles/return_control_generate_messages_lisp.dir/build.make
 
 .PHONY : return_control_generate_messages_lisp

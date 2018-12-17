@@ -1,0 +1,48 @@
+MAIN:
+    num_reps: 1             #[number]
+    testType: 'Linguini_GrabNShake'
+    data_dir: 'data'
+    output_dir_format: '[timestamp] - [trajdir] - [testtype]'
+    save_topics:
+        - '/gantry'
+        - '/object_return'
+
+gantry:
+    devname: '/dev/ttyACM0' # [device string]
+    baudrate: 115200        # [baud]
+    traj_folder: 'Ninas_first_trajectory'   #[folder string]
+    hand_actuation: 'gcode' #[string] OPTIONS - 'gcode', 'standalone'
+    DEBUG: True
+
+hand:
+    devname: '/dev/ttyUSB1' # [device string]
+    baudrate: 115200        # [baud]
+    num_fingers: 3          # [number]
+    default_delay: 200      # [ms]
+    DEBUG: False
+
+object_return: 
+    devname: '/dev/ttyUSB0' # [device string]
+    baudrate: 115200        # [baud]
+    default_delay: 200     # [ms]
+    DEBUG: False
+    
+
+cameras: 
+    camera0:
+        connected: True
+        location: 'Front'       #[string]
+        camera_frame_id: 'usb_cam0'
+        cal_file: 'settings_cam0.yaml'
+    camera1:
+        connected: False
+        location: 'Left'        #[string]
+        camera_frame_id: 'usb_cam1'
+        cal_file: 'settings_cam1.yaml'
+    picture_width: 1920     #[px]
+    picture_height: 1080    #[px]
+    DEBUG: False
+
+cameras_on: 1
+GLOBAL_DEBUG: False
+GLOBAL_SAVE_DATA: True

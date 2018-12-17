@@ -40,13 +40,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/return_control/srv" TYPE FILE FILES
-    "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv"
-    "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
-    )
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/return_control/cmake" TYPE FILE FILES "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control/catkin_generated/installspace/return_control-msg-paths.cmake")
 endif()
 

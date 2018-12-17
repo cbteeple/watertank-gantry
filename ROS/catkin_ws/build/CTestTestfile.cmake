@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
 subdirs(libuvc_ros-master/libuvc_ros)
+subdirs(comm_sender)
 subdirs(data_manager)
 subdirs(gantry_control)
 subdirs(return_control)

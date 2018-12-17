@@ -118,6 +118,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/gtest/cmake_install.cmake")
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/libuvc_ros-master/libuvc_ros/cmake_install.cmake")
+  include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/comm_sender/cmake_install.cmake")
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/data_manager/cmake_install.cmake")
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/gantry_control/cmake_install.cmake")
   include("/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control/cmake_install.cmake")

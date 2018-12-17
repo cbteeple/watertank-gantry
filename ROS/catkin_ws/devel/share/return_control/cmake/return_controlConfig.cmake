@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(return_control_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include " STREQUAL " ")
+if(NOT "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/include " STREQUAL " ")
   set(return_control_INCLUDE_DIRS "")
-  set(_include_dirs "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include")
+  set(_include_dirs "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/include;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib;/home/woodlab/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

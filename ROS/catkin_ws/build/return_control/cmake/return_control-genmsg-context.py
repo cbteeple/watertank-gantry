@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/serial_data.msg;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg"
-services_str = "/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv;/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv"
+services_str = ""
 pkg_name = "return_control"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

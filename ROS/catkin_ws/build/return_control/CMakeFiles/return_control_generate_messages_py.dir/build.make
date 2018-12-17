@@ -55,8 +55,6 @@ include return_control/CMakeFiles/return_control_generate_messages_py.dir/progre
 
 return_control/CMakeFiles/return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_serial_data.py
 return_control/CMakeFiles/return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_setpoint.py
-return_control/CMakeFiles/return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_serial_read.py
-return_control/CMakeFiles/return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_SerialSend.py
 return_control/CMakeFiles/return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py
 return_control/CMakeFiles/return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py
 
@@ -71,37 +69,21 @@ return_control/CMakeFiles/return_control_generate_messages_py: /media/woodlab/DA
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG return_control/setpoint"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg
 
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_serial_read.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_serial_read.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV return_control/serial_read"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv
-
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_SerialSend.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_SerialSend.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV return_control/SerialSend"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv
-
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_serial_data.py
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_setpoint.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_serial_read.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_SerialSend.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for return_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for return_control"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg --initpy
 
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_serial_data.py
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_setpoint.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_serial_read.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_SerialSend.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for return_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for return_control"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv --initpy
 
 return_control_generate_messages_py: return_control/CMakeFiles/return_control_generate_messages_py
 return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_serial_data.py
 return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/_setpoint.py
-return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_serial_read.py
-return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/_SerialSend.py
 return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/msg/__init__.py
 return_control_generate_messages_py: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/lib/python2.7/dist-packages/return_control/srv/__init__.py
 return_control_generate_messages_py: return_control/CMakeFiles/return_control_generate_messages_py.dir/build.make

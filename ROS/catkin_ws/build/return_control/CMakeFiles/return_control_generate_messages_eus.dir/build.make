@@ -55,8 +55,6 @@ include return_control/CMakeFiles/return_control_generate_messages_eus.dir/progr
 
 return_control/CMakeFiles/return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/msg/serial_data.l
 return_control/CMakeFiles/return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/msg/setpoint.l
-return_control/CMakeFiles/return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/serial_read.l
-return_control/CMakeFiles/return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/SerialSend.l
 return_control/CMakeFiles/return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/manifest.l
 
 
@@ -70,25 +68,13 @@ return_control/CMakeFiles/return_control_generate_messages_eus: /media/woodlab/D
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from return_control/setpoint.msg"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg/setpoint.msg -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/msg
 
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/serial_read.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/serial_read.l: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from return_control/serial_read.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/serial_read.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv
-
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/SerialSend.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/SerialSend.l: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from return_control/SerialSend.srv"
-	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/srv/SerialSend.srv -Ireturn_control:/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/src/return_control/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p return_control -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv
-
 /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for return_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for return_control"
 	cd /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/build/return_control && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control return_control std_msgs
 
 return_control_generate_messages_eus: return_control/CMakeFiles/return_control_generate_messages_eus
 return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/msg/serial_data.l
 return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/msg/setpoint.l
-return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/serial_read.l
-return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/srv/SerialSend.l
 return_control_generate_messages_eus: /media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/devel/share/roseus/ros/return_control/manifest.l
 return_control_generate_messages_eus: return_control/CMakeFiles/return_control_generate_messages_eus.dir/build.make
 

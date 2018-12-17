@@ -139,12 +139,8 @@ vc-fileutils.settings
 .vscode/launch.json
 
 #cmake
-CMakeLists.txt
 Marlin/CMakeLists.txt
-CMakeListsPrivate.txt
 
-#CLion
-cmake-build-*
 
 #GCode - Actually I want to save this
 #*.gcode
@@ -158,6 +154,9 @@ cmake-build-*
 *.pyc
 
 ROS/catkin_ws/data
-
+ROS/catkin_ws/devel
+ROS/catkin_ws/build
+ROS/catkin_ws/install
+ROS/catkin_ws/src/comm_sender
 
 Arduino/pressure_controller/
