@@ -11,6 +11,7 @@ import valves_gcode_control
 DEBUG=rospy.get_param('GLOBAL_DEBUG') or rospy.get_param('/gantry/DEBUG')
 params=rospy.get_param('gantry')
 SAVE_DATA=rospy.get_param('GLOBAL_SAVE_DATA')
+hand_type = params.hand_actuation;
 
 ready = True
 posReached = 0
@@ -125,8 +126,10 @@ def server():
 
 				#Send actuation if it's different than before
 				#Wait for the ready signal after each send
+				#ASSUME ACTUATION SIGNALS ARE PSI
 				act=actuation()
 				act.levels=new_pos[5:]
+
 				rospy.loginfo(act)
 				pubAct.publish(act)
 				
