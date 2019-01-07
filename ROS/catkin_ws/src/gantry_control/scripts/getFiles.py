@@ -47,5 +47,6 @@ def getTrajFiles(*args):
 	allFiles = [os.path.join(traj_dir,f) for f in os.listdir(traj_dir)
 	if os.path.isfile(os.path.join(traj_dir, f))
 	and "Perturbation" in os.path.join(traj_dir, f) ]
+	allFiles.sort()
 	
 	return allFiles
