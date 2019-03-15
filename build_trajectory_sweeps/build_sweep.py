@@ -83,7 +83,7 @@ class trajectorySweep:
         idx=0
         for curr_perturb in itertools.product(*self.perturbations):
             curr_traj = self.perturbTraj(home_pos,base_traj,curr_perturb)
-            self.saveTraj(curr_traj, "%d"%(idx))
+            self.saveTraj(curr_traj, "%03d"%(idx))
             idx += 1
 
 
@@ -115,8 +115,10 @@ class trajectorySweep:
 
     def getGrasp(self,grasp_on):
 
-        if grasp_on:
+        if grasp_on ==1:
             traj = self.grasp_settings["grasp_traj"]
+        elif grasp_on ==2:
+            traj = self.grasp_settings["fingertip_grasp_traj"]
         else:
             traj = self.grasp_settings["release_traj"]
 
@@ -132,7 +134,7 @@ class trajectorySweep:
             
     def saveTraj(self,traj, trajname):
         # Save the trajectory
-        outFile=os.path.join(self.traj_folder,self.settings_file,self.settings_file+'_'+trajname+".gcode")
+        outFile=os.path.join(self.traj_folder,self.settings_file,self.settings_file+'_Perturbation'+trajname+".gcode")
         np.savetxt(outFile, traj, delimiter='\t', fmt='%0.4f') 
 
 

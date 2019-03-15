@@ -10,3 +10,4 @@ autoexposure: false
 exposure: 100
 auto_white_balance: false
 white_balance: 4000
+gain: 255

@@ -11,6 +11,7 @@ import rospy
 from return_control.msg import serial_data
 from std_msgs.msg import String
 import serial_coms
+import serial
 
 devname = '0'
 baud = 0
