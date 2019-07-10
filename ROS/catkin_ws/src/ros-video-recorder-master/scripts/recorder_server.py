@@ -62,7 +62,7 @@ def opencv_version():
     v = cv2.__version__.split('.')[0]
     if v == '2':
         return 2
-    elif v == '3':
+    elif v == '3' or v == '4':
         return 3
     raise Exception('opencv version can not be parsed. v={}'.format(v))
 
@@ -196,7 +196,7 @@ def cam_do(fastRate):
     output_width = int(rospy.get_param('cameras/picture_width', '640'))
     output_height = int(rospy.get_param('cameras/picture_height', '480'))
     output_fps = int(rospy.get_param('~framerate', '30'))
-    output_format = rospy.get_param('~output_format', 'mp42')
+    output_format = rospy.get_param('~output_format', 'mp4v')
     output_topic = rospy.get_param('~output_topic', '/video_recorder/image_raw')
 
     output_dir = rospy.get_param('MAIN/output_fullpath', 'data')

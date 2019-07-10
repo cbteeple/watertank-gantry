@@ -1,0 +1,49 @@
+stage:
+    time_absolute: True
+    base_speed: 7000 #[mm/min]
+    
+    sweep:
+        x-dir:
+            lims: [-20, 100]  # A vector of
+            step: 5.0
+        y-dir:
+            lims: [0, 0]  # A vector of
+            step: 10.0
+        z-dir:
+            lims: [0, 0]  # A vector of
+            step: 10.0
+
+    home_position: [200, 260, 0]
+
+    traj:
+        # [time, x, y, z, grasp]
+        - [0.0,  0, 0, 0,  0]
+        - [2.0,  0, 0, 0,  0]
+
+        #Grasp and move up slightly
+        - [3.0,  0, 0,  0,  1]
+        - [4.5,  0, 0, 5,  1]
+
+        #make a butterfly
+        - [5.0,  -50, 0, 5,  1]
+        - [5.25,  -50, -50, 5,  1]
+        - [5.5,  50,    50, 5,  1]
+        - [5.75,  50,    -50, 5,  1]
+        - [6.0,  -50,    50, 5,  1]
+        - [6.25,  -50, 0, 5,  1]
+        - [6.5,  0, 0, 5,  1]
+
+        #Release
+        - [7.0,  0, 0, 0,  1]
+        - [7.5,  0, 0, 0,  0]
+
+grasp:
+    use_smooth_traj: False
+    # Linear grasp trajectories to load onto the pressure controller
+    grasp_traj:
+        - [0.0,  -10, 0, 0]
+        - [1.0,  15, 0, 0]
+
+    release_traj:
+        - [0.0,  15, 0, 0]
+        - [1.0,  -10, 0, 0]

@@ -1,6 +1,6 @@
 MAIN:
     num_reps: 1             #[number]
-    testType: 'butterfly_power_cup3'
+    testType: 'DEBUG'
     data_dir: 'newData'
     output_dir_format: '[timestamp] - [trajdir] - [testtype]'
     save_topics:
@@ -10,7 +10,7 @@ MAIN:
 gantry:
     devname: '/dev/ttyACM1' # [device string]
     baudrate: 115200        # [baud]
-    traj_folder: 'butterfly_test_power'   #[folder string]
+    traj_folder: 'butterfly_test_mode2_tall'   #[folder string]
     hand_actuation: 'gcode' #[string] OPTIONS - 'gcode', 'standalone'
     DEBUG: True
 

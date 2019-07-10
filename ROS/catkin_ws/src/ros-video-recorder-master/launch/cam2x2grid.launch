@@ -3,12 +3,14 @@
     <arg name="video" default="0" />
     <arg name="video_width" default="640" />
     <arg name="video_height" default="480" />
-    <arg name="video_codec" default="mp42" />
+    <arg name="video_codec" default="xvid" />
     <arg name="video_path" default="/home/woodlab/Documents/grid_[timestamp].avi" />
     <arg name="video_topic" default="/video_recorder/image_raw" />
 
     <node name="cv_camera" pkg="cv_camera" type="cv_camera_node" output="screen" required="true">
     </node>
+
+
 
     <node name="video_recorder" pkg="video_recorder" type="recorder.py" output="screen" required="true">
 
@@ -24,6 +26,8 @@
         <param name="source3" value="/cv_camera/image_raw,0,240,320,240" />
         <param name="source4" value="/cv_camera/image_raw,320,240,320,240" />-->
     </node>
+
+
 
     <node name="image_view_grid" pkg="image_view" type="image_view" respawn="false" output="screen" required="true">
         <remap from="image" to="$(arg video_topic)"/>

@@ -1,0 +1,6 @@
+[submodule "comm_sender"]
+	path = comm_sender
+	url = https://github.com/theodorekoutros/comm_sender.git
+[submodule "ROS/catkin_ws/src/comm_sender"]
+	path = ROS/catkin_ws/src/comm_sender
+	url = https://github.com/theodorekoutros/comm_sender.git

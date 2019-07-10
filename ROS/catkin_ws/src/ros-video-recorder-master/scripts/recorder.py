@@ -15,7 +15,7 @@ def opencv_version():
     v = cv2.__version__.split('.')[0]
     if v == '2':
         return 2
-    elif v == '3':
+    elif v == '3' or v == '4':
         return 3
     raise Exception('opencv version can not be parsed. v={}'.format(v))
 
@@ -136,7 +136,7 @@ if __name__ == '__main__':
     output_width = int(rospy.get_param('~output_width', '640'))
     output_height = int(rospy.get_param('~output_height', '480'))
     output_fps = int(rospy.get_param('~output_fps', '30'))
-    output_format = rospy.get_param('~output_format', 'mp42')
+    output_format = rospy.get_param('~output_format', 'mp4v')
     output_topic = rospy.get_param('~output_topic', '/video_recorder/image_raw')
     output_path = rospy.get_param('~output_path', '/media/woodlab/DATAPART1/watertank-gantry/ROS/catkin_ws/data/movie_[timestamp].avi')
     output_path = output_path.replace('[timestamp]', datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))

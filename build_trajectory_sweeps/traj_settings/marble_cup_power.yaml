@@ -1,0 +1,61 @@
+stage:
+    time_absolute: True
+    base_speed: 9000 #[mm/min]
+    
+    sweep:
+        x-dir:
+            lims: [0, 0]  # A vector of
+            step: 5.0
+        y-dir:
+            lims: [0, 0]  # A vector of
+            step: 10.0
+        z-dir:
+            lims: [0, 0]  # A vector of
+            step: 10.0
+
+    home_position: [200, 260, 0]
+
+    traj:
+        # [time, x, y, z, grasp]
+        - [0.0,  150, -250, 0,  0]
+        - [2.0,  150, 0, 0,  0]
+        - [4.0,  70, 0, 0,  0]
+
+        #Grasp marble and move it to the cup
+        - [5.0,  70, 0, 0,  2]
+        - [7.0,  70, 0, 120,  2]
+        - [9.0,  0, 0, 120,  2]
+        - [10.0,  0, 0, 120,  0]
+
+        #do a power grasp on the cup
+        - [11.0,  0, 0, 30,  0]
+        - [12.0,  -35, 0, 30,  0]
+        - [13.0,  -35, 0, 30,  1]
+
+        #Move the cup up
+        - [14.0,  -35, 0, 110,  1]
+        - [16.0,  -35, -50, 110,  1]
+        - [17.0,  -35, -50, 30,  1]
+        - [18.0,  -35, -50, 30,  0]
+        - [20.0,  100, -50, 30,  0]
+        - [21.0,  150, -250, 30,  0]
+
+
+grasp:
+    use_smooth_traj: False
+    # Linear grasp trajectories to load onto the pressure controller
+    grasp_traj:
+        - [0.0,  -10, 0, 0]
+        - [1.0,  15, 15, 0]
+
+    release_traj:
+        - [0.0,  15, 15, 0]
+        - [1.0,  -10, -10, 0]
+
+    fingertip_grasp_traj:
+        - [0.0,  -10, 0, 0]
+        - [1.0,  15, 15, 0]
+
+    fingertip_release_traj:
+        - [0.0,  15, 15, 0]
+        - [1.0,  -10, 0, 0]
